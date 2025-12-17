@@ -355,25 +355,6 @@ button[disabled] {
 // }
 #cart-form,
 #primary {
-	.pill {
-		border-radius: 2rem;
-		padding: 0.7rem 1.6rem;
-		text-decoration: none;
-		&:hover,
-		&:active {
-			color: $color_body;
-		}
-	}
-	.not_pill {
-		border-radius: 0;
-		padding: 0.7rem 1.6rem;
-		text-decoration: none;
-		line-height: 100%;
-		&:hover,
-		&:active {
-			color: $color_body;
-		}
-	}
 	.bg-,
 	.bg_ {
 		&black {
