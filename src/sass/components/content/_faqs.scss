@@ -1,0 +1,36 @@
+/* FAQs */
+
+.faqs {
+	h2 {
+		@include media1000 {
+			margin-bottom: 3rem;
+		}
+	}
+}
+
+.general_faqs {
+	.faq-question {
+		h4 {
+			font-weight: 600;
+		}
+	}
+}
+.mobile_faqs {
+	display: block;
+    .padding_2 {
+        padding: 0;
+    }
+    h2 {
+        margin-top: 1rem;
+        padding-bottom: 1rem;
+    }
+	@include media1000 {
+		display: none;
+	}
+}
+.desktop_faqs {
+	display: none;
+	@include media1000 {
+		display: block;
+	}
+}

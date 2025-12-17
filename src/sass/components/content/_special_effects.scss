@@ -1,0 +1,37 @@
+.arch {
+	mask-image: url("/wp-content/themes/soul/assets/arch.svg");
+	mask-size: contain;
+	mask-position: center;
+	mask-repeat: no-repeat;
+}
+
+.curved-arch {
+	position: relative;
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 33%;
+		background-color: $color_body;
+		mask-image: url("/wp-content/themes/soul/assets/curved-arch-alt.svg");
+		mask-size: cover;
+		mask-position: top;
+		mask-repeat: no-repeat;
+	}
+}
+
+.wave {
+	mask-image: url("/wp-content/themes/soul/assets/wave.svg");
+	mask-size: cover;
+	mask-position: center;
+	mask-repeat: no-repeat;
+}
+
+.wave-reverse {
+	mask-image: url("/wp-content/themes/soul/assets/wave-reverse.svg");
+	mask-size: cover;
+	mask-position: center;
+	mask-repeat: no-repeat;
+}

@@ -1,0 +1,41 @@
+.separator {
+	margin: 0 var(--margin);
+	height: 0;
+	position: relative;
+	display: none;
+	&:after {
+		position: absolute;
+		width: 100%;
+		height: 1px;
+		background-color: $color_black;
+		content: "";
+		z-index: 1;
+	}
+}
+
+.bg_white + .separator:has(+ .bg_white),
+.bg_black + .separator:has(+ .bg_black),
+.bg_bg + .separator:has(+ .bg_bg),
+.bg_body + .separator:has(+ .bg_body),
+.bg_blue + .separator:has(+ .bg_blue),
+.bg_mid_blue + .separator:has(+ .bg_mid_blue),
+.bg_light_blue + .separator:has(+ .bg_light_blue),
+.bg_green + .separator:has(+ .bg_green),
+.bg_mid_green + .separator:has(+ .bg_mid_green),
+.bg_light_green + .separator:has(+ .bg_light_green),
+.bg_rose + .separator:has(+ .bg_rose),
+.bg_mid_rose + .separator:has(+ .bg_mid_rose),
+.bg_light_rose + .separator:has(+ .bg_light_rose),
+.bg_copper + .separator:has(+ .bg_copper),
+.bg_mid_copper + .separator:has(+ .bg_mid_copper),
+.bg_light_copper + .separator:has(+ .bg_light_copper),
+.bg_ochre + .separator:has(+ .bg_ochre),
+.bg_mid_ochre + .separator:has(+ .bg_mid_ochre),
+.bg_light_ochre + .separator:has(+ .bg_light_ochre),
+.bg_yellow + .separator:has(+ .bg_yellow),
+.bg_gray + .separator:has(+ .bg_gray),
+.bg_mid_gray + .separator:has(+ .bg_mid_gray),
+.bg_light_gray + .separator:has(+ .bg_light_gray),
+.page_links + .separator:has(+ .page_links) {
+	display: block;
+}

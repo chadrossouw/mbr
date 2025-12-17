@@ -1,0 +1,158 @@
+header .fb-share-button.fb_iframe_widget {
+	margin: 2rem auto;
+	display: block;
+	width: fit-content;
+}
+
+.news h1 {
+	font-size: 2rem;
+}
+
+.page-header {
+	&.header-simple,
+	&.new_header {
+		min-height: 20rem;
+		.description {
+			max-width: 720px;
+		}
+	}
+	&.grid_content {
+		a {
+			margin-left: auto;
+		}
+		article {
+			margin-left: 2rem;
+		}
+		aside {
+			margin-right: 2rem;
+		}
+	}
+
+	height: fit-content;
+	align-items: center;
+	&.header-featured {
+		@include media1000 {
+			gap: 0;
+			min-height: 37.5vw;
+			max-height: 37.5vw;
+		}
+	}
+	> .header_text {
+		display: grid;
+		place-items: center;
+		height: fit-content;
+		padding-right:2rem;
+		h1{
+			margin-bottom:1.8rem;
+		}
+		@include media1000 {
+			height: 100%;
+			h1 {
+				width: 80%;
+			}
+		}
+		.header_text_content {
+			> svg {
+				width: 100%;
+				height: 100%;
+				max-width: 5rem;
+				max-height: 5rem;
+				object-fit: contain;
+				margin-bottom: 1rem;
+			}
+			p:has(+a){
+				margin-bottom:1.8rem;
+			}
+			p {
+				@include media1000{
+					font-size: clamp(0.75rem, 1vw, 1rem);
+					line-height: 1.5;
+				}
+			}
+		}
+	}
+	.container:has(.video_bg__video,img){
+		height:100%;
+		width:auto;
+	}
+
+	.subheader{
+		font-weight: 400;
+		margin-top:1rem;
+	}
+}
+.featured_image {
+	height: fit-content;
+
+	overflow: hidden;
+	position: relative;
+	> img {
+		min-width: 100%;
+		min-height: 100%;
+		object-fit: cover;
+	}
+	.video_bg__video {
+		min-width: 100%;
+		min-height: 100%;
+		position: relative;
+		overflow: hidden;
+	}
+	&::before {
+		content: "";
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: o;
+		z-index: +3;
+		background-color: transparent;
+	}
+}
+
+.notice {
+	//position: absolute;
+	//z-index: 9998;
+	margin-top:var(--header-height);
+
+	align-items: center;
+	p {
+		font-size: 1rem;
+		line-height: 1.3rem;
+		margin-bottom: 0;
+		padding: 1rem 0;
+	}
+	button {
+		margin-left: auto;
+		font-size: 1rem;
+		padding:0;
+		background-color: transparent;
+		border: none;
+		text-decoration: underline;
+	}
+	&.hide{
+		display: none;
+	}
+}
+#notice:not(.hide)+#primary {
+    padding-top: 0;
+}
+@media screen and (max-width: 999px) {
+	.page-header.header-featured {
+		> *:first-child {
+			order: 2 !important;
+		}
+	}
+}
+
+.search_header{
+	display: flex;
+	align-items: center;
+	form{
+		width:100%;
+		max-width: 1200px;
+	}
+}
+
+.header_text_content {
+    width: 100%;
+}

@@ -1,0 +1,109 @@
+{
+    "key": "group_65d5c136f1aed",
+    "title": "Featured Content",
+    "fields": [
+        {
+            "key": "field_65d5c138cf2fa",
+            "label": "Featured Title",
+            "name": "featured_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Appears under the title",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 1,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_67ff5d6507cfa",
+            "label": "Featured description",
+            "name": "featured_description",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_67da8123b0a1d",
+            "label": "Featured button",
+            "name": "featured_button",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "allow_in_bindings": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            },
+            {
+                "param": "page_template",
+                "operator": "!=",
+                "value": "thank_you.php"
+            },
+            {
+                "param": "page_template",
+                "operator": "!=",
+                "value": "search-page.php"
+            },
+            {
+                "param": "page_template",
+                "operator": "!=",
+                "value": "news.php"
+            },
+            {
+                "param": "page_template",
+                "operator": "!=",
+                "value": "whats-on.php"
+            },
+            {
+                "param": "page",
+                "operator": "!=",
+                "value": "413"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1744805979
+}

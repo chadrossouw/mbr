@@ -1,0 +1,95 @@
+.attraction-info-block-container {
+	display: grid;
+	gap: 2rem;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	grid-template-columns: 100%;
+	@include media1000 {
+		grid-template-columns: 1fr 1fr 1fr;
+		column-gap: clamp(2rem, 10vw, 10rem);
+	}
+}
+
+.attraction-info-logo-block svg {
+	height: 3rem;
+	width: auto;
+}
+
+.attraction-info-annual-pass {
+	font-size: 1.1rem;
+	line-height: 1.5rem;
+}
+
+.attraction-info-block {
+	margin: 2rem 0;
+	.toggle_modal {
+		background-color: transparent;
+		font-weight: 400;
+		padding: 0;
+		text-decoration: underline;
+		text-align: left;
+		text-transform: none;
+		display: inline;
+		transition: text-decoration-thickness var(--transition) ease,
+			color var(--transition) ease;
+		text-underline-offset: 0.25em;
+		&:hover {
+			color: $color_highlight;
+			text-decoration-thickness: 0.1em;
+		}
+	}
+	a:not(.button) {
+		&:hover {
+			color: $color_highlight;
+		}
+	}
+}
+
+.ticket-button-block {
+	display: flex;
+	gap: 1rem;
+	flex-wrap:wrap;
+	.button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&.bg-white{
+			color:$color_black;
+		}
+		&.bg-primary:hover{
+			color:$color_black;
+		}
+	}
+}
+
+.attraction-info-item {
+	margin-bottom: 0.5rem;
+}
+.attraction-info-opening-times-block {
+	p + p {
+		margin-top: -0.75rem;
+	}
+}
+.attraction-info-annual-pass-block {
+	@include media1000 {
+		grid-column: 2/4;
+		h3 {
+			font-size: 2rem;
+			line-height: 125%;
+			display: inline;
+			margin-right: 1rem;
+		}
+	}
+}
+
+.attraction-info-annual-pass-block .find_out_more {
+	display: inline-block;
+}
+
+.attraction-info-annual-pass-block .find_out_more.underline:hover {
+	color: $color_highlight;
+}
+
+.attraction-info-annual-pass-block .find_out_more.underline:hover::after {
+	background-color: currentColor;
+}

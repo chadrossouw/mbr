@@ -1,0 +1,175 @@
+/*Colors & bgs*/
+
+.black {
+	color: $color_black;
+	&:visited {
+		color: $color_black;
+	}
+}
+
+.body {
+	color: $color_body;
+	&:visited {
+		color: $color_body;
+	}
+}
+
+.white {
+	color: $color_white;
+	&:visited {
+		color: $color_white;
+	}
+	& > h1,
+	& > h2,
+	& > h3,
+	& > h4,
+	& > h5,
+	& > h6 {
+		color: $color_white;
+	}
+}
+
+.primary {
+	color: $color-primary;
+	&:visited {
+		color: $color-primary;
+	}
+}
+
+.secondary {
+	color: $color-secondary;
+	&:visited {
+		color: $color-secondary;
+	}
+}
+
+.tertiary {
+	color: $color-tertiary;
+	&:visited {
+		color: $color-tertiary;
+	}
+}
+
+.highlight {
+	color: $color-highlight;
+	&:visited {
+		color: $color-highlight;
+	}
+}
+
+.emphasis {
+	color: $color-emphasis;
+	&:visited {
+		color: $color-emphasis;
+	}
+}
+.yellow {
+	color: $yellow;
+	&:visited {
+		color: $yellow;
+	}
+}
+
+.fill-,
+.fill_ {
+	&black {
+		fill: $color_black;
+		svg path {
+			fill: $color_black;
+		}
+	}
+	&bg {
+		fill: $color_bg;
+		svg path {
+			fill: $color_bg;
+		}
+	}
+	&white {
+		fill: $color_bg;
+		svg path {
+			fill: $color_bg;
+		}
+	}
+	&grey {
+		fill: $color_grey;
+		svg path {
+			fill: $color_grey;
+		}
+	}
+
+	&primary {
+		fill: $color-primary;
+		svg path {
+			fill: $color-primary;
+		}
+	}
+	&secondary {
+		fill: $color_secondary;
+		svg path {
+			fill: $color_secondary;
+		}
+	}
+	&tertiary {
+		fill: $color_tertiary;
+		svg path {
+			fill: $color_tertiary;
+		}
+	}
+	&highlight {
+		fill: $color_highlight;
+		svg path {
+			fill: $color_highlight;
+		}
+	}
+	&emphasis {
+		fill: $color_emphasis;
+		svg path {
+			fill: $color_emphasis;
+		}
+	}
+	&body {
+		fill: $color_body;
+		svg path {
+			fill: $color_body;
+		}
+	}
+}
+
+.border_grey {
+	border: 1px solid $color_grey;
+}
+
+.border_white {
+	border: 1px solid $color_white;
+}
+
+.error {
+	color: #a01313;
+}
+
+@media (forced-colors: active) {
+}
+
+@media (forced-colors: active) and (prefers-color-scheme: light) {
+}
+
+@media (forced-colors: active) and (prefers-color-scheme: dark) {
+}
+
+.bg_body {
+	a {
+		color: $color_white;
+		&:visited {
+			color: $color_white;
+		}
+		&.title {
+			color: $color_primary;
+		}
+	}
+	.body {
+		color: $color_body;
+		&:visited {
+			color: $color_body;
+		}
+	}
+}

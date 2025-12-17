@@ -1,0 +1,807 @@
+ul {
+	&.step-counter {
+		display: flex;
+		transform: translateX(-5rem);
+		li,
+		a {
+			width: 8rem;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-decoration: none;
+		}
+		.step-counter--number {
+			position: relative;
+			height: 3rem;
+			width: 3rem;
+			background-color: $color_white;
+			border-radius: 1.5rem;
+			display: grid;
+			place-items: center;
+			color: $bg_grey;
+			border: 1px solid $bg_grey;
+			font-weight: $font_bold;
+			z-index: 2;
+			&::after {
+				content: "";
+				display: block;
+				position: absolute;
+				width: 5.5rem;
+				height: 1px;
+				background-color: $bg_grey;
+				top: 50%;
+				left: 0.1rem;
+				transform: translate(50%, -50%);
+				z-index: 1;
+			}
+		}
+		.step-counter--title {
+			text-align: center;
+			text-transform: uppercase;
+			font-weight: $font_bold;
+			color: $bg_grey;
+			padding-top: 0.5rem;
+			line-height: 1.2rem;
+		}
+		li.active,
+		li:has(a) {
+			.step-counter--number {
+				height: 3rem;
+				width: 3rem;
+				background-color: $bg_grey;
+				color: $color_white;
+			}
+		}
+	}
+	@media screen and (max-width: 700px) {
+		max-width: 100%;
+		&.step-counter {
+			transform: translateX(-0.9rem);
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			padding-left: 0;
+			li,
+			a {
+				width: 5rem;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				text-decoration: none;
+			}
+			.step-counter--number {
+				&::after {
+					content: "";
+					display: block;
+					position: absolute;
+					width: 4rem;
+					height: 1px;
+					background-color: $bg_grey;
+					top: 50%;
+					left: 0.9rem;
+					transform: translate(50%, -50%);
+					z-index: 1;
+				}
+			}
+		}
+	}
+	@media screen and (max-width: 400px) {
+		max-width: 100%;
+		&.step-counter {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			transform: none;
+			padding-left: 0;
+			li,
+			a {
+				width: 3.5rem;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				text-decoration: none;
+			}
+			.step-counter--number {
+				&::after {
+					content: "";
+					display: block;
+					position: absolute;
+					width: 3rem;
+					height: 1px;
+					background-color: $bg_grey;
+					top: 50%;
+					left: 2.9rem;
+					transform: translate(0, -50%);
+					z-index: 1;
+				}
+			}
+			.step-counter--title {
+			}
+		}
+	}
+	@media screen and (min-width: 500px) and (max-width: 700px) {
+		max-width: 100%;
+		&.step-counter {
+			.step-counter--number {
+				&::after {
+					content: "";
+					display: block;
+					position: absolute;
+					width: 6.5rem;
+					height: 1px;
+					background-color: $bg_grey;
+					top: 50%;
+					left: 2.9rem;
+					transform: translate(0, -50%);
+					z-index: 1;
+				}
+			}
+		}
+	}
+}
+ul.step-counter li:last-child .step-counter--number::after {
+	content: none;
+	display: none;
+}
+
+.calendar-today.grid.gap {
+	h3,
+	h4 {
+		margin-bottom: 0.2rem;
+	}
+	p {
+		font-size: 0.9rem;
+		line-height: 1.2rem;
+		margin-bottom: 0.1rem;
+	}
+	ul,
+	ol {
+		margin: 0 0 0.1rem 0;
+		font-size: 0.9rem;
+	}
+	.house.grid.padding_2.bg_light_green,
+	.museum.grid.padding_2.bg_light_green {
+		@include media1000 {
+			grid-template-columns: 1fr 4fr;
+		}
+
+		gap: 1rem;
+	}
+}
+.buy-tickets,
+.woocommerce {
+	input[type="radio"] {
+		appearance: none;
+		&:hover {
+			cursor: pointer;
+		}
+	}
+	.form_group.ticket-types.rounded.padding_2 {
+		li {
+			display: grid;
+			grid-template-columns: 6fr 1fr 1fr;
+			align-items: center;
+			gap: 0.5rem;
+			padding: 1rem 0 1rem 0;
+			border-top: 1px solid $color_black;
+			input {
+				background: none;
+				border: 1px solid $color_black;
+				width: 4rem;
+				height: 2rem;
+			}
+		}
+	}
+	.form_group.tour-types.rounded.padding_2 {
+		& > li {
+			position: relative;
+			& > input {
+				appearance: none;
+			}
+			& > label {
+				appearance: none;
+				position: absolute;
+				left: 0;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+			#own_pace::before {
+				content: "";
+				position: absolute;
+				left: -1rem;
+				width: 0.8rem;
+				height: 0.8rem;
+				border-radius: 0.4rem;
+				border: 1px solid $color_black;
+				background-color: $color_white;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+			#own_pace:checked::before {
+				background-color: $bg_grey;
+			}
+		}
+		list-style: none;
+		li {
+			padding: 0.5rem 0 1rem 0;
+			border-top: 1px solid $color_black;
+			position: relative;
+		}
+		.tour::before {
+			content: "";
+			position: absolute;
+			left: -1rem;
+			width: 0.8rem;
+			top: 0.8rem;
+			height: 0.8rem;
+			border-radius: 0.4rem;
+			border: 1px solid $color_black;
+			background-color: $color_white;
+		}
+		.tour:has(.radio_button:checked)::before {
+			background-color: $bg_grey;
+		}
+
+		.false_radio {
+			margin-bottom: 0.5rem;
+		}
+		span {
+			width: 100%;
+		}
+	}
+	.donation.form-group.rounded.padding_2 {
+		.donation_details {
+			display: block;
+			&.hidden {
+				display: none;
+			}
+		}
+	}
+	.radio_list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+		padding-top: 0.5rem;
+	}
+	.dot_radio {
+		position: relative;
+		width: 3rem;
+		& > input {
+			appearance: none;
+		}
+		& > label {
+			appearance: none;
+			position: absolute;
+			left: 1rem;
+		}
+		input::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			width: 0.8rem;
+			height: 0.8rem;
+			border-radius: 0.4rem;
+			border: 1px solid $color_black;
+			background-color: $color_white;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		input:checked::before {
+			background-color: $bg_grey;
+		}
+	}
+	.box_radio {
+		position: relative;
+		width: 4rem;
+		height: 2rem;
+		&:hover {
+			cursor: pointer;
+		}
+		& label {
+			position: absolute;
+			z-index: 100;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		input {
+			appearance: none;
+			&:hover {
+				cursor: pointer;
+			}
+			&::after {
+				position: absolute;
+				content: "";
+				width: 4rem;
+				height: 2rem;
+				background: none;
+				border: 1px solid $color_black;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+			&[disabled="disabled"] {
+				&:hover {
+					cursor: not-allowed;
+				}
+				&::after {
+					opacity: 0.2;
+					position: absolute;
+					content: "";
+					width: 4rem;
+					height: 2rem;
+					background: none;
+					border: 1px solid $color_black;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+				}
+				& + label {
+					opacity: 0.2;
+					&:hover {
+						cursor: not-allowed;
+					}
+				}
+			}
+		}
+
+		input:checked {
+			&::after {
+				background-color: $bg_grey;
+			}
+			& + label {
+				color: $color_white;
+			}
+		}
+		&.bg_yellow {
+			width: 3.2rem;
+			height: 2.4rem;
+			overflow: hidden;
+			border-radius: 4px;
+			input {
+				appearance: none;
+				&:hover {
+					cursor: pointer;
+				}
+				&::after {
+					width: 3.2rem;
+					height: 2.4rem;
+					border: none;
+				}
+			}
+			input:checked {
+				&::after {
+					background-color: $color_black;
+				}
+				& + label {
+					color: $yellow;
+				}
+			}
+		}
+		.box_radio label:hover {
+			cursor: pointer;
+		}
+	}
+	.radio_wrapper {
+		label {
+			font-weight: $font_medium;
+			&:hover {
+				cursor: pointer;
+			}
+		}
+	}
+	.donation_amount {
+		margin-top: 1rem;
+	}
+}
+
+.donation.form-group.rounded.padding_2 {
+	h3 {
+		margin-bottom: 0.5rem;
+	}
+	.donation_selector {
+		margin-top: 0.5rem;
+	}
+}
+.woocommerce {
+	.shop_table.shop_table_responsive.cart.woocommerce-cart-form__contents {
+		thead,
+		.order-total {
+			background-color: $bg_grey;
+		}
+		.product-name {
+			a {
+				line-height: 18px;
+				text-decoration: none;
+				span {
+					line-height: 14px;
+					font-weight: $font_regular;
+				}
+			}
+			a:has(span) {
+				font-weight: $font_semibold;
+			}
+		}
+	}
+	.coupon {
+		label {
+			font-weight: $font_semibold;
+		}
+		.coupon_wrapper {
+			display: flex;
+			gap: 0;
+			margin-top: 0.5rem;
+		}
+	}
+	@media screen and (max-width: 700px) {
+		.empty_row {
+			appearance: none;
+		}
+	}
+}
+.modal.quick-book.popup.open {
+	select {
+		margin-bottom: 1rem;
+	}
+	h4,
+	p {
+		margin-bottom: 0.2rem;
+		line-height: 1.4rem;
+	}
+	form {
+		margin-top: 0.5rem;
+		position: relative;
+
+		&.loading {
+			&::after {
+				content: "";
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: 3rem;
+				height: 3rem;
+				border: 5px solid transparent;
+				border-top: 5px solid $color_black;
+				border-radius: 50%;
+				animation: spin 1s linear infinite;
+				transform: translate(-50%, -50%);
+				z-index: 100;
+			}
+		}
+	}
+}
+.donation_gift_aid {
+	margin-bottom: 0.5rem;
+}
+.cross-sell {
+	width: 100%;
+	margin-top: 2rem;
+	.bg-light_ochre.rounded.padding_2 {
+		width: 100%;
+	}
+	.container.container--threetwo {
+		border-radius: 0.3rem;
+		overflow: hidden;
+	}
+	.crosssell-content {
+		padding-left: 0.5rem;
+		font-weight: $font_semibold;
+		a {
+			font-size: 0.9rem;
+			line-height: 1rem;
+		}
+		a,
+		p,
+		h5 {
+			margin-bottom: 0.2rem;
+			line-height: 1.2rem;
+			font-weight: $font_semibold;
+		}
+		p,
+		label,
+		input,
+		select {
+			font-size: 0.8rem;
+			line-height: 1rem;
+		}
+		select {
+			width: fit-content;
+			& + label {
+				margin-top: 0.5rem;
+			}
+		}
+		input[type="number"] {
+			width: 7ch;
+			padding: 0.5rem;
+			border-radius: 5px;
+		}
+		.buttons {
+			a,
+			div {
+				font-size: 0.8rem;
+				line-height: 1rem;
+				text-decoration: none;
+				display: flex;
+				align-items: center;
+				gap: 0.2rem;
+				color: $bg_grey;
+				span {
+					height: 1rem;
+					width: 1rem;
+					svg {
+						height: 1rem;
+						width: 1rem;
+					}
+				}
+				&.added_to_cart {
+					display: none;
+				}
+			}
+		}
+	}
+	.hdk_events_select,
+	.ticket_selector {
+		padding: 0;
+	}
+}
+
+.book-ticket-content .cross-sell {
+	.hdk_events_select {
+		.initial {
+			display: none;
+		}
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.grid.grid_content.grid_cross_sell {
+		.buy-tickets {
+			max-width: calc(100vw - (2 * var(--margin)));
+			& > * {
+				max-width: calc(100vw - (2 * var(--margin)));
+				& > * {
+					max-width: calc(100vw - (2 * var(--margin)));
+					& > * {
+						max-width: calc(100vw - (2 * var(--margin)));
+					}
+				}
+			}
+			.coupon_wrapper {
+				max-width: calc(100vw - (2 * var(--margin)));
+				flex-wrap: wrap;
+			}
+		}
+	}
+}
+.update_wrapper {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: -1rem;
+	margin-bottom: 0.5rem;
+}
+.error_message {
+	color: $color_error;
+	padding: 0;
+}
+#customer_details {
+	h3 {
+		margin-top: 1.5rem;
+	}
+}
+.proceed_to_checkout {
+	.grid > a:not(.pill) {
+		justify-self: flex-end;
+		margin-top: 0.5rem;
+	}
+	.form-group {
+		display: grid;
+		gap: 0.5rem;
+		margin-bottom: 1rem;
+	}
+}
+
+table span.tour {
+	display: flex;
+	gap: 0.5rem;
+	align-items: center;
+}
+
+.donation_text {
+	margin-top: 1rem;
+}
+
+#primary .gift_aid {
+	margin: 1rem 0;
+	:where(
+			:not(html):not(iframe):not(canvas):not(img):not(svg):not(video)
+				:not(svg *):not(symbol *)
+				:not(.gform-theme__no-reset--el):not(
+					.gform-theme__no-reset--children *
+				):not(.gform-theme__disable):not(.gform-theme__disable *):not(
+					.gform-theme__disable-reset
+				):not(.gform-theme__disable-reset *):not(.gform_heading *):not(
+					.gfield--type-html *
+				):not(.gfield--type-section *):not(.form_saved_message > *):not(
+					.form_saved_message_sent > *
+				):not(.gform_confirmation_message *):not(.wp-editor-container):not(
+					.mce-tinymce
+				):not(.mce-tinymce *):not(.wp-editor-area):not(
+					.gfield_description > *
+				):not(.gform-field-label--type-inline > :not(span))
+		) {
+		display: block;
+	}
+	svg {
+		width: 140px;
+		path {
+			display: inline;
+		}
+	}
+
+	.small {
+		font-size: 80%;
+		line-height: 28px;
+	}
+	.tooltip {
+		details {
+			position: relative;
+		}
+		summary {
+			//width:100%
+			font-size: 0.8rem;
+			color: black;
+			text-decoration: underline;
+			margin: 0;
+
+			&::after {
+				display: none;
+			}
+			span {
+				position: relative;
+			}
+		}
+		:open {
+			summary span::after,
+			summary span::before {
+				content: "x";
+				text-decoration: none;
+				color: $bg_grey;
+				position: absolute;
+				right: -0.5rem;
+				top: -0.5rem;
+			}
+			summary span::before {
+				top: calc(100% + 2rem);
+				right: 2rem;
+				z-index: 100;
+			}
+		}
+		details {
+			padding: 0;
+			border-top: 0;
+			line-height: 28px;
+		}
+		.panel {
+			background-color: $color_white;
+			border-radius: 1rem;
+			padding: 1rem;
+			position: relative;
+			margin-top: 1rem;
+			z-index: 1;
+		}
+	}
+	@include media1200 {
+		display: grid;
+		grid-template-columns: 8rem 1fr;
+		gap: 2rem;
+		.tooltip {
+			display: flex;
+			gap: 0.2em;
+			flex-wrap: nowrap;
+
+			details {
+				padding: 0;
+				border-top: 0;
+				line-height: 28px;
+				summary {
+					width: max-content;
+					z-index: 100;
+				}
+				.panel {
+					position: absolute;
+					box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.4);
+					width: clamp(300px, 50vw, 420px);
+					z-index: 99;
+					right: 0;
+					top: 2rem;
+					padding: 2rem;
+					&::before {
+						content: "";
+						position: absolute;
+						top: -1rem;
+						right: 1.5rem;
+						border: 0.5rem solid transparent;
+						width: 1px;
+						height: 1px;
+						display: block;
+						border-bottom: 0.5rem solid $color_white;
+					}
+				}
+			}
+		}
+	}
+}
+
+ul#tours_available {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+@media screen and (min-width: 300px) and (max-width: 1000px) {
+	.grid.grid_calendar {
+		& > .calendar {
+			margin-bottom: 1rem;
+		}
+	}
+	.proceed_to_checkout {
+		.grid.grid_50 {
+			& > a {
+				margin-bottom: 1rem;
+			}
+		}
+	}
+}
+@media screen and (max-width: 500px) {
+	.coupon_wrapper {
+		input {
+			margin-bottom: 1rem;
+		}
+	}
+}
+
+.sbbox {
+	margin: 1rem 0;
+}
+
+.attendee_box,
+.ticket_table {
+	table {
+		margin-bottom: 2rem;
+		border-bottom: 1px solid $color_black;
+		th {
+			text-align: left;
+		}
+		td {
+			border-bottom: 1px dotted $color_black;
+			padding: 1rem 0.5rem;
+		}
+		tr:last-child {
+			td {
+				border-bottom: 0;
+			}
+		}
+	}
+}
+
+#ticket_validator,
+#add_ticket {
+	display: grid;
+	gap: 0.5rem;
+	border-bottom: 2px solid $color_black;
+	padding-bottom: 1rem;
+	margin-bottom: 1rem;
+}
+
+.admissions-content,
+.ticket_table {
+	table {
+		overflow-x: scroll;
+		max-width: calc(100vw - 2 * var(--margin));
+		display: inline-block;
+	}
+}
+
+#own_pace + label {
+	font-weight: 700;
+}

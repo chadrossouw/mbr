@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51.5 51.5">
+  <g id="scroll_down_arrow" data-name="scroll down arrow" transform="translate(75.75 -24.25) rotate(90)">
+    <path id="Path_2122" data-name="Path 2122" d="M50,75.75A25.75,25.75,0,1,1,75.75,50,25.779,25.779,0,0,1,50,75.75Zm0-49.5A23.75,23.75,0,1,0,73.75,50,23.774,23.774,0,0,0,50,26.25Z" fill="#fff"/>
+    <path id="Path_2123" data-name="Path 2123" d="M56.609,50.82H42.277a1,1,0,0,1,0-2H56.609a1,1,0,0,1,0,2Z" fill="#fff"/>
+    <path id="Path_2124" data-name="Path 2124" d="M51.738,57.305a1,1,0,0,1-.777-1.633l4.785-5.867-4.246-5.5a1,1,0,1,1,1.582-1.223l4.73,6.125a1,1,0,0,1-.016,1.242l-5.289,6.48a.971.971,0,0,1-.77.371Z" fill="#fff"/>
+  </g>
+</svg>

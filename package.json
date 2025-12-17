@@ -1,0 +1,30 @@
+{
+	"private": true,
+	"devDependencies": {
+		"@babel/core": "^7.22.20",
+		"@babel/preset-env": "^7.22.20",
+		"babelify": "^10.0.0",
+		"browser-sync": "^2.24.7",
+		"browserify": "^16.2.2",
+		"gulp": "^4.0.2",
+		"gulp-autoprefixer": "^4.1.0",
+		"gulp-clean-css": "^2.0.12",
+		"gulp-notify": "^3.2.0",
+		"gulp-postcss": "^8.0.0",
+		"gulp-rename": "^1.2.2",
+		"gulp-sass": "^5.0.1",
+		"gulp-scss": "^1.4.0",
+		"gulp-scss-lint": "^1.0.0",
+		"gulp-sourcemaps": "^2.6.4",
+		"gulp-streamify": "^1.0.2",
+		"gulp-terser": "^2.1.0",
+		"sass": "^1.56.1",
+		"vinyl-source-stream": "^2.0.0"
+	},
+	"dependencies": {
+		"@vimeo/player": "^2.20.1",
+		"color-calendar": "^1.0.7",
+		"swiper": "^11.0.5",
+		"vinyl-buffer": "^1.0.1"
+	}
+}

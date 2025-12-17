@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <g id="twitter" transform="translate(-859.5 -3617)">
+    <g id="Ellipse_4" data-name="Ellipse 4" transform="translate(859.5 3617)" fill="none" stroke="#fff" stroke-width="1">
+      <circle cx="32" cy="32" r="32" stroke="none"/>
+      <circle cx="32" cy="32" r="31.5" fill="none"/>
+    </g>
+    <path id="x" d="M-52.354,25l7.424,9.926L-52.4,43h1.681l6.541-7.065L-38.894,43h5.722l-7.839-10.487L-34.058,25h-1.681l-6.024,6.51L-46.632,25Zm2.473,1.237h2.629l11.607,15.521h-2.627Z" transform="translate(934.287 3615)" fill="#fff"/>
+  </g>
+</svg>

@@ -1,0 +1,318 @@
+.error_message {
+	padding: 0.5rem;
+	border: 2px solid var(--color-error);
+	display: block;
+	color: var(--color-black-to-white);
+}
+
+.search_group {
+	justify-content: flex-start;
+	input[type="search"] {
+		flex-grow: 1;
+	}
+}
+
+.popular_searches {
+	margin-top: 1rem;
+}
+
+.popular_searches .flex {
+	max-width: 680px;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	.pill {
+		border: 1px solid $color_white;
+	}
+}
+
+#filter {
+	input[type="checkbox"] {
+		opacity: 0;
+		position: absolute;
+		& + label {
+			position: relative;
+			display: block;
+			line-height: 105%;
+			font-weight: 400;
+			font-size: 0.9rem;
+			z-index: 3;
+			cursor: pointer;
+			&::before,
+			&::after {
+				content: "";
+
+				position: absolute;
+			}
+			&::before {
+				left: -1rem;
+				top: calc(50% - 1rem);
+				width: calc(100% + 2rem);
+				height: 2rem;
+				background: $color_white;
+				opacity: 0;
+				transition: opacity var(--transition) ease;
+				z-index: -1;
+			}
+			&::after {
+				right: 1rem;
+				width: 0.5rem;
+				height: 0.15rem;
+				top: calc(50% - 0.5rem);
+				border: 1px solid $color_body;
+				border-top-color: transparent;
+				border-right-color: transparent;
+				transform: rotate(-52deg) translate(-2px, 4px);
+				opacity: 0;
+				transition: opacity var(--transition) ease;
+				z-index: -1;
+			}
+			&:hover {
+				&::after,
+				&::before {
+					opacity: 0.8;
+				}
+				color: #000;
+			}
+		}
+		&:hover {
+			& + label {
+				&::after,
+				&::before {
+					opacity: 0.8;
+				}
+				color: #000;
+			}
+		}
+		&:checked {
+			& + label {
+				&::after,
+				&::before {
+					opacity: 1;
+				}
+				color: #000;
+			}
+		}
+		&:focus {
+			& + label {
+				outline: 2px solid;
+				outline-offset: 2px;
+			}
+		}
+	}
+}
+#primary .form_container {
+	.gform-theme--api,
+	.gform-theme--framework {
+		input[type="submit"] {
+			--gf-local-radius: 2rem;
+			--gf-local-bg-color: #{$yellow};
+			--gf-local-color: #{$color_black};
+			text-transform: uppercase;
+			font-weight: 600;
+			transition: all var(--transition) ease;
+			&:hover {
+				--gf-local-bg-color: #{$color_black};
+				--gf-local-color: #{$yellow};
+			}
+		}
+	}
+}
+
+//Donation form
+#gform_wrapper_5 {
+	background-color: $bg_grey;
+	padding: 2rem;
+	border-radius: 1rem;
+	overflow: clip;
+	position: relative;
+	.gform_heading,
+	#field_5_15 legend {
+		border: 0;
+		clip: rect(1px, 1px, 1px, 1px);
+		clip-path: inset(50%);
+		height: 1px;
+		margin: -1px;
+		overflow: hidden;
+		padding: 0;
+		position: absolute !important;
+		width: 1px;
+		word-wrap: normal !important; // Many screen reader and browser combinations announce broken words as they would appear visually.
+		&:focus {
+			background-color: $color__background-screen;
+			border-radius: 3px;
+			box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+			clip: auto !important;
+			clip-path: none;
+			color: $color__text-screen;
+			display: block;
+			font-size: 0.875rem;
+			font-weight: 700;
+			height: auto;
+			left: 5px;
+			line-height: normal;
+			padding: 15px 23px 14px;
+			text-decoration: none;
+			top: 5px;
+			width: auto;
+			z-index: 100000; // Above WP toolbar.
+		}
+	}
+	#field_5_15 {
+		height: 2rem;
+	}
+	#input_5_15 {
+		position: relative;
+		left: -2rem;
+		top: -2rem;
+		margin-bottom: 2rem;
+		width: calc(100% + 4rem);
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+		.gchoice {
+			background-color: $bg_grey;
+			transition: background-color var(--transition) ease;
+			&:has(input:checked) {
+				background-color: $bg_grey;
+				label {
+					font-weight: 600;
+				}
+			}
+			label {
+				text-transform: uppercase;
+				padding: 2rem;
+				cursor: pointer;
+				&:hover {
+					font-weight: 600;
+				}
+			}
+			input {
+				opacity: 0;
+				position: absolute;
+			}
+		}
+	}
+
+	#input_5_20 {
+		display: flex;
+		flex-direction: row;
+		gap: 1rem;
+		.gchoice {
+			position: relative;
+			width: 3.2rem;
+			height: 2.4rem;
+			overflow: hidden;
+			border-radius: 4px;
+			display: block;
+			&:hover {
+				cursor: pointer;
+			}
+			label {
+				background-color: $yellow;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin: 0;
+				font-weight: 500;
+			}
+			input {
+				appearance: none;
+				opacity: 0;
+				position: absolute;
+				&:hover {
+					cursor: pointer;
+				}
+
+				&[disabled="disabled"] {
+					&:hover {
+						cursor: not-allowed;
+					}
+					&::after {
+						opacity: 0.2;
+						position: absolute;
+						content: "";
+						width: 3.2rem;
+						height: 2.4rem;
+						background: none;
+						border: none;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+					}
+					& + label {
+						opacity: 0.2;
+						&:hover {
+							cursor: not-allowed;
+						}
+					}
+				}
+			}
+
+			input:checked {
+				& + label {
+					background-color: $color_black;
+					color: $color_grey;
+				}
+			}
+			label:hover {
+				cursor: pointer;
+			}
+		}
+	}
+
+	input#gform_submit_button_5 {
+		margin: 0 auto;
+		border-radius: 2rem;
+		background-color: #efd27b;
+		color: #282431;
+		&:hover {
+			background-color: #282431;
+			color: #efd27b;
+		}
+	}
+}
+
+#gform_wrapper_6 {
+	background-color: $bg_grey;
+	padding: 2rem;
+	border-radius: 1rem;
+	overflow: clip;
+	position: relative;
+	input#gform_submit_button_6 {
+		border-radius: 2rem;
+		background-color: #efd27b;
+		color: #282431;
+		&:hover {
+			background-color: #282431;
+			color: #efd27b;
+		}
+	}
+}
+
+input[type="radio"] ~ .error_message {
+	margin-top: 2rem;
+	display: block;
+}
+
+.stay_in_touch form.emailoctopus-form input[type="submit"].btn {
+	width: fit-content;
+	flex-grow: 0;
+	border-radius: 2rem;
+	font-weight: 700;
+}
+
+.stay_in_touch form.emailoctopus-form .main-form {
+	justify-content: flex-start;
+}
+
+.gform_confirmation_wrapper {
+	grid-column: 1 / 2;
+	padding: 2rem;
+	background-color: $bg_grey;
+	border-radius: 1rem;
+}

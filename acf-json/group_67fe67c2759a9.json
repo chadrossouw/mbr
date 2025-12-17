@@ -1,0 +1,59 @@
+{
+    "key": "group_67fe67c2759a9",
+    "title": "Icon page style",
+    "fields": [
+        {
+            "key": "field_67fe67c390ca7",
+            "label": "Icon page style",
+            "name": "icon_page_style",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "cafe": "Our cafe",
+                "garden": "Our garden",
+                "shop": "Our shop",
+                "venue_hire": "Venue hire",
+                "discover": "Discover",
+                "families": "For families",
+                "learn": "Learn"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "icon_page.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1747991660
+}
