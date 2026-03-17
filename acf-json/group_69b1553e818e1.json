@@ -1,11 +1,31 @@
 {
-    "key": "group_681b13800e312",
-    "title": "Object",
+    "key": "group_69b1553e818e1",
+    "title": "Contact",
     "fields": [
         {
-            "key": "field_681b139efc2d1",
-            "label": "Date",
-            "name": "date",
+            "key": "field_69b1553f1f6b1",
+            "label": "Contact Info",
+            "name": "contact_info",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_69b155911f6b2",
+            "label": "Contact form shortcode",
+            "name": "contact_form_shortcode",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -21,34 +41,14 @@
             "placeholder": "",
             "prepend": "",
             "append": ""
-        },
-        {
-            "key": "field_681b1380fc2d0",
-            "label": "Description",
-            "name": "description",
-            "aria-label": "",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 0,
-            "delay": 0
         }
     ],
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "page",
                 "operator": "==",
-                "value": "object"
+                "value": "351"
             }
         ]
     ],
@@ -57,11 +57,9 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": [
-        "the_content"
-    ],
+    "hide_on_screen": "",
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1746694164
+    "modified": 1773229502
 }

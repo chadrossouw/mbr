@@ -30,6 +30,25 @@ body {
 
 main {
 	display: block;
+	&:not(.home-page){
+		.page-content{
+			padding: 6rem 25rem 4rem;
+			h1{
+				text-align: center;
+				text-transform: uppercase;
+			}
+
+			@media screen and (max-width: 1200px) {
+				padding: 10rem 15rem 4rem;
+			}
+			@media screen and (max-width: 1000px) {
+				padding: 10rem 10rem 4rem;
+			}
+			@media screen and (max-width: 700px) {
+				padding: 10rem 2rem 4rem;
+			}
+		}
+	}
 }
 
 /**

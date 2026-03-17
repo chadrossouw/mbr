@@ -225,6 +225,7 @@ textarea {
 	border-radius: 0;
 	padding: 0.5rem 1rem;
 	transition: border var(--transition) ease;
+	width: 100%;
 	&:focus {
 		outline: 1px solid $color_primary;
 	}

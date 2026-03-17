@@ -1,3 +1,5 @@
 <section>
-    <?php get_content_layouts(get_the_ID()); ?>
+    <?php if (get_field('about_us')) : ?>
+        <?php the_field('about_us'); ?>
+    <?php endif; ?>
 </section>
