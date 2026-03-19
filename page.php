@@ -14,7 +14,7 @@ while (have_posts()) :
     <?php include get_template_directory() . '/template-parts/header-page.php'; ?>
 
     <section class="page-content">
-        <?php the_content(); ?>
+        <!-- <?php the_content(); ?> -->
     </section>
 
 </article>

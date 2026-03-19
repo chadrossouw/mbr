@@ -123,34 +123,39 @@ address {
 /*Links*/
 a {
 	color: $color_black;
-	text-decoration-thickness: 0.05em;
-	transition: text-decoration-thickness var(--transition) ease,
-		color var(--transition) ease;
+	text-decoration: none !important;
+	//text-decoration-thickness: 0.05em;
+	//transition: text-decoration-thickness var(--transition) ease,
+		//color var(--transition) ease;
 	&:visited {
 		color: $color_black;
+		text-decoration: none !important;
 	}
 
 	&:hover,
 	&:focus,
 	&:active {
-		color: $color_grey;
-		text-decoration-thickness: 0.1em;
+		//color: $color_grey;
+		//text-decoration-thickness: 0.1em;
+		text-decoration: none !important;
 	}
 
 	&:hover,
 	&:active {
 		outline: 0;
+		text-decoration: none !important;
 	}
 
 	&:focus {
-		outline: 2px solid;
+		outline: 0px solid;
 	}
 	&.black {
 		&:hover,
 		&:focus,
 		&:active {
-			color: $color_grey;
-			text-decoration-thickness: 0.1em;
+			//color: $color_grey;
+			//text-decoration-thickness: 0.1em;
+			text-decoration: none !important;
 		}
 	}
 }

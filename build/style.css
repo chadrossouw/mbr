@@ -930,25 +930,24 @@ address {
 /*Links*/
 a {
   color: #000;
-  text-decoration-thickness: 0.05em;
-  transition: text-decoration-thickness var(--transition) ease, color var(--transition) ease;
+  text-decoration: none !important;
 }
 a:visited {
   color: #000;
+  text-decoration: none !important;
 }
 a:hover, a:focus, a:active {
-  color: #6e6e6e;
-  text-decoration-thickness: 0.1em;
+  text-decoration: none !important;
 }
 a:hover, a:active {
   outline: 0;
+  text-decoration: none !important;
 }
 a:focus {
-  outline: 2px solid;
+  outline: 0px solid;
 }
 a.black:hover, a.black:focus, a.black:active {
-  color: #6e6e6e;
-  text-decoration-thickness: 0.1em;
+  text-decoration: none !important;
 }
 
 .bg_body a,
@@ -2998,6 +2997,12 @@ header#masthead.bg_light_gray.mobile_only:not(:has(~ .home-page)) .preheader_nav
 header#masthead.bg_light_gray.mobile_only:not(:has(~ .home-page)) .utilities {
   display: none;
 }
+header#masthead .site-branding svg path {
+  fill: #fff;
+}
+header#masthead:not(:has(~ .home-page)) .site-branding svg path {
+  fill: #000;
+}
 header#masthead:not(:has(~ .home-page)) #site-navigation {
   display: none;
 }
@@ -3006,13 +3011,30 @@ header#masthead:not(:has(~ .home-page)) #site-navigation.show {
 }
 header#masthead:not(:has(~ .home-page)) #site-navigation .main-navigation-inner {
   background-color: #000;
-  padding-top: 3rem;
+  padding: 3rem;
 }
 header#masthead:not(:has(~ .home-page)) .header .hamburger_container {
   display: block;
 }
 header#masthead #site-navigation a {
   color: #000;
+  position: relative;
+  text-decoration: none;
+}
+header#masthead #site-navigation a::after {
+  content: "";
+  position: absolute;
+  left: 0%;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+header#masthead #site-navigation a:hover::after {
+  transform: scaleX(1);
 }
 header#masthead #site-navigation a:visited {
   color: #000;
@@ -3062,9 +3084,6 @@ header#masthead .open_times {
     align-items: center;
     width: fit-content;
     justify-content: center;
-  }
-  header#masthead .site-branding svg path {
-    fill: #000 !important;
   }
   header#masthead .book-branding-search {
     grid-column: 1/2;
@@ -3197,7 +3216,6 @@ header#masthead .open_times {
     gap: 2rem;
   }
   header#masthead .utilities svg path,
-  header#masthead .site-branding svg path,
   header#masthead .so-me svg path {
     fill: #000;
   }
@@ -3209,19 +3227,14 @@ header#masthead .open_times {
   header#masthead .hamburger-inner::after {
     background-color: #000;
   }
-}
-@media screen and (min-width: 1000px) and (min-width: 1000px) {
-  header#masthead .site-branding svg {
-    max-width: 16vw !important;
-    max-height: 75px;
-  }
-}
-@media screen and (min-width: 1000px) {
   header#masthead:not(:has(~ .home-page)) .header {
     display: flex;
   }
   header#masthead:not(:has(~ .home-page)) .header #site-navigation {
-    max-height: 20px;
+    position: fixed;
+    right: 4rem;
+    top: 8rem;
+    min-width: unset;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -3294,22 +3307,16 @@ header#masthead.slideOut .pre_header:after {
   bottom: -1rem;
   left: calc(var(--margin) * -1);
 }
-header#masthead .site-branding svg {
-  height: auto;
-  min-width: 160px;
-}
-@media screen and (min-width: 1000px) {
-  header#masthead .site-branding svg {
-    max-width: 33vw;
-    max-height: 75px;
-  }
-}
-header#masthead .site-branding svg path {
-  fill: #000;
-}
 @media screen and (width > 1px) {
   header#masthead:has(~ .home-page) #site-navigation {
     display: block !important;
+    padding: 0 2rem;
+  }
+  header#masthead:has(~ .home-page) #site-navigation .menu-primary-menu-container {
+    z-index: 9999;
+  }
+  header#masthead:has(~ .home-page) .site-branding {
+    padding-bottom: 0;
   }
 }
 
@@ -3422,13 +3429,11 @@ body:has(.no-featured-image) header#masthead .pre_header:after {
 #primary-menu {
   display: flex;
   flex-direction: column;
-  align-items: center;
   row-gap: 0.5rem;
   max-width: 95vw;
   margin: 0 auto;
   width: 100%;
   margin-bottom: 1.2rem;
-  flex-direction: row;
   justify-content: space-between;
   max-width: 100%;
   list-style: none;
@@ -3718,24 +3723,33 @@ body:has(.no-featured-image) header#masthead .pre_header:after {
 }
 .site-branding a {
   display: block;
-  width: fit-content;
+  width: 20vw;
   color: #fff;
-  height: 100%;
+  height: 16vw;
+  transform: translate(0, -2vw);
 }
-.site-branding a svg path {
-  fill: white;
-}
-@media screen and (min-width: 1200px) {
-  .site-branding a svg {
-    width: auto;
-    height: 75px;
-  }
-  .site-branding a svg path {
-    fill: white;
-  }
+.site-branding a svg {
+  min-width: 160px;
 }
 .site-branding a:hover svg path {
   fill: #ffdd00;
+}
+
+header#masthead:not(:has(~ .home-page)) .site-branding a {
+  width: 10vw;
+}
+@media screen and (max-width: 1200px) {
+  header#masthead:not(:has(~ .home-page)) .site-branding a {
+    transform: translate(-10px, -32px);
+  }
+}
+header#masthead:not(:has(~ .home-page)) .site-branding a.logo {
+  color: #000;
+  height: auto;
+  min-width: 160px;
+}
+header#masthead:not(:has(~ .home-page)) .site-branding a svg {
+  min-width: 160px;
 }
 
 #primary-menu .sub-menu {
@@ -3939,14 +3953,10 @@ ul#mobile-menu a {
 }
 /*Branding*/
 .site-branding {
-  z-index: 10000;
+  z-index: 1112;
   justify-self: left;
   padding-bottom: 3rem;
 }
-.site-branding svg {
-  width: 160px;
-}
-
 .search_toggle {
   background-color: transparent;
   display: inline;
@@ -4435,7 +4445,6 @@ a.menu-item-link.menu-item-back-link svg path {
 
 #mobile_nav {
   visibility: hidden;
-  width: 300px;
   height: 100vh;
   padding: 0;
   position: absolute;
@@ -4501,7 +4510,8 @@ a.menu-item-link.menu-item-back-link svg path {
 header#masthead.bg_light_gray.mobile_only:has(~ main.home-page) #mobile_nav {
   visibility: visible;
   right: unset;
-  top: 10rem;
+  left: 4rem;
+  top: 16rem;
   background-color: transparent;
 }
 header#masthead.bg_light_gray.mobile_only:has(~ main.home-page) #mobile_nav .preheader_nav,
@@ -4510,7 +4520,8 @@ header#masthead.bg_light_gray.mobile_only:has(~ main.home-page) #mobile_nav .uti
 }
 @media screen and (max-width: 700px) {
   header#masthead.bg_light_gray.mobile_only:has(~ main.home-page) #mobile_nav {
-    top: 8rem;
+    top: 12rem;
+    left: 1rem;
   }
   header#masthead.bg_light_gray.mobile_only:has(~ main.home-page) #mobile_nav #primary-menu ul li {
     padding: 0 2rem 3rem;
@@ -4538,52 +4549,6 @@ header#masthead.bg_light_gray.mobile_only:has(~ main.home-page) #mobile_nav .uti
   padding-right: 1rem;
   width: max-content;
   display: inline-block;
-}
-#primary-menu .menu-item.menu-item-has-children > a::before {
-  position: absolute;
-  top: 4px;
-  right: -1px;
-  content: "";
-  display: block;
-  width: 10px;
-  height: 10px;
-  border-left: 2px solid currentColor;
-  border-bottom: 2px solid currentColor;
-  transform: rotate(-45deg) rotateX(0);
-  transition: 0.3s ease-in-out;
-  z-index: 100;
-  transition: 0.6s;
-  opacity: 1;
-}
-#primary-menu .menu-item.menu-item-has-children > a::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 0;
-  border-bottom: 4px solid currentColor;
-  transition: 0.3s ease-in-out;
-  z-index: 100;
-  transform: scaleX(0);
-  top: 100%;
-  position: absolute;
-}
-#primary-menu .menu-item.menu-item-has-children.open > a::after {
-  transform: scaleX(1);
-}
-#primary-menu > li > a::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 0;
-  border-bottom: 4px solid currentColor;
-  transition: 0.3s ease-in-out;
-  z-index: 100;
-  transform: scaleX(0);
-  top: 100%;
-  position: absolute;
-}
-#primary-menu > li > a:hover::after, #primary-menu > li > a:focus::after {
-  transform: scaleX(1);
 }
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
   #primary-menu {
@@ -4623,6 +4588,7 @@ header#masthead.bg_light_gray.mobile_only:has(~ main.home-page) #mobile_nav .uti
 
 header#masthead #mobile_nav {
   background-color: #fff;
+  z-index: 9999;
 }
 header#masthead #mobile_nav .sub-menu li a::after {
   display: none;
@@ -4687,7 +4653,7 @@ header#masthead.site-header.bg_light_gray.mobile_only .open_times {
   justify-content: flex-start;
 }
 header#masthead.site-header.bg_light_gray.mobile_only .header.bg-white.padding-x.black {
-  z-index: 9999;
+  z-index: 1111;
   margin-top: 0;
   display: flex;
   align-items: center;
