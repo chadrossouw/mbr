@@ -84,6 +84,9 @@ header#masthead {
 				transform: scaleX(0);
 				transform-origin: center;
 				transition: transform 0.3s ease;
+				@media screen and (min-width: 1700px) {
+					height: 0.3rem;
+				}
 				}
 
 				&:hover::after {
@@ -915,7 +918,10 @@ body:has(.no-featured-image) header#masthead {
 }
 
 .hamburger-inner::after {
-	top: -0.6rem;
+	top: -0.66rem;
+	@include media700{
+		top: -0.6rem;
+	}
 }
 
 .hamburger--collapse .hamburger-inner {
@@ -2063,7 +2069,7 @@ header#masthead.bg_light_gray.mobile_only:has(~ main.home-page) {
 
 header#masthead {
 	#mobile_nav {
-		background-color: $color-white;
+		background-color: #000;
 		z-index: 9999;
 
 		.sub-menu li a {
