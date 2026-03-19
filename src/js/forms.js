@@ -1,7 +1,7 @@
 const formHandler = () => {
 	const form = document.querySelector("#signupform");
 	if (!form) return;
-
+ 
 	const formResponse = document.querySelector("#form_response");
 	const submitButton = form.querySelector('input[type="submit"]');
 	form.validateForm = () => {

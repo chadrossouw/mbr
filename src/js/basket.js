@@ -17,7 +17,7 @@ const basket = () => {
     if(cart_parking) {
         cart_parking.addEventListener('submit',handleSubmit);
     }
-    if(submit){
+    if(submit){ 
         submit.setAttribute('disabled','disabled');
         const form = submit.closest('form');
         form.addEventListener('change',()=>{
@@ -25,7 +25,7 @@ const basket = () => {
         });
     }
 
-
+ 
     const crossSells = document.querySelectorAll('.crosssell--item');
     if(crossSells.length){
         crossSells.forEach(crossSell=>{
