@@ -93,6 +93,9 @@ main:not(.home-page) .page-content h1 {
   text-align: center;
   text-transform: uppercase;
 }
+main:not(.home-page) .page-content p a {
+  text-decoration: underline !important;
+}
 @media screen and (max-width: 1200px) {
   main:not(.home-page) .page-content {
     padding: 10rem 15rem 4rem;
