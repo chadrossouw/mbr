@@ -1841,9 +1841,9 @@ a.menu-item-link.menu-item-back-link svg path {
 }
 
 #mobile_nav {
-	visibility: hidden;
+	visibility: hidden; 
 	//width: 300px;
-	height: 100vh;
+	height:fit-content;
 	padding: 0;
 	position: absolute;
 	right: 4rem;
