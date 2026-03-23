@@ -4,7 +4,7 @@ if (! defined('SOUL_VERSION')) {
 	if (isset($_ENV['ENVIRONMENT']) && $_ENV['ENVIRONMENT'] == "develop") {
 		define('SOUL_VERSION', time());
 	} else {
-		define('SOUL_VERSION', "1.0.01");
+		define('SOUL_VERSION', "1.0.02");
 	}
 }
 if (! function_exists('soul_setup')) :
