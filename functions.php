@@ -4,7 +4,7 @@ if (! defined('SOUL_VERSION')) {
 	if (isset($_ENV['ENVIRONMENT']) && $_ENV['ENVIRONMENT'] == "develop") {
 		define('SOUL_VERSION', time());
 	} else {
-		define('SOUL_VERSION', "1.0.29");
+		define('SOUL_VERSION', "1.0.02");
 	}
 }
 if (! function_exists('soul_setup')) :
@@ -260,11 +260,11 @@ function custom_news_feed()
 }
 
 // Remove the default WordPress editor for About and Contact pages
-add_action('admin_init', function() {
+/* add_action('admin_init', function() {
     // IDs of the pages to remove editor from
     $pages_to_remove_editor = array( get_page_by_path('about')->ID, get_page_by_path('contact')->ID );
 
     foreach ($pages_to_remove_editor as $page_id) {
         remove_post_type_support('page', 'editor');
     }
-});
+}); */
