@@ -89,6 +89,15 @@ main:not(.home-page) .page-content {
   margin-left: auto;
   margin-right: auto;
 }
+main:not(.home-page) .page-content form p span {
+  z-index: 9999;
+}
+main:not(.home-page) .page-content form input[type=submit] {
+  transition: border 0.4s ease-in;
+}
+main:not(.home-page) .page-content form input[type=submit]:hover {
+  border: 1px solid #000;
+}
 main:not(.home-page) .page-content h1 {
   text-align: center;
   text-transform: uppercase;
