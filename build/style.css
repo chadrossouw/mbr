@@ -79,49 +79,6 @@ body {
 /**
  * Render the `main` element consistently in IE.
  */
-main {
-  display: block;
-}
-main:not(.home-page) .page-content {
-  padding: 6rem 25rem 4rem;
-  max-width: 820px;
-  box-sizing: content-box;
-  margin-left: auto;
-  margin-right: auto;
-}
-main:not(.home-page) .page-content form p span {
-  z-index: 9999;
-}
-main:not(.home-page) .page-content form input[type=submit] {
-  transition: border 0.4s ease-in;
-}
-main:not(.home-page) .page-content form input[type=submit]:hover {
-  border: 1px solid #000;
-}
-main:not(.home-page) .page-content h1 {
-  text-align: center;
-  text-transform: uppercase;
-}
-main:not(.home-page) .page-content p a {
-  text-decoration: underline !important;
-}
-@media screen and (max-width: 1200px) {
-  main:not(.home-page) .page-content {
-    padding: 10rem 15rem 4rem;
-  }
-}
-@media screen and (max-width: 1000px) {
-  main:not(.home-page) .page-content {
-    padding: 10rem 10rem 4rem;
-  }
-}
-@media screen and (max-width: 700px) {
-  main:not(.home-page) .page-content {
-    padding: 10rem 2rem 4rem;
-    box-sizing: border-box;
-  }
-}
-
 /**
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
@@ -857,7 +814,7 @@ h4 svg {
 @media screen and (min-width: 1200px) {
   :root {
     --margin: 6vw;
-    --header-height: 8.5rem;
+    --header-height: 10rem;
     --nav-padding: 6vw;
   }
 }
@@ -3062,10 +3019,11 @@ header#masthead #site-navigation a:visited {
   color: #000;
 }
 header#masthead .header {
-  padding: 4rem;
+  padding: 4rem 4rem 0;
   background-color: transparent;
   display: block;
   position: relative;
+  height: var(--header-height);
 }
 header#masthead .header .hamburger_container {
   display: none;
@@ -3753,7 +3711,6 @@ body:has(.no-featured-image) header#masthead .pre_header:after {
   width: 20vw;
   color: #fff;
   height: 16vw;
-  transform: translate(0, -2vw);
 }
 .site-branding a svg {
   min-width: 160px;
@@ -3777,6 +3734,7 @@ header#masthead:not(:has(~ .home-page)) .site-branding a.logo {
 }
 header#masthead:not(:has(~ .home-page)) .site-branding a svg {
   min-width: 160px;
+  height: auto;
 }
 
 #primary-menu .sub-menu {
@@ -3982,8 +3940,8 @@ ul#mobile-menu a {
 .site-branding {
   z-index: 1112;
   justify-self: left;
-  padding-bottom: 3rem;
 }
+
 .search_toggle {
   background-color: transparent;
   display: inline;
@@ -4005,126 +3963,6 @@ ul#mobile-menu a {
     align-items: center;
   }
 }
-/*Language Select*/
-.header {
-  position: relative;
-  width: 100%;
-  margin-top: 1rem;
-  align-items: start;
-  column-gap: 1rem;
-}
-.header .wpml-ls-legacy-dropdown-click a {
-  border: transparent;
-  color: #fff;
-  width: fit-content;
-  padding-left: 0;
-}
-.header .wpml-ls-legacy-dropdown-click {
-  width: 15.5em;
-  max-width: 45vw;
-}
-.header .wpml-ls-legacy-dropdown-click .wpml-ls-item a:not(.wpml-ls-item-toggle) {
-  padding: 1rem;
-}
-.header .wpml-ls-legacy-dropdown-click .wpml-ls-sub-menu {
-  background-color: #ffdd00;
-}
-.header .wpml-ls-legacy-dropdown-click .wpml-ls-current-language:hover > a,
-.header .wpml-ls-legacy-dropdown-click a:focus,
-.header .wpml-ls-legacy-dropdown-click a:hover {
-  background: #ffdd00;
-  color: #fff;
-  width: fit-content;
-  padding-left: 0;
-}
-.header .wpml-ls-legacy-dropdown-click a.wpml-ls-item-toggle {
-  padding-right: calc(15px + 1.4em);
-}
-@media screen and (min-width: 1000px) {
-  .header .wpml-ls-legacy-dropdown-click a.wpml-ls-item-toggle {
-    padding-right: calc(25px + 1.4em);
-  }
-}
-.header .wpml-ls-legacy-dropdown-click .wpml-ls-sub-menu a img {
-  margin-right: 5px;
-}
-.header .wpml-ls-link {
-  width: 100%;
-}
-.header .wpml-ls-item-toggle:focus,
-.header .wpml-ls-link:focus {
-  outline: 2px solid #fff;
-  outline-offset: 0.5rem;
-}
-.header .wpml-ls-item-toggle:hover,
-.header .wpml-ls-link:hover {
-  text-decoration: underline;
-}
-@media screen and (min-width: 1200px) {
-  .header .wpml-ls-legacy-dropdown-click {
-    width: fit-content;
-    max-width: 100%;
-    padding-right: 2rem;
-  }
-}
-.header .wpml-ls-legacy-dropdown-click a.wpml-ls-item-toggle::after {
-  display: block;
-  content: " ";
-  background-image: url("../assets/down-arrow.svg");
-  background-size: 1rem 1rem;
-  height: 1rem;
-  width: 1rem;
-  background-repeat: no-repeat;
-  border-top: none;
-  border: none;
-  top: calc(50% - 0.5rem);
-  right: 0;
-  transition: transform var(--transition) ease;
-}
-@media screen and (min-width: 1200px) {
-  .header .wpml-ls-legacy-dropdown-click a.wpml-ls-item-toggle::after {
-    top: 0;
-  }
-}
-.header .wpml-ls-legacy-dropdown-click a.wpml-ls-item-toggle[aria-expanded=true]::after {
-  transform: rotate(180deg);
-}
-@media screen and (min-width: 1200px) {
-  .header .wpml-ls-legacy-dropdown-click {
-    width: fit-content;
-    max-width: 100%;
-    padding-right: 2rem;
-  }
-  .header .wpml-ls-legacy-dropdown-click .wpml-ls-sub-menu {
-    background-color: #ffdd00;
-  }
-  .header .wpml-ls-legacy-dropdown-click .wpml-ls-item {
-    padding: 0.5rem;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .header .wpml-ls-legacy-dropdown-click a.wpml-ls-item-toggle {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .header {
-    align-items: center;
-    height: fit-content;
-    margin-top: 0rem;
-  }
-}
-
-/*Breadcrumbs*/
-/* .breadcrumbs {
-	display: none;
-	@include media1200 {
-		display: block;
-	}
-} */
 .breadcrumbs .crumb svg {
   height: 0.85rem;
   width: auto;
@@ -5186,6 +5024,61 @@ article h3 {
     width: 400px;
     max-width: 90vw;
   }
+}
+
+main {
+  display: block;
+}
+main:not(.home-page) .page-content {
+  padding: var(--header-height) 25rem 4rem;
+  max-width: 820px;
+  box-sizing: content-box;
+  margin-left: auto;
+  margin-right: auto;
+}
+main:not(.home-page) .page-content form p span {
+  z-index: 9999;
+}
+main:not(.home-page) .page-content form input[type=submit] {
+  transition: border 0.4s ease-in;
+}
+main:not(.home-page) .page-content form input[type=submit]:hover {
+  border: 1px solid #000;
+}
+main:not(.home-page) .page-content h1 {
+  text-align: center;
+  text-transform: uppercase;
+}
+main:not(.home-page) .page-content p a {
+  text-decoration: underline !important;
+}
+@media screen and (max-width: 1200px) {
+  main:not(.home-page) .page-content {
+    padding-left: 15rem;
+    padding-right: 15rem;
+  }
+}
+@media screen and (max-width: 1000px) {
+  main:not(.home-page) .page-content {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  main:not(.home-page) .page-content {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    box-sizing: border-box;
+  }
+}
+
+.gallery-item {
+  justify-self: center;
+  align-self: center;
+}
+
+.featured-image {
+  margin-bottom: 2rem;
 }
 
 .footer_grid--item.logo_so-me {

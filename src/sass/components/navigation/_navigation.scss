@@ -100,10 +100,11 @@ header#masthead {
 	}
 
 	.header {
-		padding: 4rem;
+		padding: 4rem 4rem 0;
 		background-color: transparent;
 		display: block;
 		position: relative;
+		height:var(--header-height);
 
 		.hamburger_container {
 			display: none;
@@ -982,8 +983,6 @@ body:has(.no-featured-image) header#masthead {
 		width: 20vw;
 		color: $color_white;
 		height: 16vw;
-		transform: translate(-0, -2vw);
-
 		svg {
 			min-width: 160px;
 			path {
@@ -1026,6 +1025,7 @@ header#masthead:not(:has(~ .home-page)) {
 
 			svg {
 				min-width: 160px;
+				height:auto;
 			}
 		}
 	}
@@ -1271,11 +1271,6 @@ ul#mobile-menu a {
 .site-branding {
 	z-index: 1112;
 	justify-self: left;
-	padding-bottom: 3rem;
-
-	svg {
-		//width: 160px;
-	}
 }
 
 .search_toggle {
@@ -1303,145 +1298,6 @@ ul#mobile-menu a {
 	}
 }
 
-/*Language Select*/
-.header {
-	position: relative;
-	width: 100%;
-
-	.wpml-ls-legacy-dropdown-click a {
-		border: transparent;
-		color: $color_white;
-		width: fit-content;
-		padding-left: 0;
-	}
-
-	.wpml-ls-legacy-dropdown-click {
-		width: 15.5em;
-		max-width: 45vw;
-	}
-
-	.wpml-ls-legacy-dropdown-click .wpml-ls-item a:not(.wpml-ls-item-toggle) {
-		padding: 1rem;
-	}
-
-	.wpml-ls-legacy-dropdown-click .wpml-ls-sub-menu {
-		background-color: $color_secondary;
-	}
-
-	.wpml-ls-legacy-dropdown-click .wpml-ls-current-language:hover>a,
-	.wpml-ls-legacy-dropdown-click a:focus,
-	.wpml-ls-legacy-dropdown-click a:hover {
-		background: $color_secondary;
-		color: $color_white;
-		width: fit-content;
-		padding-left: 0;
-	}
-
-	.wpml-ls-legacy-dropdown-click a.wpml-ls-item-toggle {
-		padding-right: calc(15px + 1.4em);
-
-		@include media1000 {
-			padding-right: calc(25px + 1.4em);
-		}
-	}
-
-	.wpml-ls-legacy-dropdown-click .wpml-ls-sub-menu a img {
-		margin-right: 5px;
-	}
-
-	.wpml-ls-link {
-		width: 100%;
-	}
-
-	.wpml-ls-item-toggle,
-	.wpml-ls-link {
-		&:focus {
-			outline: 2px solid $color_white;
-			outline-offset: 0.5rem;
-		}
-
-		&:hover {
-			text-decoration: underline;
-		}
-	}
-
-	.wpml-ls-legacy-dropdown-click {
-		@include media1200 {
-			width: fit-content;
-			max-width: 100%;
-			padding-right: 2rem;
-		}
-	}
-
-	.wpml-ls-legacy-dropdown-click a.wpml-ls-item-toggle {
-		&::after {
-			display: block;
-			content: " ";
-			background-image: url("../assets/down-arrow.svg");
-			background-size: 1rem 1rem;
-			height: 1rem;
-			width: 1rem;
-			background-repeat: no-repeat;
-			border-top: none;
-			border: none;
-			top: calc(50% - 0.5rem);
-			right: 0;
-			transition: transform var(--transition) ease;
-
-			@include media1200 {
-				top: 0;
-			}
-		}
-
-		&[aria-expanded="true"]::after {
-			transform: rotate(180deg);
-		}
-	}
-
-	.wpml-ls-legacy-dropdown-click {
-		@include media1200 {
-			width: fit-content;
-			max-width: 100%;
-			padding-right: 2rem;
-
-			.wpml-ls-sub-menu {
-				background-color: $color-secondary;
-			}
-
-			.wpml-ls-item {
-				padding: 0.5rem;
-			}
-		}
-
-		a.wpml-ls-item-toggle {
-			@include media1200 {
-				margin-top: 0;
-				margin-bottom: 0;
-				padding-top: 0;
-				padding-bottom: 0;
-			}
-		}
-	}
-
-	margin-top: 1rem;
-	align-items: start;
-	column-gap: 1rem;
-
-	@include media1200 {
-		align-items: center;
-		height: fit-content;
-		margin-top: 0rem;
-	}
-}
-
-/*Breadcrumbs*/
-
-/* .breadcrumbs {
-	display: none;
-	@include media1200 {
-		display: block;
-	}
-} */
 .breadcrumbs .crumb svg {
 	height: 0.85rem;
 	width: auto;

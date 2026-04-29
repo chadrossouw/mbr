@@ -28,49 +28,7 @@ body {
  * Render the `main` element consistently in IE.
  */
 
-main {
-	display: block;
-	&:not(.home-page){
-		.page-content{
-			padding: 6rem 25rem 4rem;
-			max-width: 820px;
-			box-sizing: content-box;
-			margin-left: auto;
-			margin-right: auto;
-			form{
-				p span{
-					z-index: 9999;
-				}
-				input[type=submit]{
-					transition: border 0.4s ease-in;
-					&:hover{
-						border: 1px solid #000;
-					}
-				}
-			}
-			h1{
-				text-align: center;
-				text-transform: uppercase;
-			}
-			p{
-				a{
-					text-decoration: underline !important;
-				}
-			}
 
-			@media screen and (max-width: 1200px) {
-				padding: 10rem 15rem 4rem;
-			}
-			@media screen and (max-width: 1000px) {
-				padding: 10rem 10rem 4rem;
-			}
-			@media screen and (max-width: 700px) {
-				padding: 10rem 2rem 4rem;
-				box-sizing: border-box;
-			}
-		}
-	}
-}
 
 /**
  * Correct the font size and margin on `h1` elements within `section` and

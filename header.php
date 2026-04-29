@@ -117,19 +117,12 @@ $id = get_the_ID();
 		</header><!-- #masthead -->
 		<header id="masthead" class="site-header bg_light_gray mobile_only">
 			<div class="pre_header bg-beige padding-x">
-				<div class="open_times">
-					<?php echo get_open_today(); ?>
-				</div>
+				
 			</div>
 			<div class="header bg-white padding-x black">
 				<div class="site-branding">
 					<a href="<?php echo get_home_url(); ?>" class="logo"><span class="screen-reader-text"><?php echo __('Home', 'soul'); ?></span><?php echo file_get_contents(get_template_directory() . '/assets/logo.svg'); ?></a>
 				</div><!-- .site-branding -->
-				<?php
-				$book_tickets = get_field('book_tickets', 'option');
-				if ($book_tickets): ?>
-					<a href="<?php echo esc_url($book_tickets['url']); ?>" class="bold" target="_blank"><?php echo esc_html($book_tickets['title']); ?></a>
-				<?php endif; ?>
 				<div class="hamburger_container">
 					<button class="hamburger hamburger--collapse" type="button" id="hamburger_mobile" aria-controls="main-navigation" aria-expanded="false">
 						<span class="hamburger-box">

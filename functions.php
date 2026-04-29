@@ -110,13 +110,9 @@ require get_template_directory() . '/inc/custom_taxonomies.php';
  * Functions for Content Blocks
  */
 require get_template_directory() . '/inc/get_blocks.php';
-require get_template_directory() . '/inc/get_listings.php';
 require get_template_directory() . '/inc/get_layouts.php';
-require get_template_directory() . '/inc/get_numbers.php';
 /**
  * Functions for Accessibility*/
-
-require get_template_directory() . '/inc/get_accessibility.php';
 
 /**
  * REST API functions
@@ -128,7 +124,6 @@ require get_template_directory() . '/inc/rest.php';
  * Date functions
  */
 
-require get_template_directory() . '/inc/get_dates.php';
 
 /**
  * Utilities
@@ -139,14 +134,13 @@ require get_template_directory() . '/inc/utilities.php';
  * Events
  */
 
-require get_template_directory() . '/inc/events.php';
 
 /**
  * Template stuff
  */
 
-require get_template_directory() . '/inc/map.php';
-require get_template_directory() . '/inc/get_carousel.php';
+
+
 require get_template_directory() . '/inc/nav.php';
 
 /**
