@@ -4737,6 +4737,11 @@ main#primary.home-page header.page-header.mobile_header {
   }
 }
 
+.mc4wp-form-fields label {
+  margin-bottom: 1rem;
+  display: block;
+}
+
 /*If content is added to a page outside of the soul blocks*/
 .type-page > ul, .type-page > ol, .type-page > p, .type-page > h2, .type-page > h3, .type-page > h4, .type-page > h5 {
   width: 680px;
