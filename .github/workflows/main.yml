@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v6
     - name: FTP-Deploy-Action
-      uses: SamKirkland/FTP-Deploy-Action@4.4.0
+      uses: SamKirkland/FTP-Deploy-Action@v4.4.0
       with:
         server: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USERNAME }}
