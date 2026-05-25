@@ -190,6 +190,42 @@ const hamburgerToggleMobile = () => {
 	
 };
 
+//Very New after redesign
+const mobileNavToggle = () => {
+
+	const button = document.querySelector("#hamburger_mobile");
+	const nav = document.querySelector("#mobile_nav");
+	const close = document.querySelector("#close-menu-btn")
+
+	if (!button || !nav) return;
+
+	button.addEventListener("click", (e) => {
+		e.stopPropagation();
+
+		nav.classList.add("show");
+	});
+
+	close.addEventListener("click", (e) => {
+		e.stopPropagation();
+
+		nav.classList.remove("show");
+	});
+
+	document.addEventListener("click", (e) => {
+
+		if (
+			!nav.contains(e.target) &&
+			!button.contains(e.target)
+		) {
+			nav.classList.remove("show");
+		}
+
+	});
+
+};
+
+//export { mobileNavToggle };
+
 // // Ensure it runs after DOM loaded
 // document.addEventListener("DOMContentLoaded", hamburgerToggle);
 
@@ -485,4 +521,4 @@ const hamburgerToggleMobile = () => {
 // 	});
 // }
 // export { hamburgerToggle, dynamicVH, navigation, navScrollWatcher, megaMenu, navNotice };
-export { hamburgerToggle, hamburgerToggleMobile };
+export { hamburgerToggle, hamburgerToggleMobile, mobileNavToggle };

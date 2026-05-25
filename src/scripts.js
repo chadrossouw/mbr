@@ -5,7 +5,8 @@ import {
 	// megaMenu,
 	// navNotice,
 	hamburgerToggle,
-	hamburgerToggleMobile
+	hamburgerToggleMobile,
+	mobileNavToggle,
 } from "./js/navigation.js";
 
 // import {
@@ -42,6 +43,7 @@ import {
 // navNotice();
 hamburgerToggle();
 hamburgerToggleMobile();
+mobileNavToggle();
 
 // os_showroom_map();
 // cardLinks();

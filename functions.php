@@ -262,3 +262,46 @@ function custom_news_feed()
         remove_post_type_support('page', 'editor');
     }
 }); */
+
+add_filter('wp_nav_menu_objects', 'soul_blank_menu_items', 10, 2);
+
+function soul_blank_menu_items($items, $args)
+{
+	foreach ($items as $item) {
+
+		$display_as_blank = get_field(
+			'display_as_blank',
+			'menu_item_' . $item->ID
+		);
+
+		if ($display_as_blank) {
+
+			// Add custom class to the <li>
+			$item->classes[] = 'menu-item-blank';
+
+			// Remove visible text
+			//$item->title = '';
+
+			// Remove link destination
+			$item->url = '';
+		}
+	}
+
+	return $items;
+}
+
+function atg_menu_classes($classes, $item, $args) {
+  if($args->theme_location == 'menu-2') {
+    $classes[] = 'menu-item-bottom';
+  }
+  return $classes;
+}
+add_filter('nav_menu_css_class', 'atg_menu_classes', 1, 3);
+
+function atop_menu_classes($classes, $item, $args) {
+  if($args->theme_location == 'menu-1') {
+    $classes[] = 'menu-item-top';
+  }
+  return $classes;
+}
+add_filter('nav_menu_css_class', 'atop_menu_classes', 1, 3);

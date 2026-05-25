@@ -56,7 +56,7 @@ $id = get_the_ID();
 	<div id="page" class="site">
 		<a class="skip-link screen-reader-text" href="#primary"><?php echo file_get_contents(get_template_directory() . '/assets/logo.svg'); ?></a>
 		<header id="masthead" class="site-header desktop_only">
-			<div class="pre_header bg_white padding-x">
+			<!--<div class="pre_header bg_white padding-x">
 				<div class="open_times">
 
 				</div>
@@ -81,28 +81,52 @@ $id = get_the_ID();
 						</li>
 					</ul>
 				</nav>
-			</div>
+			</div>-->
 			<div class="header flex space-between padding-x bg_white black">
 				<div class="site-branding">
 					<a href="<?php echo get_home_url(); ?>" class="logo"><span class="screen-reader-text"><?php echo __('Home', 'soul'); ?></span><?php echo file_get_contents(get_template_directory() . '/assets/logo.svg'); ?></a>
 				</div><!-- .site-branding -->
 				<nav id="site-navigation" class="main-navigation" aria-label="<?php echo esc_attr__('Main navigation', 'soul'); ?>">
 					<div class="main-navigation-inner">
-						<?php
-						wp_nav_menu(
-							array(
-								'theme_location' => 'menu-1',
-								'menu_id'        => 'primary-menu',
-								'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-							)
+						<ul id="primary_menu" class="navigation">
+							<?php
+							wp_nav_menu(
+								array(
+									'theme_location' => 'menu-1',
+									'menu_id'        => 'primary-menu',
+									'items_wrap' => '%3$s',
+									"container" => false
+								)
 
-						);
-						?>
+							);
+							wp_nav_menu(
+								array(
+									'theme_location' => 'menu-2',
+									'menu_id'        => 'secondary-menu',
+									/* 'walker'         => new Custom_Menu_Walker(), */
+									'items_wrap' => '%3$s',
+									"container" => false
+								)
+							);
+							?>
+						</ul>
 						<a href="/search"><span class="screen-reader-text"><?php echo __('Search'); ?></span><?php echo file_get_contents(get_template_directory() . '/assets/searchicon.svg'); ?></a>
 						<!-- <div class="nav-search-form mobile"><?php //get_search_form(); 
 																	?> -->
 					</div>
 				</nav>
+
+				<!--<nav class="preheader_nav">
+					<?php wp_nav_menu(
+						array(
+							'theme_location' => 'menu-2',
+							'menu_id'        => 'secondary-menu',
+							/* 'walker'         => new Custom_Menu_Walker(), */
+							'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+						)
+					);
+					?>
+				</nav>-->
 
 				<div class="hamburger_container">
 					<button class="hamburger hamburger--collapse" type="button" id="hamburger" aria-controls="main-navigation" aria-expanded="false">
@@ -135,33 +159,35 @@ $id = get_the_ID();
 
 			</div>
 			<div id="mobile_nav" class="mobile_nav padding">
+				<span id="close-menu-btn">×</span>
 				<nav id="site-navigation" class="main-navigation" aria-label="<?php echo esc_attr__('Main navigation', 'soul'); ?>">
 					<div class="main-navigation-inner">
-						<?php
-						wp_nav_menu(
-							array(
-								'theme_location' => 'menu-1',
-								'menu_id'        => 'primary-menu',
-								'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-							)
+						<ul id="primary_menu" class="navigation">
+							<?php
+							wp_nav_menu(
+								array(
+									'theme_location' => 'menu-1',
+									'menu_id'        => 'primary-menu',
+									'items_wrap' => '%3$s',
+									"container" => false
+								)
 
-						);
-						?>
-						<a href="/?s"><span class="screen-reader-text"><?php echo __('Search'); ?></span><?php echo file_get_contents(get_template_directory() . '/assets/searchicon.svg'); ?></a>
+							);
+							wp_nav_menu(
+								array(
+									'theme_location' => 'menu-2',
+									'menu_id'        => 'secondary-menu',
+									/* 'walker'         => new Custom_Menu_Walker(), */
+									'items_wrap' => '%3$s',
+									"container" => false
+								)
+							);
+							?>
+						</ul>
+						<a href="/search"><span class="screen-reader-text"><?php echo __('Search'); ?></span><?php echo file_get_contents(get_template_directory() . '/assets/searchicon.svg'); ?></a>
 						<!-- <div class="nav-search-form mobile"><?php //get_search_form(); 
 																	?> -->
 					</div>
-				</nav>
-				<nav class="preheader_nav">
-					<?php wp_nav_menu(
-						array(
-							'theme_location' => 'menu-2',
-							'menu_id'        => 'secondary-menu',
-							/* 'walker'         => new Custom_Menu_Walker(), */
-							'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-						)
-					);
-					?>
 				</nav>
 				<nav class="utilities">
 					<ul>

@@ -60,6 +60,40 @@ body {
 
 body {
 	background-color: $color_white;
+
+	&::before{
+		content: "";
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 33.333vw;
+		width: 2px;
+		background: #d6d1d1;
+		z-index: 9990;
+		pointer-events: none;
+	}
+	:after{
+		// content: "";
+		// position: fixed;
+		// top: var(--header-height);
+		// left: 0;
+		// right: 0;
+		// height: 2px;
+		// background: blue;
+		// z-index: 9990;
+		// pointer-events: none;
+	}
+
+	@media screen and (max-width: 700px) {
+		&::before{
+			left: 50vw;
+		}
+	}
+	@media screen and (max-width: 560px) {
+		&::before{
+			display: none;
+		}
+	}
 }
 
 .scroll_lock,
