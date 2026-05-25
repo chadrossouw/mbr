@@ -175,16 +175,17 @@ const hamburgerToggleMobile = () => {
 	button.addEventListener("click", (e) => {
 		e.stopPropagation();
 
-		if (nav.style.visibility === "visible") {
-			nav.style.visibility = "hidden";
-		} else {
-			nav.style.visibility = "visible";
-		}
+		// if (nav.style.visibility === "visible") {
+		// 	nav.style.visibility = "hidden";
+		// } else {
+		// 	nav.style.visibility = "visible";
+		// }
+		nav.classList.add("show");
 	});
 
 	document.addEventListener("click", (e) => {
 		if (!nav.contains(e.target) && !button.contains(e.target)) {
-			nav.style.visibility = "hidden";
+			// nav.style.visibility = "hidden";
 		}
 	});
 	

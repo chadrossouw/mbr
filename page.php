@@ -13,6 +13,24 @@ while (have_posts()) :
 
     <section class="page-content">
         <h1><?php the_title(); ?></h1>
+        
+        <?php if (have_rows('content_blocks')) : ?>
+
+            <?php while (have_rows('content_blocks')) : the_row(); ?>
+
+                <?php if (get_row_layout() === 'three_column_no_form') : ?>
+
+                    <?php get_template_part(
+                        'template-parts/layouts/layout',
+                        'three_column_no_form'
+                    ); ?>
+
+                <?php endif; ?>
+
+            <?php endwhile; ?>
+
+        <?php endif; ?>
+
         <?php if(has_post_thumbnail()) : ?>
             <div class="featured-image container container--sixteennine">
                 <?php the_post_thumbnail('full'); ?>

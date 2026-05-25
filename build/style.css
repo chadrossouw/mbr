@@ -849,7 +849,7 @@ body::before {
   left: 33.333vw;
   width: 2px;
   background: #d6d1d1;
-  z-index: 9990;
+  z-index: 9998;
   pointer-events: none;
 }
 @media screen and (max-width: 700px) {
@@ -3161,17 +3161,40 @@ header#masthead:not(:has(~ .home-page)) .site-branding svg path {
   fill: #000;
 }
 header#masthead:not(:has(~ .home-page)) #site-navigation {
-  display: none;
+  display: block;
 }
 header#masthead:not(:has(~ .home-page)) #site-navigation.show {
   display: block;
 }
 header#masthead:not(:has(~ .home-page)) #site-navigation .main-navigation-inner {
-  background-color: #000;
-  padding: 3rem;
+  background-color: transparent;
+  padding: 0;
+}
+@media screen and (min-width: 1200px) {
+  header#masthead:not(:has(~ .home-page)) #site-navigation .main-navigation-inner {
+    padding: 3rem;
+  }
+}
+header#masthead:not(:has(~ .home-page)) #site-navigation .main-navigation-inner #primary-menu li a {
+  color: #000 !important;
 }
 header#masthead:not(:has(~ .home-page)) .header .hamburger_container {
   display: block;
+  color: #000;
+}
+@media screen and (min-width: 1200px) {
+  header#masthead:not(:has(~ .home-page)) .header .hamburger_container {
+    display: none;
+  }
+}
+header#masthead:not(:has(~ .home-page)) .header .hamburger_container button.hamburger {
+  color: #000;
+}
+header#masthead:not(:has(~ .home-page)) .header .hamburger_container button.hamburger .hamburger-box .hamburger-inner {
+  background-color: #000;
+}
+header#masthead:not(:has(~ .home-page)) .header .hamburger_container button.hamburger .hamburger-box .hamburger-inner::before, header#masthead:not(:has(~ .home-page)) .header .hamburger_container button.hamburger .hamburger-box .hamburger-inner::after {
+  background-color: #000;
 }
 header#masthead #site-navigation a {
   color: #fff !important;
@@ -3408,10 +3431,13 @@ header#masthead .open_times {
     display: flex;
   }
   header#masthead:not(:has(~ .home-page)) .header #site-navigation {
-    position: fixed;
-    right: 4rem;
-    top: 8rem;
     min-width: unset;
+  }
+  header#masthead:not(:has(~ .home-page)) .header #site-navigation .main-navigation-inner #primary_menu li {
+    border-color: #000;
+  }
+  header#masthead:not(:has(~ .home-page)) .header #site-navigation .main-navigation-inner #primary_menu li a {
+    color: #000 !important;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -3998,11 +4024,6 @@ body:has(.no-featured-image) header#masthead .pre_header:after {
 header#masthead:not(:has(~ .home-page)) .site-branding a {
   width: 10vw;
 }
-@media screen and (max-width: 1200px) {
-  header#masthead:not(:has(~ .home-page)) .site-branding a {
-    transform: translate(-10px, -32px);
-  }
-}
 header#masthead:not(:has(~ .home-page)) .site-branding a.logo {
   color: #000;
   height: auto;
@@ -4586,20 +4607,32 @@ a.menu-item-link.menu-item-back-link svg path {
 
 #mobile_nav {
   visibility: hidden;
-  height: fit-content;
+  opacity: 0;
+  pointer-events: none;
+  width: 100%;
+  height: 100vh;
   padding: 0;
   position: absolute;
-  right: 4rem;
-  top: 7rem;
+  top: 0;
 }
 #mobile_nav.show {
   visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+#mobile_nav #close-menu-btn {
+  color: #fff;
+  position: absolute;
+  top: 0;
+  right: 5vw;
+  font-size: 4rem;
+  width: fit-content;
+  height: fit-content;
+  display: inline-block;
 }
 @media screen and (max-width: 700px) {
-  #mobile_nav {
+  #mobile_nav #close-menu-btn {
     right: 2rem;
-    top: 5rem;
-    width: unset;
   }
 }
 #mobile_nav #primary-menu {
@@ -5388,9 +5421,11 @@ article h3 {
 main {
   display: block;
 }
+main:not(.home-page) {
+  padding-top: 15rem;
+}
 main:not(.home-page) .page-content {
-  padding: var(--header-height) 25rem 4rem;
-  max-width: 820px;
+  padding: var(--header-height) 0vw 4rem;
   box-sizing: content-box;
   margin-left: auto;
   margin-right: auto;
@@ -5411,22 +5446,66 @@ main:not(.home-page) .page-content h1 {
 main:not(.home-page) .page-content p a {
   text-decoration: underline !important;
 }
-@media screen and (max-width: 1200px) {
-  main:not(.home-page) .page-content {
-    padding-left: 15rem;
-    padding-right: 15rem;
+main:not(.home-page) .page-content .three-col-no-form {
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+}
+main:not(.home-page) .page-content .three-col-no-form .three-col-grid {
+  display: block;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+main:not(.home-page) .page-content .three-col-no-form .three-col-grid a {
+  display: inline-block;
+  margin: 0 2rem;
+  width: calc(33% - 4rem);
+  height: 100%;
+  box-sizing: border-box;
+  vertical-align: top;
+}
+main:not(.home-page) .page-content .three-col-no-form .three-col-grid a .card-image img {
+  width: 100%;
+}
+main:not(.home-page) .page-content .three-col-no-form .three-col-grid a .card-text {
+  text-align: left;
+  max-width: 90%;
+  padding: clamp(0.875rem, 1.9vw, 1.75rem) 0 clamp(2.625rem, 5.7vw, 5.25rem);
+}
+main:not(.home-page) .page-content .three-col-no-form .three-col-grid a .card-text h2,
+main:not(.home-page) .page-content .three-col-no-form .three-col-grid a .card-text p {
+  font-size: clamp(0.875rem, 1.9vw, 1.75rem);
+  font-family: "Josefin Sans", sans-serif;
+  line-height: 1;
+}
+main:not(.home-page) .page-content .three-col-no-form .three-col-grid a .card-text h2 {
+  font-weight: 400;
+  color: #000;
+}
+main:not(.home-page) .page-content .three-col-no-form .three-col-grid a .card-text p {
+  font-weight: 300;
+  color: #373737;
+}
+@media screen and (max-width: 900px) {
+  main:not(.home-page) .page-content .three-col-no-form .three-col-grid a {
+    margin: 0 1rem;
+    width: calc(32.9% - 2rem);
   }
 }
-@media screen and (max-width: 1000px) {
-  main:not(.home-page) .page-content {
-    padding-left: 10rem;
-    padding-right: 10rem;
+@media screen and (max-width: 700px) {
+  main:not(.home-page) .page-content .three-col-no-form .three-col-grid a {
+    margin: 0 1rem;
+    width: calc(49.6% - 2rem);
+  }
+}
+@media screen and (max-width: 560px) {
+  main:not(.home-page) .page-content .three-col-no-form .three-col-grid a {
+    width: calc(100% - 2rem);
   }
 }
 @media screen and (max-width: 700px) {
   main:not(.home-page) .page-content {
-    padding-left: 2rem;
-    padding-right: 2rem;
     box-sizing: border-box;
   }
 }
