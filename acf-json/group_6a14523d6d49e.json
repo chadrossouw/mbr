@@ -17,12 +17,10 @@
                 "id": ""
             },
             "post_type": [
-                "product"
+                "artists"
             ],
             "post_status": "",
-            "taxonomy": [
-                "product_cat:artworks"
-            ],
+            "taxonomy": "",
             "filters": [
                 "search"
             ],
@@ -114,5 +112,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1779717402
+    "modified": 1779791079
 }

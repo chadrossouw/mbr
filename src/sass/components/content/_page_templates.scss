@@ -409,6 +409,180 @@ main {
 				}
 			}
 
+			//Exhibitions single page
+			.three-col-grid{
+				display: block;
+				width: 100%;
+				text-align: center;
+				box-sizing: border-box;
+				text-align: left;
+				&.single-exhibition-top{
+					position: relative;
+					&::after{
+						content: "";
+						position: absolute;
+						left: 0;
+						right: 0;
+						bottom: -2rem;
+						width: 100%;
+						height: 2px;
+						background-color: #d6d1d1;
+						z-index: 9998;
+						pointer-events: none;
+						@media screen and (max-width: 900px) {
+							bottom: -1rem;
+						}
+					}
+				}
+				&.single-exhibition-description{
+					margin-top: 4rem;
+					position: relative;
+					padding-bottom: 8vw;
+					&::after{
+						content: "";
+						position: absolute;
+						left: 0;
+						right: 0;
+						bottom: -2rem;
+						width: 100%;
+						height: 2px;
+						background-color: #d6d1d1;
+						z-index: 9998;
+						pointer-events: none;
+
+					}
+
+					&.long{
+						margin-top: 0;
+						&::after{
+							height: 0;
+							width: 0;
+						}
+					}
+
+					.description-content{
+						p{
+							max-width: 900px;
+						}
+					}
+					@media screen and (max-width: 900px) {
+						margin-top: 2rem;
+						&::after{
+							bottom: -1rem;
+						}
+					}
+				}
+
+				a.three-col-card{vertical-align: top;}
+				.three-col-card{
+					display: inline-block;
+					margin: 0 2rem;
+					width: calc(33% - 4rem);
+					height: 100%;
+					box-sizing: border-box;
+					
+					&.exhibition-meta{
+						padding: 0 2rem 1.2rem;
+
+						.card-text{
+							max-width: 100%;
+							padding-bottom: 0;
+
+							h2{
+								font-weight: 700;
+								font-size: clamp(1.0625rem, 2.31vw, 2.125rem);
+							}
+							p{
+								font-weight: 600;
+								font-size: clamp(1.0625rem, 2.31vw, 2.125rem);
+								text-transform: uppercase;
+								font-style: italic;
+							}
+						}
+						
+						@media screen and (max-width: 900px) {
+							padding: 0 1rem 0;
+						}
+					}
+
+					.card-image{
+						img{
+							width: 100%;
+						}
+					}
+					.card-text{
+						text-align: left;
+						max-width: 90%;
+						padding: clamp(0.875rem, 1.9vw, 1.75rem) 0 clamp(2.625rem, 5.7vw, 5.25rem);
+						h2,
+						p{
+							font-size: clamp(0.875rem, 1.9vw, 1.75rem);
+							font-family: 'Josefin Sans', sans-serif;
+							line-height: 1;
+						}
+						h2{
+							font-weight: 400;
+							color: #000;
+						}
+						p{
+							font-weight: 300;
+							color: #373737;
+						}
+					}
+					
+					@media screen and (max-width: 900px) {
+						margin: 0 1rem;
+						width: calc(32.9% - 2rem)
+					}
+					@media screen and (max-width: 700px){
+						margin: 0 1rem;
+						width: calc(49.6% - 2rem)
+					}
+					@media screen and (max-width: 560px){
+						width: calc(100% - 2rem)
+					}
+				}
+				.two-column-span{
+					display: inline-block;
+					margin: 0 2rem;
+					width: calc(66.5% - 4rem);
+					height: 100%;
+					box-sizing: border-box;
+					vertical-align: bottom;
+					aspect-ratio: 1.48;
+					&.description-content{
+						height: fit-content;
+						aspect-ratio: unset;
+					}
+
+					img{
+						width: 100%;
+						height: 100%;
+					}
+					@media screen and (max-width: 900px) {
+						margin: 0 1rem;
+						width: calc(66.4% - 2rem)
+					}
+					@media screen and (max-width: 700px){
+						margin: 0 1rem;
+						width: calc(49.6% - 2rem)
+					}
+					@media screen and (max-width: 560px){
+						width: calc(100% - 2rem)
+					}
+				}
+			}
+
+			.related-artworks{
+				margin-top: 4rem;
+				position: relative;
+				@media screen and (max-width: 900px) {
+					margin-top: 2rem;
+				}
+			}
+
+
+
 			@media screen and (max-width: 1200px) {
 				// padding-left: 15rem;
 				// padding-right: 15rem;

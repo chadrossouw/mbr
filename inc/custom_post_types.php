@@ -64,8 +64,8 @@ function soul_init()
 		'public'             => true,
 		'show_ui'            => true,
 		'show_in_rest'       => true,
-		'has_archive'        => true,
-		'rewrite'            => array('slug' => 'exhibitions'),
+		'has_archive'        => false,
+		'rewrite'            => array('slug' => 'exhibitions', 'with_front' => false),
 		'menu_icon'          => 'dashicons-art',
 		'supports'           => array('title', 'thumbnail', 'editor'),
 	);
