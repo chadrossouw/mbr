@@ -42,6 +42,76 @@ function soul_init()
 	// register_post_type('event', $args_event); 
 
 
+	// Exhibitions
+	$labels_exhibitions = array(
+		'name'               => __( 'Exhibitions', 'soul' ),
+		'singular_name'      => __( 'Exhibition', 'soul' ),
+		'menu_name'          => __( 'Exhibitions', 'soul' ),
+		'name_admin_bar'     => __( 'Exhibitions', 'soul' ),
+		'add_new'            => __( 'Add New', 'soul' ),
+		'add_new_item'       => __( 'Add New Exhibition', 'soul' ),
+		'new_item'           => __( 'New Exhibition', 'soul' ),
+		'edit_item'          => __( 'Edit Exhibition', 'soul' ),
+		'view_item'          => __( 'View Exhibition', 'soul' ),
+		'all_items'          => __( 'All Exhibitions', 'soul' ),
+		'search_items'       => __( 'Search Exhibitions', 'soul' ),
+		'not_found'          => __( 'No Exhibitions found.', 'soul' ),
+		'not_found_in_trash' => __( 'No Exhibitions found in Trash.', 'soul' )
+	);
+
+	$args_exhibitions = array(
+		'labels'             => $labels_exhibitions,
+		'public'             => true,
+		'show_ui'            => true,
+		'show_in_rest'       => true,
+		'has_archive'        => true,
+		'rewrite'            => array('slug' => 'exhibitions'),
+		'menu_icon'          => 'dashicons-art',
+		'supports'           => array('title', 'thumbnail', 'editor'),
+	);
+
+	register_post_type('exhibitions', $args_exhibitions);
+
+	//Artists
+		$labels_artists = array(
+		'name'               => __( 'Artists', 'soul' ),
+		'singular_name'      => __( 'Artist', 'soul' ),
+		'menu_name'          => __( 'Artists', 'soul' ),
+		'add_new_item'       => __( 'Add New Artist', 'soul' ),
+	);
+
+	$args_artists = array(
+		'labels'        => $labels_artists,
+		'public'        => true,
+		'show_ui'       => true,
+		'show_in_rest'  => true,
+		'has_archive'   => false,
+		'rewrite'       => array('slug' => 'artists'),
+		'menu_icon'    => 'dashicons-admin-users',
+		'supports'      => array('title', 'thumbnail', 'editor'),
+	);
+
+	register_post_type('artists', $args_artists);
+
+	// Artworks
+	// $labels_artworks = array(
+	// 	'name'          => __( 'Artworks', 'soul' ),
+	// 	'singular_name' => __( 'Artwork', 'soul' ),
+	// 	'menu_name'     => __( 'Artworks', 'soul' ),
+	// );
+
+	// $args_artworks = array(
+	// 	'labels'        => $labels_artworks,
+	// 	'public'        => true,
+	// 	'show_ui'       => true,
+	// 	'show_in_rest'  => true,
+	// 	'has_archive'   => false,
+	// 	'rewrite'       => array('slug' => 'artworks'),
+	// 	'menu_icon'     => 'dashicons-format-image',
+	// 	'supports'      => array('title', 'thumbnail', 'editor'),
+	// );
+
+	// register_post_type('artworks', $args_artworks);
 
 }
 add_action('init', 'soul_init');

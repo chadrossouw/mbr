@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 /**
  * Layout: Three Column No Form
  */
@@ -55,4 +55,4 @@
 
     <?php endif; ?>
 
-</section>
+</section> -->

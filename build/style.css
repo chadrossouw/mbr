@@ -846,7 +846,7 @@ body::before {
   position: fixed;
   top: 0;
   bottom: 0;
-  left: 33.333vw;
+  left: 33.1vw;
   width: 2px;
   background: #d6d1d1;
   z-index: 9998;
@@ -5425,10 +5425,15 @@ main:not(.home-page) {
   padding-top: 15rem;
 }
 main:not(.home-page) .page-content {
-  padding: var(--header-height) 0vw 4rem;
+  padding: 0;
   box-sizing: content-box;
   margin-left: auto;
   margin-right: auto;
+}
+@media screen and (min-width: 1200px) {
+  main:not(.home-page) .page-content {
+    padding: 5rem 0vw 4rem;
+  }
 }
 main:not(.home-page) .page-content form p span {
   z-index: 9999;
@@ -5456,6 +5461,7 @@ main:not(.home-page) .page-content .three-col-no-form .three-col-grid {
   width: 100%;
   text-align: center;
   box-sizing: border-box;
+  text-align: left;
 }
 main:not(.home-page) .page-content .three-col-no-form .three-col-grid a {
   display: inline-block;

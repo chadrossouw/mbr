@@ -1,6 +1,6 @@
 {
     "key": "group_6a140ba5de9b1",
-    "title": "Exhibitions",
+    "title": "Flexible Content Blocks",
     "fields": [
         {
             "key": "field_6a140ba652ebe",
@@ -139,5 +139,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1779702714
+    "modified": 1779715019
 }
