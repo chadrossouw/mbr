@@ -5635,11 +5635,22 @@ main:not(.home-page) .page-content .three-col-grid .three-col-card.exhibition-me
 main:not(.home-page) .page-content .three-col-grid .three-col-card.exhibition-meta.artwork-meta .card-text .artwork-inquire a {
   font-size: clamp(0.8125rem, 1.77vw, 1.625rem);
   font-weight: 200;
+  color: #000;
   border: 1px solid #9b9b9b;
   width: 100%;
   display: inline-block;
   padding: 1rem 0;
   text-align: center;
+  text-transform: uppercase;
+  transition: border 0.4s ease-in;
+}
+main:not(.home-page) .page-content .three-col-grid .three-col-card.exhibition-meta.artwork-meta .card-text .artwork-inquire a:visited {
+  background-color: #9b9b9b;
+  color: #000;
+}
+main:not(.home-page) .page-content .three-col-grid .three-col-card.exhibition-meta.artwork-meta .card-text .artwork-inquire a:hover {
+  background-color: #000;
+  color: #fff;
 }
 main:not(.home-page) .page-content .three-col-grid .three-col-card .card-image img {
   width: 100%;
@@ -5738,6 +5749,27 @@ main.enquiry-form-page article section.enquiry-page-content section.enquiry-top.
 main.enquiry-form-page article section.enquiry-page-content section.enquiry-top.with-1-col-2-col div.three-col-card, main.enquiry-form-page article section.enquiry-page-content section.enquiry-top.with-1-col-2-col div.two-column-span {
   height: fit-content;
   vertical-align: bottom;
+}
+main.enquiry-form-page article section.enquiry-page-content section.enquiry-top.with-1-col-2-col div.two-column-span form input[type=submit] {
+  font-size: clamp(0.8125rem, 1.77vw, 1.625rem);
+  font-weight: 200;
+  color: #000;
+  border: 1px solid #9b9b9b;
+  background-color: #fff;
+  width: 100%;
+  display: inline-block;
+  padding: 1rem 0;
+  text-align: center;
+  text-transform: uppercase;
+  transition: border 0.4s ease-in;
+}
+main.enquiry-form-page article section.enquiry-page-content section.enquiry-top.with-1-col-2-col div.two-column-span form input[type=submit]:visited {
+  background-color: #9b9b9b;
+  color: #000;
+}
+main.enquiry-form-page article section.enquiry-page-content section.enquiry-top.with-1-col-2-col div.two-column-span form input[type=submit]:hover {
+  background-color: #000;
+  color: #fff;
 }
 @media screen and (max-width: 700px) {
   main.enquiry-form-page article section.enquiry-page-content section.enquiry-top.with-1-col-2-col div.two-column-span {

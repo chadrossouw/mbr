@@ -67,14 +67,14 @@ if ( count( $artist_names ) > 1 ) {
 	$artist_output = strtoupper( $artist_names[0] ?? '' );
 }
 
-$subject = 'Enquiry on ' . get_the_title($product_id);
-
-if ($artist_output) {
-	$subject .= ' by ' . $artist_output;
-}
+$artwork_slug = sanitize_title(get_the_title($product_id));
+$artist_slug  = sanitize_title($artist_output);
 
 $enquiry_url = add_query_arg(
-	['subject' => $subject],
+	[
+		'artwork' => $artwork_slug,
+		'artist'  => $artist_slug,
+	],
 	get_permalink(get_page_by_path('enquire-product'))
 );
 ?>

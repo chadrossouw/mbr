@@ -308,3 +308,42 @@ function atop_menu_classes($classes, $item, $args) {
   return $classes;
 }
 add_filter('nav_menu_css_class', 'atop_menu_classes', 1, 3);
+
+// Prepopulate enquiry subject field
+add_filter('wpcf7_form_tag', function ($tag) {
+
+	if ($tag['name'] !== 'your-subject') {
+		return $tag;
+	}
+
+	$artwork = !empty($_GET['artwork'])
+		? sanitize_text_field(wp_unslash($_GET['artwork']))
+		: '';
+
+	$artist = !empty($_GET['artist'])
+		? sanitize_text_field(wp_unslash($_GET['artist']))
+		: '';
+
+	if ($artwork) {
+
+		$formatted_artwork = ucwords(
+			str_replace('-', ' ', $artwork)
+		);
+
+		$subject = 'Enquiry on ' . $formatted_artwork;
+
+		if ($artist) {
+
+			$formatted_artist = strtoupper(
+				str_replace('-', ' ', $artist)
+			);
+
+			$subject .= ' by ' . $formatted_artist;
+		}
+
+		$tag['values'] = [$subject];
+	}
+
+	return $tag;
+
+});
