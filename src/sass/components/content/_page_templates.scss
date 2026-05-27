@@ -673,27 +673,38 @@ main {
 						}
 
 						&.two-column-span{
-							form{
-								input[type=submit]{
-									font-size: clamp(0.8125rem, 1.77vw, 1.625rem);
-									font-weight: 200;
-									color: #000;
-									border: 1px solid #9b9b9b;
-									background-color: #fff;
-									width: 100%;
-									display: inline-block;
-									padding: 1rem 0;
+							.card-text{
+								.form-text{
 									text-align: center;
-									text-transform: uppercase;
-									transition: border 0.4s ease-in;
+								}
+							}
+							#inquire-form{
 
-									&:visited{
-										background-color: #9b9b9b;
+								form{
+									max-width: 680px;
+									margin: 0 auto;
+
+									input[type=submit]{
+										font-size: clamp(0.8125rem, 1.77vw, 1.625rem);
+										font-weight: 200;
 										color: #000;
-									}
-									&:hover{
-										background-color: #000;
-										color: #fff;
+										border: 1px solid #9b9b9b;
+										background-color: #fff;
+										width: 100%;
+										display: inline-block;
+										padding: 1rem 0;
+										text-align: center;
+										text-transform: uppercase;
+										transition: border 0.4s ease-in;
+
+										&:visited{
+											background-color: #9b9b9b;
+											color: #000;
+										}
+										&:hover{
+											background-color: #000;
+											color: #fff;
+										}
 									}
 								}
 							}

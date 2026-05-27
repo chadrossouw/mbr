@@ -5750,7 +5750,14 @@ main.enquiry-form-page article section.enquiry-page-content section.enquiry-top.
   height: fit-content;
   vertical-align: bottom;
 }
-main.enquiry-form-page article section.enquiry-page-content section.enquiry-top.with-1-col-2-col div.two-column-span form input[type=submit] {
+main.enquiry-form-page article section.enquiry-page-content section.enquiry-top.with-1-col-2-col div.two-column-span .card-text .form-text {
+  text-align: center;
+}
+main.enquiry-form-page article section.enquiry-page-content section.enquiry-top.with-1-col-2-col div.two-column-span #inquire-form form {
+  max-width: 680px;
+  margin: 0 auto;
+}
+main.enquiry-form-page article section.enquiry-page-content section.enquiry-top.with-1-col-2-col div.two-column-span #inquire-form form input[type=submit] {
   font-size: clamp(0.8125rem, 1.77vw, 1.625rem);
   font-weight: 200;
   color: #000;
@@ -5763,11 +5770,11 @@ main.enquiry-form-page article section.enquiry-page-content section.enquiry-top.
   text-transform: uppercase;
   transition: border 0.4s ease-in;
 }
-main.enquiry-form-page article section.enquiry-page-content section.enquiry-top.with-1-col-2-col div.two-column-span form input[type=submit]:visited {
+main.enquiry-form-page article section.enquiry-page-content section.enquiry-top.with-1-col-2-col div.two-column-span #inquire-form form input[type=submit]:visited {
   background-color: #9b9b9b;
   color: #000;
 }
-main.enquiry-form-page article section.enquiry-page-content section.enquiry-top.with-1-col-2-col div.two-column-span form input[type=submit]:hover {
+main.enquiry-form-page article section.enquiry-page-content section.enquiry-top.with-1-col-2-col div.two-column-span #inquire-form form input[type=submit]:hover {
   background-color: #000;
   color: #fff;
 }
