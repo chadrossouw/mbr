@@ -433,6 +433,12 @@ main {
 							bottom: -1rem;
 						}
 					}
+					&.with-1-col-2-col{
+						@media screen and (max-width: 560px) {
+							display: flex;
+							flex-direction: column-reverse;
+						}
+					}
 				}
 				&.single-exhibition-description{
 					margin-top: 4rem;
@@ -502,6 +508,45 @@ main {
 						
 						@media screen and (max-width: 900px) {
 							padding: 0 1rem 0;
+						}
+
+						&.artwork-meta{
+							.card-text{
+								max-width: 320px;
+								h2{
+									font-size: clamp(0.9375rem, 2.04vw, 1.875rem);
+									font-weight: 400;
+								}
+								p{
+									&.card-title{
+										font-size: clamp(0.9375rem, 2.04vw, 1.875rem);
+										font-weight: 300;
+										margin-bottom: 0.5rem;
+									}
+									&.artwork-meta-item{
+										font-size: clamp(0.6875rem, 1.5vw, 1.375rem);
+										font-weight: 200;
+										text-transform: none;
+										font-style: normal;
+										padding-bottom: 0.5rem;
+
+										&.artwork-dimensions{
+											margin-bottom: 0;
+										}
+									}
+								}
+								.artwork-inquire{
+									a{
+										font-size: clamp(0.8125rem, 1.77vw, 1.625rem);
+										font-weight: 200;
+										border: 1px solid #9b9b9b;
+										width: 100%;
+										display: inline-block;
+										padding: 1rem 0;
+										text-align: center;
+									}
+								}
+							}
 						}
 					}
 
@@ -597,6 +642,49 @@ main {
 				box-sizing: border-box;
 			}
 		}
+	}
+	
+	&.enquiry-form-page{
+		article{
+			section.enquiry-page-content{
+				min-height: calc(100vh - 15rem);
+
+				section.enquiry-top.with-1-col-2-col{
+					height: 100%;
+					min-height: 100%;
+
+					div{
+						&.three-col-card,
+						&.two-column-span{
+							height: fit-content;
+							vertical-align: bottom;
+						}
+
+						&.two-column-span{
+							@media screen and (max-width: 700px) {
+								width: calc(100% - 2rem);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@media screen and (max-width: 700px) {
+		&::before{
+			width: 0;
+		}
+	}
+}
+
+body{
+	&:has(.enquiry-form-page){
+		@media screen and (max-width: 700px) {
+		&::before{
+			width: 0;
+		}
+	}
 	}
 }
 

@@ -40,7 +40,7 @@ get_header();
         <section class="page-content">
 
             <!-- TOP SECTION -->
-            <section class="single-exhibition-top three-col-grid">
+            <section class="single-exhibition-top three-col-grid with-1-col-2-col">
 
                 <div class="exhibition-meta three-col-card">
 

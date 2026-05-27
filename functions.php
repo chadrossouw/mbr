@@ -120,6 +120,9 @@ require get_template_directory() . '/inc/get_layouts.php';
 
 require get_template_directory() . '/inc/rest.php';
 
+//Woo
+require get_template_directory() . '/inc/woocommerce.php';
+
 /**
  * Date functions
  */
