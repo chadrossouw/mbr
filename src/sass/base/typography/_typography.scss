@@ -84,12 +84,12 @@ p+h4{
 
 h1,
 .h1 {
-	font-size: 1.8rem;
+	font-size: clamp(2.09375rem, 4.75vw, 4.1875rem);
 	@include media700 {
-		font-size: 2rem;
+		//font-size: 2rem;
 	}
 	@include media1000 {
-		font-size: 2.2rem;
+		//font-size: 2.2rem;
 	}
 	//letter-spacing: 0.12em;
 }

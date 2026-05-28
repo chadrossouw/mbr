@@ -512,21 +512,8 @@ p + h4 {
 
 h1,
 .h1 {
-  font-size: 1.8rem;
+  font-size: clamp(2.09375rem, 4.75vw, 4.1875rem);
 }
-@media screen and (min-width: 700px) {
-  h1,
-  .h1 {
-    font-size: 2rem;
-  }
-}
-@media screen and (min-width: 1000px) {
-  h1,
-  .h1 {
-    font-size: 2.2rem;
-  }
-}
-
 h2,
 .h2 {
   font-size: 1.4rem;
@@ -5638,11 +5625,12 @@ main:not(.home-page) .page-content .three-col-grid .three-col-card.exhibition-me
   color: #000;
   border: 1px solid #9b9b9b;
   width: 100%;
+  max-width: 320px;
   display: inline-block;
   padding: 1rem 0;
   text-align: center;
   text-transform: uppercase;
-  transition: border 0.4s ease-in;
+  transition: all 0.4s ease-in;
 }
 main:not(.home-page) .page-content .three-col-grid .three-col-card.exhibition-meta.artwork-meta .card-text .artwork-inquire a:visited {
   background-color: #9b9b9b;
@@ -5783,6 +5771,237 @@ main.enquiry-form-page article section.enquiry-page-content section.enquiry-top.
     width: calc(100% - 2rem);
   }
 }
+main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.three-col-card div.artbook-item {
+  padding-bottom: 3rem;
+}
+main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.three-col-card div.artbook-item a {
+  display: inline-block;
+  font-family: "Josefin Sans", sans-serif;
+}
+main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.three-col-card div.artbook-item a.artwork-main-link {
+  width: 100%;
+}
+main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.three-col-card div.artbook-item a.artwork-main-link img {
+  width: 100%;
+  aspect-ratio: 1;
+}
+main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.three-col-card div.artbook-item a.artwork-main-link .art-main-link-text {
+  padding: 0 2vw;
+}
+main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.three-col-card div.artbook-item a.artwork-main-link .art-main-link-text h2 {
+  font-size: clamp(1rem, 1.15vw, 1.0625rem);
+  font-weight: 600;
+  padding-top: clamp(0.5rem, 1.15vw, 1.0625rem);
+  font-family: "Josefin Sans", sans-serif;
+  margin: 0 0 0.3rem;
+}
+main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.three-col-card div.artbook-item a.artwork-main-link .art-main-link-text p {
+  font-size: clamp(0.8rem, 1.02vw, 0.9375rem);
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.three-col-card div.artbook-item a.artwork-enquire-link {
+  border: 1px solid #9b9b9b;
+  padding: 9px 48px;
+  font-size: 12px;
+  color: #000;
+  text-transform: uppercase;
+  margin: 0 2vw;
+  transition: all 0.4s ease-in;
+}
+main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.three-col-card div.artbook-item a.artwork-enquire-link :visited {
+  background-color: #9b9b9b;
+  color: #000;
+}
+main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.three-col-card div.artbook-item a.artwork-enquire-link:hover {
+  background-color: #000;
+  color: #fff;
+}
+main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.three-col-card div.see-more {
+  text-align: right;
+}
+main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.three-col-card div.see-more a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 1rem 0;
+  width: 100%;
+  max-width: 400px;
+  font-size: clamp(0.8125rem, 1.77vw, 1.625rem);
+  font-weight: 200;
+  color: #000;
+  border: 1px solid #9b9b9b;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.4s ease-in;
+}
+main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.three-col-card div.see-more a:visited {
+  background-color: #9b9b9b;
+  color: #000;
+}
+main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.three-col-card div.see-more a:hover {
+  background-color: #000;
+  color: #fff;
+}
+main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.two-column-span {
+  vertical-align: top;
+  height: fit-content;
+  margin: 0 auto;
+  width: 66.5vw;
+}
+@media screen and (min-width: 700px) {
+  main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.two-column-span h1 {
+    text-align: left;
+    padding-left: 8.5vw;
+  }
+}
+main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.two-column-span h2 {
+  font-size: clamp(1rem, 1.15vw, 1.0625rem);
+  font-weight: 600;
+  padding-top: clamp(0.5rem, 1.15vw, 1.0625rem);
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  margin: 0 0 0.3rem;
+}
+main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.two-column-span p {
+  font-size: clamp(0.8rem, 1.02vw, 0.9375rem);
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  font-style: italic;
+  margin-bottom: 0.7rem;
+}
+main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.two-column-span .three-col-grid {
+  width: 100%;
+  display: inline-block;
+  margin: 0 0;
+}
+main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.two-column-span .three-col-grid div.book-card-wrapper {
+  width: calc(49.58% - 4rem);
+  display: inline-block;
+  margin: 0 2rem;
+  vertical-align: top;
+}
+main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.two-column-span .three-col-grid div.book-card-wrapper .three-col-card.book-card {
+  width: 100%;
+  padding-bottom: 1.2rem;
+  margin: 0;
+}
+main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.two-column-span .three-col-grid div.book-card-wrapper .three-col-card.book-card .card-image {
+  display: inline-block;
+  width: 100%;
+  aspect-ratio: 1.5;
+}
+main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.two-column-span .three-col-grid div.book-card-wrapper .three-col-card.book-card .card-image img {
+  width: 100%;
+  height: 100%;
+}
+main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.two-column-span .three-col-grid div.book-card-wrapper .three-col-card.book-card .book-link-text {
+  padding: 0 2vw;
+}
+main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.two-column-span .three-col-grid div.book-card-wrapper .three-col-card.book-card .book-link-text .book-price span.amount {
+  border: 1px solid #9b9b9b;
+  padding: 9px 8px;
+  font-size: 12px;
+  color: #000;
+  text-transform: uppercase;
+}
+main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.two-column-span .three-col-grid div.book-card-wrapper .but-book-add-to-cart {
+  padding: 0 2vw 3rem;
+}
+main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.two-column-span .three-col-grid div.book-card-wrapper .but-book-add-to-cart form button,
+main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.two-column-span .three-col-grid div.book-card-wrapper .but-book-add-to-cart .but-book-enquire a {
+  border: 1px solid #9b9b9b;
+  padding: 9px 48px;
+  font-size: 12px;
+  color: #000;
+  text-transform: uppercase;
+  transition: all 0.4s ease-in;
+  display: inline-block;
+}
+main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.two-column-span .three-col-grid div.book-card-wrapper .but-book-add-to-cart form button :visited,
+main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.two-column-span .three-col-grid div.book-card-wrapper .but-book-add-to-cart .but-book-enquire a :visited {
+  background-color: #9b9b9b;
+  color: #000;
+}
+main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.two-column-span .three-col-grid div.book-card-wrapper .but-book-add-to-cart form button:hover,
+main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.two-column-span .three-col-grid div.book-card-wrapper .but-book-add-to-cart .but-book-enquire a:hover {
+  background-color: #000;
+  color: #fff;
+}
+@media screen and (max-width: 900px) {
+  main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.two-column-span .three-col-grid div.book-card-wrapper {
+    margin: 0 1rem;
+    width: calc(49.52% - 2rem);
+  }
+}
+@media screen and (max-width: 700px) {
+  main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.two-column-span .three-col-grid div.book-card-wrapper {
+    width: calc(100% - 2rem);
+  }
+}
+main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.two-column-span div.see-more {
+  text-align: right;
+  margin-right: 2rem;
+  margin-left: 2rem;
+  margin-bottom: 4rem;
+}
+main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.two-column-span div.see-more a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 1rem 0;
+  width: 100%;
+  max-width: 400px;
+  font-size: clamp(0.8125rem, 1.77vw, 1.625rem);
+  font-weight: 200;
+  color: #000;
+  border: 1px solid #9b9b9b;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.4s ease-in;
+}
+main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.two-column-span div.see-more a:visited {
+  background-color: #9b9b9b;
+  color: #000;
+}
+main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.two-column-span div.see-more a:hover {
+  background-color: #000;
+  color: #fff;
+}
+@media screen and (max-width: 700px) {
+  main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.two-column-span div.see-more {
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+}
+@media screen and (max-width: 560px) {
+  main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.two-column-span div.see-more {
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.two-column-span {
+    width: 66.4vw;
+  }
+  main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.two-column-span .three-col-grid .three-col-card.book-card {
+    width: calc(49.4% - 2rem);
+  }
+}
+@media screen and (max-width: 700px) {
+  main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.two-column-span {
+    width: 49.6vw;
+  }
+  main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.two-column-span .three-col-grid .three-col-card.book-card {
+    width: calc(100% - 2rem);
+  }
+}
+@media screen and (max-width: 560px) {
+  main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.two-column-span {
+    width: 100vw;
+    margin-top: 5rem;
+  }
+}
 @media screen and (max-width: 700px) {
   main::before {
     width: 0;
@@ -5802,6 +6021,121 @@ main.enquiry-form-page article section.enquiry-page-content section.enquiry-top.
 
 .featured-image {
   margin-bottom: 2rem;
+}
+
+.single-product .product.instock section.page-content.but-book-product-content section.but-single-book-top .three-col-card .card-text, .single-product .product.outofstock section.page-content.but-book-product-content section.but-single-book-top .three-col-card .card-text {
+  max-width: 100%;
+}
+.single-product .product.instock section.page-content.but-book-product-content section.but-single-book-top .three-col-card .card-text p.but-book-price, .single-product .product.outofstock section.page-content.but-book-product-content section.but-single-book-top .three-col-card .card-text p.but-book-price {
+  font-size: clamp(0.9375rem, 2.04vw, 1.875rem);
+  margin-top: 1rem;
+}
+.single-product .product.instock section.page-content.but-book-product-content section.but-single-book-top .three-col-card .card-text p.but-book-price span bdi span.woocommerce-Price-currencySymbol, .single-product .product.outofstock section.page-content.but-book-product-content section.but-single-book-top .three-col-card .card-text p.but-book-price span bdi span.woocommerce-Price-currencySymbol {
+  padding-right: 0.7vw;
+}
+.single-product .product.instock section.page-content.but-book-product-content section.but-single-book-top .three-col-card .card-text h2,
+.single-product .product.instock section.page-content.but-book-product-content section.but-single-book-top .three-col-card .card-text p, .single-product .product.outofstock section.page-content.but-book-product-content section.but-single-book-top .three-col-card .card-text h2,
+.single-product .product.outofstock section.page-content.but-book-product-content section.but-single-book-top .three-col-card .card-text p {
+  margin-bottom: 1.2rem;
+}
+.single-product .product.instock section.page-content.but-book-product-content section.but-single-book-top .three-col-card .card-text .but-book-add-to-cart form, .single-product .product.outofstock section.page-content.but-book-product-content section.but-single-book-top .three-col-card .card-text .but-book-add-to-cart form {
+  margin-bottom: 1.5rem;
+  max-width: 320px;
+}
+.single-product .product.instock section.page-content.but-book-product-content section.but-single-book-top .three-col-card .card-text .but-book-add-to-cart form button, .single-product .product.outofstock section.page-content.but-book-product-content section.but-single-book-top .three-col-card .card-text .but-book-add-to-cart form button {
+  font-size: clamp(0.8125rem, 1.77vw, 1.625rem);
+  font-weight: 200;
+  color: #000;
+  border: 1px solid #9b9b9b;
+  width: 100%;
+  display: inline-block;
+  padding: 1rem 0;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.4s ease-in;
+}
+.single-product .product.instock section.page-content.but-book-product-content section.but-single-book-top .three-col-card .card-text .but-book-add-to-cart form button:visited, .single-product .product.outofstock section.page-content.but-book-product-content section.but-single-book-top .three-col-card .card-text .but-book-add-to-cart form button:visited {
+  background-color: #9b9b9b;
+  color: #000;
+}
+.single-product .product.instock section.page-content.but-book-product-content section.but-single-book-top .three-col-card .card-text .but-book-add-to-cart form button:hover, .single-product .product.outofstock section.page-content.but-book-product-content section.but-single-book-top .three-col-card .card-text .but-book-add-to-cart form button:hover {
+  background-color: #000;
+  color: #fff;
+}
+.single-product .product.instock section.page-content.but-book-product-content section.but-single-book-top .three-col-card .card-text .but-book-add-to-cart .but-book-enquire, .single-product .product.outofstock section.page-content.but-book-product-content section.but-single-book-top .three-col-card .card-text .but-book-add-to-cart .but-book-enquire {
+  margin-bottom: clamp(1rem, 2.17vw, 2rem);
+}
+.single-product .product.instock section.page-content.but-book-product-content section.but-single-book-description, .single-product .product.outofstock section.page-content.but-book-product-content section.but-single-book-description {
+  padding-top: clamp(2rem, 4vw, 3.5rem);
+  padding-bottom: clamp(1.8rem, 3.6vw, 3rem);
+  margin-bottom: 2rem;
+}
+.single-product .product.instock section.page-content.but-book-product-content section.but-single-book-description .three-col-card .card-text, .single-product .product.outofstock section.page-content.but-book-product-content section.but-single-book-description .three-col-card .card-text {
+  padding: 0;
+  margin: 0;
+  min-width: 100%;
+}
+.single-product .product.instock section.page-content.but-book-product-content section.but-single-book-description .three-col-card .card-text h2, .single-product .product.outofstock section.page-content.but-book-product-content section.but-single-book-description .three-col-card .card-text h2 {
+  font-size: clamp(0.9375rem, 2.04vw, 1.875rem);
+  text-transform: uppercase;
+  margin-bottom: clamp(1rem, 2.17vw, 2rem);
+}
+.single-product .product.instock section.page-content.but-book-product-content section.but-single-book-description .three-col-card .card-text p, .single-product .product.outofstock section.page-content.but-book-product-content section.but-single-book-description .three-col-card .card-text p {
+  font-size: clamp(0.9rem, 1.63vw, 1.5rem);
+  margin-bottom: 0;
+  line-height: 130%;
+}
+.single-product .product.instock section.page-content.but-book-product-content section.but-single-book-description .author-book-description, .single-product .product.outofstock section.page-content.but-book-product-content section.but-single-book-description .author-book-description {
+  vertical-align: top;
+  margin-top: -0.15vw;
+  padding-left: clamp(2rem, 4vw, 3.5rem);
+  padding-right: clamp(2rem, 4vw, 3.5rem);
+}
+.single-product .product.instock section.page-content.but-book-product-content section.but-single-book-description .author-book-description h2, .single-product .product.outofstock section.page-content.but-book-product-content section.but-single-book-description .author-book-description h2 {
+  font-size: clamp(0.9375rem, 2.04vw, 1.875rem);
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: clamp(1rem, 2.17vw, 2rem);
+}
+.single-product .product.instock section.page-content.but-book-product-content section.but-single-book-description .author-book-description p, .single-product .product.outofstock section.page-content.but-book-product-content section.but-single-book-description .author-book-description p {
+  font-size: clamp(0.9rem, 1.63vw, 1.5rem);
+  line-height: 130%;
+  margin-bottom: clamp(1rem, 2.17vw, 2rem);
+}
+.single-product .product.instock section.page-content.but-book-product-content section.but-single-book-description .author-book-description div.book-read-more a, .single-product .product.outofstock section.page-content.but-book-product-content section.but-single-book-description .author-book-description div.book-read-more a {
+  font-size: clamp(0.8125rem, 1.77vw, 1.625rem);
+  font-weight: 200;
+  color: #000;
+  border: 1px solid #9b9b9b;
+  width: 100%;
+  max-width: 320px;
+  display: inline-block;
+  padding: 1rem 0;
+  margin-top: clamp(1.5rem, 2vw, 2rem);
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.4s ease-in;
+}
+.single-product .product.instock section.page-content.but-book-product-content section.but-single-book-description .author-book-description div.book-read-more a:visited, .single-product .product.outofstock section.page-content.but-book-product-content section.but-single-book-description .author-book-description div.book-read-more a:visited {
+  background-color: #9b9b9b;
+  color: #000;
+}
+.single-product .product.instock section.page-content.but-book-product-content section.but-single-book-description .author-book-description div.book-read-more a:hover, .single-product .product.outofstock section.page-content.but-book-product-content section.but-single-book-description .author-book-description div.book-read-more a:hover {
+  background-color: #000;
+  color: #fff;
+}
+@media screen and (max-width: 700px) {
+  .single-product .product.instock section.page-content.but-book-product-content section.but-single-book-description .author-book-description, .single-product .product.outofstock section.page-content.but-book-product-content section.but-single-book-description .author-book-description {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+@media screen and (max-width: 560px) {
+  .single-product .product.instock section.page-content.but-book-product-content section.but-single-book-description .author-book-description, .single-product .product.outofstock section.page-content.but-book-product-content section.but-single-book-description .author-book-description {
+    margin-top: 2rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .footer_grid--item.logo_so-me {

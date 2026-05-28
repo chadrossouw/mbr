@@ -316,32 +316,41 @@ add_filter('wpcf7_form_tag', function ($tag) {
 		return $tag;
 	}
 
-	$artwork = !empty($_GET['artwork'])
-		? sanitize_text_field(wp_unslash($_GET['artwork']))
-		: '';
+	// Get artwork OR book
+	$item = '';
 
-	$artist = !empty($_GET['artist'])
-		? sanitize_text_field(wp_unslash($_GET['artist']))
-		: '';
+	if ( isset($_GET['artwork']) && $_GET['artwork'] !== '' ) {
 
-	if ($artwork) {
+		$item = wp_unslash($_GET['artwork']);
 
-		$formatted_artwork = ucwords(
-			str_replace('-', ' ', $artwork)
-		);
+	} elseif ( isset($_GET['book']) && $_GET['book'] !== '' ) {
 
-		$subject = 'Enquiry on ' . $formatted_artwork;
+		$item = wp_unslash($_GET['book']);
+	}
 
-		if ($artist) {
+	// Get artist OR author
+	$person = '';
 
-			$formatted_artist = strtoupper(
-				str_replace('-', ' ', $artist)
-			);
+	if ( isset($_GET['artist']) && $_GET['artist'] !== '' ) {
 
-			$subject .= ' by ' . $formatted_artist;
+		$person = wp_unslash($_GET['artist']);
+
+	} elseif ( isset($_GET['author']) && $_GET['author'] !== '' ) {
+
+		$person = wp_unslash($_GET['author']);
+	}
+
+	if ( $item ) {
+
+		// keep original as-is
+		$subject = 'Enquiry on ' . $item;
+
+		if ( $person ) {
+
+			$subject .= ' by ' . $person;
 		}
 
-		$tag['values'] = [$subject];
+		$tag['values'] = [ $subject ];
 	}
 
 	return $tag;

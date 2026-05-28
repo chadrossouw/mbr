@@ -8,7 +8,7 @@
             "name": "artists",
             "aria-label": "",
             "type": "relationship",
-            "instructions": "",
+            "instructions": "Select an Artist(s) only for an Artwork. Leave field blank for Books.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -33,11 +33,11 @@
         },
         {
             "key": "field_6a14542b22051",
-            "label": "Year",
+            "label": "Artwork Year",
             "name": "year",
             "aria-label": "",
             "type": "number",
-            "instructions": "Year the artwork was created",
+            "instructions": "Year the artwork was created. Note => Only fill this for artworks as a number such as 1987. For books, the Full year is part of the content inside the Product Details section below.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -55,11 +55,11 @@
         },
         {
             "key": "field_6a14549522052",
-            "label": "Dimensions",
+            "label": "Artwork Dimensions",
             "name": "dimensions",
             "aria-label": "",
             "type": "textarea",
-            "instructions": "",
+            "instructions": "1. For Artworks fill out as full text e.g \"Archival inks on hammuela rag\r\n7 x 94 inches (195.6 x 238.8 cm)\"\r\n2. For Books, use the Book Dimensions are part of the content inside the Product Details section below \"",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -75,11 +75,106 @@
         },
         {
             "key": "field_6a1454cf22053",
-            "label": "Work note",
+            "label": "Artwork Note",
             "name": "work_note",
             "aria-label": "",
             "type": "text",
+            "instructions": "Use this only for Artworks to display the Signed and Dated content",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6a16d43235c5d",
+            "label": "Product Details",
+            "name": "product_details",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Use this to fill in the products details of a Book. Ignore this for Artworks",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_6a16d4c135c5e",
+            "label": "About Book And Author",
+            "name": "about_book_and_author",
+            "aria-label": "",
+            "type": "group",
             "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_6a16d4f735c5f",
+                    "label": "About text",
+                    "name": "about_text",
+                    "aria-label": "",
+                    "type": "wysiwyg",
+                    "instructions": "Fill in content about the book and author",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                },
+                {
+                    "key": "field_6a16d52a35c60",
+                    "label": "Read More Link",
+                    "name": "read_more_link",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "Fill in the full URL for users who want to read more about the Author of this Book",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                }
+            ]
+        },
+        {
+            "key": "field_6a16d679644e4",
+            "label": "Book Author Name",
+            "name": "book_author_name",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Use this field to fill in the Name for the Book Author if adding a book product",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -112,5 +207,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1779805207
+    "modified": 1779881953
 }
