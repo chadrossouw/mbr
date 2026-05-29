@@ -94,9 +94,19 @@ header#masthead {
 		}
 	}
 
+	&:has(~ .about-page){
+		.site-branding{
+			svg {
+				path {
+					fill: $color_white;
+				}
+			}
+		}
+	}
+
 	#site-navigation {
 		a {
-			color: $color_white !important;
+			color: $color_white;
 			position: relative;
 			text-decoration: none;
 			text-transform: uppercase;
@@ -114,7 +124,7 @@ header#masthead {
 				bottom: -5px;
 				width: 100%;
 				height: 2px;
-				background-color: white;
+				background-color: $color-black;
 				transform: scaleX(0);
 				transform-origin: center;
 				transition: transform 0.3s ease;
@@ -129,7 +139,7 @@ header#masthead {
 		}
 
 		a:visited {
-			color: $color_black;
+			//color: $color_black;
 		}
 
 
@@ -324,10 +334,10 @@ header#masthead {
 		.utilities a,
 		#site-navigation a,
 		.open_times {
-			color: $color_black;
+			//color: $color_black;
 
 			&:visited {
-				color: $color_black;
+				//color: $color_black;
 			}
 		}
 
@@ -401,7 +411,7 @@ header#masthead {
 							li{
 								border-color: $color-black;
 								a{
-									color: $color-black !important;
+									color: $color-black;
 								}
 							}
 						}

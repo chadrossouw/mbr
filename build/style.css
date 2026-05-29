@@ -3183,8 +3183,11 @@ header#masthead:not(:has(~ .home-page)) .header .hamburger_container button.hamb
 header#masthead:not(:has(~ .home-page)) .header .hamburger_container button.hamburger .hamburger-box .hamburger-inner::before, header#masthead:not(:has(~ .home-page)) .header .hamburger_container button.hamburger .hamburger-box .hamburger-inner::after {
   background-color: #000;
 }
+header#masthead:has(~ .about-page) .site-branding svg path {
+  fill: #fff;
+}
 header#masthead #site-navigation a {
-  color: #fff !important;
+  color: #fff;
   position: relative;
   text-decoration: none;
   text-transform: uppercase;
@@ -3204,7 +3207,7 @@ header#masthead #site-navigation a::after {
   bottom: -5px;
   width: 100%;
   height: 2px;
-  background-color: white;
+  background-color: #000;
   transform: scaleX(0);
   transform-origin: center;
   transition: transform 0.3s ease;
@@ -3216,9 +3219,6 @@ header#masthead #site-navigation a::after {
 }
 header#masthead #site-navigation a:hover::after {
   transform: scaleX(1);
-}
-header#masthead #site-navigation a:visited {
-  color: #000;
 }
 header#masthead .header {
   padding: 3.2vw 5vw 0;
@@ -3369,18 +3369,6 @@ header#masthead .open_times {
     display: flex;
     align-items: center;
   }
-  header#masthead #secondary-menu a,
-  header#masthead .utilities a,
-  header#masthead #site-navigation a,
-  header#masthead .open_times {
-    color: #000;
-  }
-  header#masthead #secondary-menu a:visited,
-  header#masthead .utilities a:visited,
-  header#masthead #site-navigation a:visited,
-  header#masthead .open_times:visited {
-    color: #000;
-  }
   header#masthead .utilities ul {
     padding-left: 0;
     padding-left: 2.5rem;
@@ -3424,7 +3412,7 @@ header#masthead .open_times {
     border-color: #000;
   }
   header#masthead:not(:has(~ .home-page)) .header #site-navigation .main-navigation-inner #primary_menu li a {
-    color: #000 !important;
+    color: #000;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -5722,6 +5710,9 @@ main:not(.home-page) .page-content .related-artworks {
     margin-top: 2rem;
   }
 }
+main:not(.home-page) .page-content:not(:has(.related-artworks)) .long {
+  margin-top: 4rem;
+}
 @media screen and (max-width: 700px) {
   main:not(.home-page) .page-content {
     box-sizing: border-box;
@@ -6174,6 +6165,58 @@ main.books-page section.page-content section.books-listing div.three-col-grid di
   body:has(.enquiry-form-page)::before {
     width: 0;
   }
+}
+body:has(.home-page) header#masthead #site-navigation .main-navigation-inner ul#primary_menu li {
+  border-color: #fffcfc !important;
+}
+body:has(.home-page) header#masthead #site-navigation .main-navigation-inner ul#primary_menu li a {
+  color: #fffcfc !important;
+}
+body:has(.home-page) header#masthead #site-navigation .main-navigation-inner ul#primary_menu li a::after {
+  background-color: #fffcfc !important;
+}
+body:has(.about-page) {
+  display: block;
+  height: 100vh;
+  padding-bottom: 5rem;
+  background-color: #222222;
+  color: #fffcfc;
+}
+body:has(.about-page) header#masthead #site-navigation .main-navigation-inner ul#primary_menu li {
+  border-color: #fffcfc !important;
+}
+body:has(.about-page) header#masthead #site-navigation .main-navigation-inner ul#primary_menu li a {
+  color: #fffcfc !important;
+}
+body:has(.about-page) header#masthead #site-navigation .main-navigation-inner ul#primary_menu li a::after {
+  background-color: #fffcfc !important;
+}
+body:has(.about-page) header#masthead .hamburger_container button span.hamburger-box span.hamburger-inner {
+  background-color: #fff !important;
+}
+body:has(.about-page) header#masthead .hamburger_container button span.hamburger-box span.hamburger-inner::before, body:has(.about-page) header#masthead .hamburger_container button span.hamburger-box span.hamburger-inner::after {
+  background-color: #fff !important;
+}
+body:has(.about-page) main section.about-page-content section.about-layout div.about-content-column {
+  display: inline-block;
+  vertical-align: top;
+}
+body:has(.about-page) main section.about-page-content section.about-layout div.about-content-column h1 {
+  color: #FFCB71;
+}
+body:has(.about-page) main section.about-page-content section.about-layout div.about-content-column h2, body:has(.about-page) main section.about-page-content section.about-layout div.about-content-column h3, body:has(.about-page) main section.about-page-content section.about-layout div.about-content-column p, body:has(.about-page) main section.about-page-content section.about-layout div.about-content-column a {
+  color: #fffcfc;
+}
+body:has(.about-page) main section.about-page-content section.about-layout div.about-content-column p:last-child {
+  padding-bottom: 5rem;
+}
+@media screen and (max-width: 560px) {
+  body:has(.about-page) main section.about-page-content section.about-layout div.about-content-column {
+    padding-top: 3rem;
+  }
+}
+body div#page:has(header#masthead) {
+  position: relative;
 }
 
 .gallery-item {

@@ -639,6 +639,11 @@ main {
 				}
 			}
 
+			&:not(:has(.related-artworks)){
+				.long{
+					margin-top: 4rem;
+				}
+			}
 
 
 			@media screen and (max-width: 1200px) {
@@ -1167,10 +1172,106 @@ main {
 body{
 	&:has(.enquiry-form-page){
 		@media screen and (max-width: 700px) {
-		&::before{
-			width: 0;
+			&::before{
+				width: 0;
+			}
 		}
 	}
+
+	&:has(.home-page){
+		header#masthead{
+			#site-navigation{
+				.main-navigation-inner{
+					ul#primary_menu{
+						li{
+							border-color: #fffcfc !important;
+
+							a{
+								color: #fffcfc !important;
+
+								&::after{
+									background-color: #fffcfc !important;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&:has(.about-page){
+		display: block;
+		height: 100vh;
+		padding-bottom: 5rem;
+		background-color: #222222;
+		color: #fffcfc;
+
+		header#masthead{
+			#site-navigation{
+				.main-navigation-inner{
+					ul#primary_menu{
+						li{
+							border-color: #fffcfc !important;
+
+							a{
+								color: #fffcfc !important;
+
+								&::after{
+									background-color: #fffcfc !important;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.hamburger_container{
+				button{
+					span.hamburger-box{
+						span.hamburger-inner{
+							background-color: $color-white !important;
+							&::before,
+							&::after{
+								background-color: $color-white !important;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		main{
+			section.about-page-content{
+				section.about-layout{
+					div.about-content-column{
+						display: inline-block;
+						vertical-align: top;
+						
+						h1{
+							color: #FFCB71;
+						}
+						h2,h3,p,a{
+							color: #fffcfc;
+						}
+
+						p:last-child{
+							padding-bottom: 5rem;
+						}
+
+						@media screen and (max-width: 560px) {
+							padding-top: 3rem;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	div#page{
+		&:has(header#masthead) {
+			position: relative;
+		}
 	}
 }
 
