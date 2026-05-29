@@ -105,8 +105,8 @@ get_header();
 
                             <?php foreach (array_slice($selected_books, 0, 6) as $book) :
 
+								$book_id = is_object($book) ? $book->ID : $book;
 								$product = wc_get_product($book_id);
-                                $book_id = is_object($book) ? $book->ID : $book;
                                 $book_title = get_the_title($book_id);
                                 $book_link  = get_permalink($book_id);
                                 $book_image = get_the_post_thumbnail_url($book_id, 'large');
@@ -161,11 +161,21 @@ get_header();
 
 								<div class="artwork-add-to-cart but-book-add-to-cart">
 
-									<?php if ( $product->is_in_stock() ) : ?>
+									<?php if ($product && $product->is_in_stock() ) : ?>
 
-										<form class="cart" method="post" enctype="multipart/form-data">
+										<!-- <form class="cart" method="post" enctype="multipart/form-data">
 											<button type="submit" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" class="single_add_to_cart_button">Add to cart</button>
-										</form>
+										</form> -->
+										<a
+											href="<?php echo esc_url( add_query_arg(
+												'add-to-cart',
+												$product->get_id(),
+												get_permalink( $product->get_id() )
+											) ); ?>"
+											class="single_add_to_cart_button"
+										>
+											Add to cart
+										</a>
 
 									<?php else : ?>
 

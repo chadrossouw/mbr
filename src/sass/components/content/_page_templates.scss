@@ -888,7 +888,7 @@ main {
 								padding: 0 2vw 3rem;
 
 								form button,
-								.but-book-enquire a{
+								a{
 									border: 1px solid #9b9b9b;
 									padding: 9px 48px;
 									font-size: 12px;
@@ -1120,6 +1120,7 @@ main {
 						}
 
 						div.but-book-enquire,
+						div.but-book-add-to-cart,
 						form.cart{
 							text-align: left;
 

@@ -5901,7 +5901,7 @@ main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col
   padding: 0 2vw 3rem;
 }
 main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.two-column-span .three-col-grid div.book-card-wrapper .but-book-add-to-cart form button,
-main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.two-column-span .three-col-grid div.book-card-wrapper .but-book-add-to-cart .but-book-enquire a {
+main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.two-column-span .three-col-grid div.book-card-wrapper .but-book-add-to-cart a {
   border: 1px solid #9b9b9b;
   padding: 9px 48px;
   font-size: 12px;
@@ -5911,12 +5911,12 @@ main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col
   display: inline-block;
 }
 main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.two-column-span .three-col-grid div.book-card-wrapper .but-book-add-to-cart form button :visited,
-main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.two-column-span .three-col-grid div.book-card-wrapper .but-book-add-to-cart .but-book-enquire a :visited {
+main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.two-column-span .three-col-grid div.book-card-wrapper .but-book-add-to-cart a :visited {
   background-color: #9b9b9b;
   color: #000;
 }
 main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.two-column-span .three-col-grid div.book-card-wrapper .but-book-add-to-cart form button:hover,
-main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.two-column-span .three-col-grid div.book-card-wrapper .but-book-add-to-cart .but-book-enquire a:hover {
+main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.two-column-span .three-col-grid div.book-card-wrapper .but-book-add-to-cart a:hover {
   background-color: #000;
   color: #fff;
 }
@@ -6108,11 +6108,14 @@ main.books-page section.page-content section.books-listing div.three-col-grid di
   margin-bottom: 0.5rem;
 }
 main.books-page section.page-content section.books-listing div.three-col-grid div.book-card-wrapper div.but-book-enquire,
+main.books-page section.page-content section.books-listing div.three-col-grid div.book-card-wrapper div.but-book-add-to-cart,
 main.books-page section.page-content section.books-listing div.three-col-grid div.book-card-wrapper form.cart {
   text-align: left;
 }
 main.books-page section.page-content section.books-listing div.three-col-grid div.book-card-wrapper div.but-book-enquire a,
 main.books-page section.page-content section.books-listing div.three-col-grid div.book-card-wrapper div.but-book-enquire button,
+main.books-page section.page-content section.books-listing div.three-col-grid div.book-card-wrapper div.but-book-add-to-cart a,
+main.books-page section.page-content section.books-listing div.three-col-grid div.book-card-wrapper div.but-book-add-to-cart button,
 main.books-page section.page-content section.books-listing div.three-col-grid div.book-card-wrapper form.cart a,
 main.books-page section.page-content section.books-listing div.three-col-grid div.book-card-wrapper form.cart button {
   width: fit-content;
@@ -6127,6 +6130,8 @@ main.books-page section.page-content section.books-listing div.three-col-grid di
 }
 main.books-page section.page-content section.books-listing div.three-col-grid div.book-card-wrapper div.but-book-enquire a :visited,
 main.books-page section.page-content section.books-listing div.three-col-grid div.book-card-wrapper div.but-book-enquire button :visited,
+main.books-page section.page-content section.books-listing div.three-col-grid div.book-card-wrapper div.but-book-add-to-cart a :visited,
+main.books-page section.page-content section.books-listing div.three-col-grid div.book-card-wrapper div.but-book-add-to-cart button :visited,
 main.books-page section.page-content section.books-listing div.three-col-grid div.book-card-wrapper form.cart a :visited,
 main.books-page section.page-content section.books-listing div.three-col-grid div.book-card-wrapper form.cart button :visited {
   background-color: #9b9b9b;
@@ -6134,6 +6139,8 @@ main.books-page section.page-content section.books-listing div.three-col-grid di
 }
 main.books-page section.page-content section.books-listing div.three-col-grid div.book-card-wrapper div.but-book-enquire a:hover,
 main.books-page section.page-content section.books-listing div.three-col-grid div.book-card-wrapper div.but-book-enquire button:hover,
+main.books-page section.page-content section.books-listing div.three-col-grid div.book-card-wrapper div.but-book-add-to-cart a:hover,
+main.books-page section.page-content section.books-listing div.three-col-grid div.book-card-wrapper div.but-book-add-to-cart button:hover,
 main.books-page section.page-content section.books-listing div.three-col-grid div.book-card-wrapper form.cart a:hover,
 main.books-page section.page-content section.books-listing div.three-col-grid div.book-card-wrapper form.cart button:hover {
   background-color: #000;
