@@ -983,6 +983,180 @@ main {
 		}
 	}
 
+	&.artworks-page{
+		section.page-content{
+			section.artworks-listing{
+				div.three-col-grid{
+					margin: 0 auto;
+
+					div.art-card-wrapper{
+						display: inline-block;
+						width: calc(33% - 4rem);
+						margin: 0 2rem;
+						vertical-align: top;
+						padding-bottom: 3rem;
+
+						a.artwork-card{
+							width: 100%;
+							margin: 0;
+
+							.card-image{
+								aspect-ratio: 1;
+								img{
+									aspect-ratio: 1;
+								}
+							}
+
+							.card-text{
+								padding: clamp(0.5rem, 1.15vw, 1.0625rem) 2vw 0.2rem;
+
+								h2{
+									font-size: clamp(1rem, 1.15vw, 1.0625rem);
+									font-weight: 600;
+									padding-top: 0;
+									font-family: "Josefin Sans", sans-serif;
+									margin: 0 0 0.7rem;
+									text-transform: uppercase;
+								}
+								p{
+									font-size: clamp(0.8rem, 1.02vw, 0.9375rem);
+									font-family: "Josefin Sans", sans-serif;
+									text-transform: uppercase;
+									font-style: italic;
+									margin-bottom: 0.5rem;
+								}
+							}
+						}
+
+						div.artwork-inquire{
+							text-align: left;
+
+							a{
+								width: fit-content;
+								border: 1px solid #9b9b9b;
+								display: inline-block;
+								padding: 9px 48px;
+								font-size: 12px;
+								color: #000;
+								text-transform: uppercase;
+								margin: 0 2vw;
+								transition: all 0.4s ease-in;
+
+								:visited{
+									background-color: #9b9b9b;
+									color: #000;
+								}
+								&:hover{
+									background-color: #000;
+									color: #fff;
+								}
+							}
+						}
+
+						@media screen and (max-width: 900px) {
+							margin: 0 1rem;
+							width: calc(32.9% - 2rem);
+						}
+						@media screen and (max-width: 700px) {
+							width: calc(49.6% - 2rem);
+						}
+						@media screen and (max-width: 560px) {
+							width: calc(100% - 2rem);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&.books-page{
+		section.page-content{
+			section.books-listing{
+				div.three-col-grid{
+					margin: 0 auto;
+
+					div.book-card-wrapper{
+						display: inline-block;
+						width: calc(33% - 4rem);
+						margin: 0 2rem;
+						vertical-align: top;
+						padding-bottom: 3rem;
+
+						a.book-card{
+							width: 100%;
+							margin: 0 0 0.5rem;
+
+							.card-image{
+								aspect-ratio: 1.5;
+								img{
+									aspect-ratio: 1.5;
+								}
+							}
+
+							.card-text{
+								padding: clamp(0.5rem, 1.15vw, 1.0625rem) 2vw 0.2rem;
+
+								h2{
+									font-size: clamp(1rem, 1.15vw, 1.0625rem);
+									font-weight: 600;
+									padding-top: 0;
+									font-family: "Josefin Sans", sans-serif;
+									margin: 0 0 0.7rem;
+									text-transform: uppercase;
+								}
+								p{
+									font-size: clamp(0.8rem, 1.02vw, 0.9375rem);
+									font-family: "Josefin Sans", sans-serif;
+									text-transform: uppercase;
+									font-style: italic;
+									margin-bottom: 0.5rem;
+								}
+							}
+						}
+
+						div.but-book-enquire,
+						form.cart{
+							text-align: left;
+
+							a,
+							button{
+								width: fit-content;
+								border: 1px solid #9b9b9b;
+								display: inline-block;
+								padding: 9px 48px;
+								font-size: 12px;
+								color: #000;
+								text-transform: uppercase;
+								margin: 0 2vw;
+								transition: all 0.4s ease-in;
+
+								:visited{
+									background-color: #9b9b9b;
+									color: #000;
+								}
+								&:hover{
+									background-color: #000;
+									color: #fff;
+								}
+							}
+						}
+
+						@media screen and (max-width: 900px) {
+							margin: 0 1rem;
+							width: calc(32.9% - 2rem);
+						}
+						@media screen and (max-width: 700px) {
+							width: calc(49.6% - 2rem);
+						}
+						@media screen and (max-width: 560px) {
+							width: calc(100% - 2rem);
+						}
+					}
+				}
+			}
+		}
+	}
+
 	@media screen and (max-width: 700px) {
 		&::before{
 			width: 0;

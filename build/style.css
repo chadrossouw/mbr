@@ -6002,6 +6002,168 @@ main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col
     margin-top: 5rem;
   }
 }
+main.artworks-page section.page-content section.artworks-listing div.three-col-grid {
+  margin: 0 auto;
+}
+main.artworks-page section.page-content section.artworks-listing div.three-col-grid div.art-card-wrapper {
+  display: inline-block;
+  width: calc(33% - 4rem);
+  margin: 0 2rem;
+  vertical-align: top;
+  padding-bottom: 3rem;
+}
+main.artworks-page section.page-content section.artworks-listing div.three-col-grid div.art-card-wrapper a.artwork-card {
+  width: 100%;
+  margin: 0;
+}
+main.artworks-page section.page-content section.artworks-listing div.three-col-grid div.art-card-wrapper a.artwork-card .card-image {
+  aspect-ratio: 1;
+}
+main.artworks-page section.page-content section.artworks-listing div.three-col-grid div.art-card-wrapper a.artwork-card .card-image img {
+  aspect-ratio: 1;
+}
+main.artworks-page section.page-content section.artworks-listing div.three-col-grid div.art-card-wrapper a.artwork-card .card-text {
+  padding: clamp(0.5rem, 1.15vw, 1.0625rem) 2vw 0.2rem;
+}
+main.artworks-page section.page-content section.artworks-listing div.three-col-grid div.art-card-wrapper a.artwork-card .card-text h2 {
+  font-size: clamp(1rem, 1.15vw, 1.0625rem);
+  font-weight: 600;
+  padding-top: 0;
+  font-family: "Josefin Sans", sans-serif;
+  margin: 0 0 0.7rem;
+  text-transform: uppercase;
+}
+main.artworks-page section.page-content section.artworks-listing div.three-col-grid div.art-card-wrapper a.artwork-card .card-text p {
+  font-size: clamp(0.8rem, 1.02vw, 0.9375rem);
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+main.artworks-page section.page-content section.artworks-listing div.three-col-grid div.art-card-wrapper div.artwork-inquire {
+  text-align: left;
+}
+main.artworks-page section.page-content section.artworks-listing div.three-col-grid div.art-card-wrapper div.artwork-inquire a {
+  width: fit-content;
+  border: 1px solid #9b9b9b;
+  display: inline-block;
+  padding: 9px 48px;
+  font-size: 12px;
+  color: #000;
+  text-transform: uppercase;
+  margin: 0 2vw;
+  transition: all 0.4s ease-in;
+}
+main.artworks-page section.page-content section.artworks-listing div.three-col-grid div.art-card-wrapper div.artwork-inquire a :visited {
+  background-color: #9b9b9b;
+  color: #000;
+}
+main.artworks-page section.page-content section.artworks-listing div.three-col-grid div.art-card-wrapper div.artwork-inquire a:hover {
+  background-color: #000;
+  color: #fff;
+}
+@media screen and (max-width: 900px) {
+  main.artworks-page section.page-content section.artworks-listing div.three-col-grid div.art-card-wrapper {
+    margin: 0 1rem;
+    width: calc(32.9% - 2rem);
+  }
+}
+@media screen and (max-width: 700px) {
+  main.artworks-page section.page-content section.artworks-listing div.three-col-grid div.art-card-wrapper {
+    width: calc(49.6% - 2rem);
+  }
+}
+@media screen and (max-width: 560px) {
+  main.artworks-page section.page-content section.artworks-listing div.three-col-grid div.art-card-wrapper {
+    width: calc(100% - 2rem);
+  }
+}
+main.books-page section.page-content section.books-listing div.three-col-grid {
+  margin: 0 auto;
+}
+main.books-page section.page-content section.books-listing div.three-col-grid div.book-card-wrapper {
+  display: inline-block;
+  width: calc(33% - 4rem);
+  margin: 0 2rem;
+  vertical-align: top;
+  padding-bottom: 3rem;
+}
+main.books-page section.page-content section.books-listing div.three-col-grid div.book-card-wrapper a.book-card {
+  width: 100%;
+  margin: 0 0 0.5rem;
+}
+main.books-page section.page-content section.books-listing div.three-col-grid div.book-card-wrapper a.book-card .card-image {
+  aspect-ratio: 1.5;
+}
+main.books-page section.page-content section.books-listing div.three-col-grid div.book-card-wrapper a.book-card .card-image img {
+  aspect-ratio: 1.5;
+}
+main.books-page section.page-content section.books-listing div.three-col-grid div.book-card-wrapper a.book-card .card-text {
+  padding: clamp(0.5rem, 1.15vw, 1.0625rem) 2vw 0.2rem;
+}
+main.books-page section.page-content section.books-listing div.three-col-grid div.book-card-wrapper a.book-card .card-text h2 {
+  font-size: clamp(1rem, 1.15vw, 1.0625rem);
+  font-weight: 600;
+  padding-top: 0;
+  font-family: "Josefin Sans", sans-serif;
+  margin: 0 0 0.7rem;
+  text-transform: uppercase;
+}
+main.books-page section.page-content section.books-listing div.three-col-grid div.book-card-wrapper a.book-card .card-text p {
+  font-size: clamp(0.8rem, 1.02vw, 0.9375rem);
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+main.books-page section.page-content section.books-listing div.three-col-grid div.book-card-wrapper div.but-book-enquire,
+main.books-page section.page-content section.books-listing div.three-col-grid div.book-card-wrapper form.cart {
+  text-align: left;
+}
+main.books-page section.page-content section.books-listing div.three-col-grid div.book-card-wrapper div.but-book-enquire a,
+main.books-page section.page-content section.books-listing div.three-col-grid div.book-card-wrapper div.but-book-enquire button,
+main.books-page section.page-content section.books-listing div.three-col-grid div.book-card-wrapper form.cart a,
+main.books-page section.page-content section.books-listing div.three-col-grid div.book-card-wrapper form.cart button {
+  width: fit-content;
+  border: 1px solid #9b9b9b;
+  display: inline-block;
+  padding: 9px 48px;
+  font-size: 12px;
+  color: #000;
+  text-transform: uppercase;
+  margin: 0 2vw;
+  transition: all 0.4s ease-in;
+}
+main.books-page section.page-content section.books-listing div.three-col-grid div.book-card-wrapper div.but-book-enquire a :visited,
+main.books-page section.page-content section.books-listing div.three-col-grid div.book-card-wrapper div.but-book-enquire button :visited,
+main.books-page section.page-content section.books-listing div.three-col-grid div.book-card-wrapper form.cart a :visited,
+main.books-page section.page-content section.books-listing div.three-col-grid div.book-card-wrapper form.cart button :visited {
+  background-color: #9b9b9b;
+  color: #000;
+}
+main.books-page section.page-content section.books-listing div.three-col-grid div.book-card-wrapper div.but-book-enquire a:hover,
+main.books-page section.page-content section.books-listing div.three-col-grid div.book-card-wrapper div.but-book-enquire button:hover,
+main.books-page section.page-content section.books-listing div.three-col-grid div.book-card-wrapper form.cart a:hover,
+main.books-page section.page-content section.books-listing div.three-col-grid div.book-card-wrapper form.cart button:hover {
+  background-color: #000;
+  color: #fff;
+}
+@media screen and (max-width: 900px) {
+  main.books-page section.page-content section.books-listing div.three-col-grid div.book-card-wrapper {
+    margin: 0 1rem;
+    width: calc(32.9% - 2rem);
+  }
+}
+@media screen and (max-width: 700px) {
+  main.books-page section.page-content section.books-listing div.three-col-grid div.book-card-wrapper {
+    width: calc(49.6% - 2rem);
+  }
+}
+@media screen and (max-width: 560px) {
+  main.books-page section.page-content section.books-listing div.three-col-grid div.book-card-wrapper {
+    width: calc(100% - 2rem);
+  }
+}
 @media screen and (max-width: 700px) {
   main::before {
     width: 0;
