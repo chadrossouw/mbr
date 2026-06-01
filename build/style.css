@@ -6232,6 +6232,55 @@ body:has(.about-page) main section.about-page-content section.about-layout div.a
     padding-top: 3rem;
   }
 }
+body:has(.cart-page) .three-col-card {
+  display: inline-block;
+}
+body:has(.cart-page) .two-column-span {
+  display: inline-block;
+  width: calc(66.6% - 4rem);
+  margin-left: 33%;
+  padding: 0 2rem;
+}
+body:has(.cart-page) .two-column-span #coupon_code {
+  width: fit-content;
+}
+@media screen and (max-width: 900px) {
+  body:has(.cart-page)::before {
+    width: 0;
+  }
+  body:has(.cart-page) .two-column-span {
+    margin-left: 0;
+    width: calc(100% - 4rem);
+  }
+}
+@media screen and (max-width: 700px) {
+  body:has(.cart-page) .two-column-span {
+    width: calc(100% - 0px);
+  }
+}
+body:has(.checkout-page) .three-col-card {
+  display: inline-block;
+}
+body:has(.checkout-page) .two-column-span {
+  display: inline-block;
+  width: calc(66.6% - 4rem);
+  margin-left: 33%;
+  padding: 0 2rem;
+}
+@media screen and (max-width: 900px) {
+  body:has(.checkout-page)::before {
+    width: 0;
+  }
+  body:has(.checkout-page) .two-column-span {
+    margin-left: 0;
+    width: calc(100% - 4rem);
+  }
+}
+@media screen and (max-width: 700px) {
+  body:has(.checkout-page) .two-column-span {
+    width: calc(100% - 0px);
+  }
+}
 body div#page:has(header#masthead) {
   position: relative;
 }
@@ -6358,6 +6407,10 @@ body div#page:has(header#masthead) {
     padding-left: 0;
     padding-right: 0;
   }
+}
+
+.woocommerce-notices-wrapper {
+  margin-top: 5rem;
 }
 
 .footer_grid--item.logo_so-me {

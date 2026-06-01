@@ -93,17 +93,11 @@ get_header();
                                     <?php if ( $product && $product->is_in_stock() ) : ?>
 
                                         <a
-                                            href="<?php echo esc_url(
-                                                add_query_arg(
-                                                    'add-to-cart',
-                                                    $product->get_id(),
-                                                    get_permalink( $product->get_id() )
-                                                )
-                                            ); ?>"
-                                            class="single_add_to_cart_button"
-                                        >
-                                            Add to cart
-                                        </a>
+											href="<?php echo esc_url( wc_get_cart_url() . '?add-to-cart=' . $product->get_id() ); ?>"
+											class="single_add_to_cart_button"
+										>
+											Add to cart
+										</a>
 
                                     <?php else : ?>
 

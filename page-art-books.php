@@ -7,6 +7,8 @@ get_header();
 
 <main id="primary" class="site-main art-books-page">
 
+<?php woocommerce_output_all_notices(); ?>
+
 <?php while (have_posts()) : the_post(); ?>
 
 	<?php
@@ -49,7 +51,7 @@ get_header();
 							}
 
 							$artist_output = !empty($artist_names)
-								? strtoupper(implode(', ', $artist_names))
+								? implode(', ', $artist_names)
 								: '';
 						?>
 
@@ -163,15 +165,8 @@ get_header();
 
 									<?php if ($product && $product->is_in_stock() ) : ?>
 
-										<!-- <form class="cart" method="post" enctype="multipart/form-data">
-											<button type="submit" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" class="single_add_to_cart_button">Add to cart</button>
-										</form> -->
 										<a
-											href="<?php echo esc_url( add_query_arg(
-												'add-to-cart',
-												$product->get_id(),
-												get_permalink( $product->get_id() )
-											) ); ?>"
+											href="<?php echo esc_url( wc_get_cart_url() . '?add-to-cart=' . $product->get_id() ); ?>"
 											class="single_add_to_cart_button"
 										>
 											Add to cart

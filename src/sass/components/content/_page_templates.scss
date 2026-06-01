@@ -1269,6 +1269,70 @@ body{
 		}
 	}
 
+	&:has(.cart-page){
+		.three-col-card{
+			display: inline-block;
+		}
+
+		.two-column-span{
+			display: inline-block;
+			width: calc(66.6% - 4rem);
+			margin-left: 33%;
+			padding: 0 2rem;
+
+			#coupon_code{
+				width: fit-content;
+			}
+		}
+
+		@media screen and (max-width: 900px) {
+			&::before{
+				width: 0;
+			}
+
+			.two-column-span{
+				margin-left: 0;
+				width: calc(100% - 4rem);
+			}
+		}
+
+		@media screen and (max-width: 700px) {
+			.two-column-span{
+				width: calc(100% - 0px);
+			}
+		}
+	}
+
+	&:has(.checkout-page){
+		.three-col-card{
+			display: inline-block;
+		}
+
+		.two-column-span{
+			display: inline-block;
+			width: calc(66.6% - 4rem);
+			margin-left: 33%;
+			padding: 0 2rem;
+		}
+
+		@media screen and (max-width: 900px) {
+			&::before{
+				width: 0;
+			}
+
+			.two-column-span{
+				margin-left: 0;
+				width: calc(100% - 4rem);
+			}
+		}
+
+		@media screen and (max-width: 700px) {
+			.two-column-span{
+				width: calc(100% - 0px);
+			}
+		}
+	}
+
 	div#page{
 		&:has(header#masthead) {
 			position: relative;
@@ -1439,4 +1503,9 @@ body{
 			}
 		}
 	}
+}
+
+// For cart
+.woocommerce-notices-wrapper{
+	margin-top: 5rem;
 }

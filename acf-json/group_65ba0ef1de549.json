@@ -74,8 +74,8 @@
         },
         {
             "key": "field_6a0db2c04e351",
-            "label": "Content Blocks",
-            "name": "content_blocks",
+            "label": "Home Content Blocks",
+            "name": "home_content_blocks",
             "aria-label": "",
             "type": "flexible_content",
             "instructions": "",
@@ -251,5 +251,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1779359922
+    "modified": 1780299327
 }

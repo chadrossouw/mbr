@@ -356,3 +356,8 @@ add_filter('wpcf7_form_tag', function ($tag) {
 	return $tag;
 
 });
+
+//redirect to cart page 
+add_filter( 'woocommerce_add_to_cart_redirect', function( $url ) {
+    return wc_get_cart_url();
+});
