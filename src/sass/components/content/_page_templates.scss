@@ -464,6 +464,10 @@ main {
 							height: 0;
 							width: 0;
 						}
+
+						p{
+							font-size: clamp(0.875rem, 1.6vw, 1.5rem);
+						}
 					}
 
 					.description-content{
@@ -517,6 +521,7 @@ main {
 								h2{
 									font-size: clamp(0.9375rem, 2.04vw, 1.875rem);
 									font-weight: 400;
+									text-transform: uppercase;
 								}
 								p{
 									&.card-title{
@@ -577,24 +582,32 @@ main {
 						h2,
 						p{
 							font-size: clamp(0.875rem, 1.9vw, 1.75rem);
-							font-family: 'Josefin Sans', sans-serif;
 							line-height: 1;
 						}
 						h2{
 							font-weight: 400;
 							color: #000;
+							font-family: 'Josefin Sans', sans-serif;
 						}
 						p{
 							font-weight: 300;
 							color: #373737;
+							font-family: 'Tinos', sans-serif;
+
+							&.artwork-price{
+								font-family: 'Josefin Sans', sans-serif;
+							}
 						}
 						.card-artists{
 							font-weight: 400;
+							font-size: clamp(0.875rem, 1.1vw, 1.0625rem);
 						}
 						.card-title{
 							font-weight: 300;
 							font-style: italic;
 							text-transform: uppercase;
+							font-size: clamp(0.875rem, 1.1vw, 1.0625rem);
+							font-family: 'Josefin Sans', sans-serif;
 						}
 					}
 					
@@ -704,6 +717,7 @@ main {
 										font-size: clamp(0.8125rem, 1.77vw, 1.625rem);
 										font-weight: 200;
 										color: #000;
+										font-family: 'Josefin Sans', sans-serif;
 										border: 1px solid #9b9b9b;
 										background-color: #fff;
 										width: 100%;
@@ -761,6 +775,7 @@ main {
 										padding-top: clamp(0.5rem, 1.15vw, 1.0625rem);
 										font-family: "Josefin Sans", sans-serif;
 										margin: 0 0 0.3rem;
+										text-transform: uppercase;
 									}
 									p{
 										font-size: clamp(0.8rem, 1.02vw, 0.9375rem);
@@ -889,6 +904,9 @@ main {
 											font-size: 12px;
 											color: #000;
 											text-transform: uppercase;
+											font-family: "Josefin Sans", sans-serif;
+											display: inline-flex;
+											gap: 0.5rem;
 										}
 									}
 								}
@@ -904,6 +922,7 @@ main {
 									font-size: 12px;
 									color: #000;
 									text-transform: uppercase;
+									font-family: "Josefin Sans", sans-serif;
 									transition: all 0.4s ease-in;
 									display: inline-block;
 
@@ -1040,6 +1059,11 @@ main {
 									font-style: italic;
 									margin-bottom: 0.5rem;
 								}
+
+								span.amount{
+									display: inline-flex;
+									gap: 0.5rem;
+								}
 							}
 						}
 
@@ -1053,6 +1077,7 @@ main {
 								padding: 9px 48px;
 								font-size: 12px;
 								color: #000;
+								font-family: "Josefin Sans", sans-serif;
 								text-transform: uppercase;
 								margin: 0 2vw;
 								transition: all 0.4s ease-in;
@@ -1142,6 +1167,7 @@ main {
 								padding: 9px 48px;
 								font-size: 12px;
 								color: #000;
+								font-family: "Josefin Sans", sans-serif;
 								text-transform: uppercase;
 								margin: 0 2vw;
 								transition: all 0.4s ease-in;
@@ -1171,6 +1197,10 @@ main {
 				}
 			}
 		}
+	}
+
+	&.contact-page{
+		height: 100vh;
 	}
 
 	@media screen and (max-width: 700px) {
@@ -1268,6 +1298,10 @@ body{
 
 						p:last-child{
 							padding-bottom: 5rem;
+						}
+
+						p{
+							font-size: clamp(0.875rem, 1.4vw, 1.3125rem);
 						}
 
 						@media screen and (max-width: 560px) {

@@ -423,8 +423,8 @@ h4,
 h5,
 h6 {
   color: #000;
-  font-family: "Centra No1", sans-serif;
-  font-weight: 700;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
   line-height: 110%;
   margin: 0 0 1rem;
 }
@@ -560,6 +560,7 @@ p {
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: 400;
+  font-family: "Tinos", serif;
 }
 
 dfn,
@@ -5574,6 +5575,9 @@ main:not(.home-page) .page-content .three-col-grid.single-exhibition-description
   height: 0;
   width: 0;
 }
+main:not(.home-page) .page-content .three-col-grid.single-exhibition-description.long p {
+  font-size: clamp(0.875rem, 1.6vw, 1.5rem);
+}
 main:not(.home-page) .page-content .three-col-grid.single-exhibition-description .description-content p {
   max-width: 900px;
   font-family: "Tinos", serif;
@@ -5624,6 +5628,7 @@ main:not(.home-page) .page-content .three-col-grid .three-col-card.exhibition-me
 main:not(.home-page) .page-content .three-col-grid .three-col-card.exhibition-meta.artwork-meta .card-text h2 {
   font-size: clamp(0.9375rem, 2.04vw, 1.875rem);
   font-weight: 400;
+  text-transform: uppercase;
 }
 main:not(.home-page) .page-content .three-col-grid .three-col-card.exhibition-meta.artwork-meta .card-text p.card-title {
   font-size: clamp(0.9375rem, 2.04vw, 1.875rem);
@@ -5673,24 +5678,31 @@ main:not(.home-page) .page-content .three-col-grid .three-col-card .card-text {
 main:not(.home-page) .page-content .three-col-grid .three-col-card .card-text h2,
 main:not(.home-page) .page-content .three-col-grid .three-col-card .card-text p {
   font-size: clamp(0.875rem, 1.9vw, 1.75rem);
-  font-family: "Josefin Sans", sans-serif;
   line-height: 1;
 }
 main:not(.home-page) .page-content .three-col-grid .three-col-card .card-text h2 {
   font-weight: 400;
   color: #000;
+  font-family: "Josefin Sans", sans-serif;
 }
 main:not(.home-page) .page-content .three-col-grid .three-col-card .card-text p {
   font-weight: 300;
   color: #373737;
+  font-family: "Tinos", sans-serif;
+}
+main:not(.home-page) .page-content .three-col-grid .three-col-card .card-text p.artwork-price {
+  font-family: "Josefin Sans", sans-serif;
 }
 main:not(.home-page) .page-content .three-col-grid .three-col-card .card-text .card-artists {
   font-weight: 400;
+  font-size: clamp(0.875rem, 1.1vw, 1.0625rem);
 }
 main:not(.home-page) .page-content .three-col-grid .three-col-card .card-text .card-title {
   font-weight: 300;
   font-style: italic;
   text-transform: uppercase;
+  font-size: clamp(0.875rem, 1.1vw, 1.0625rem);
+  font-family: "Josefin Sans", sans-serif;
 }
 @media screen and (max-width: 900px) {
   main:not(.home-page) .page-content .three-col-grid .three-col-card {
@@ -5782,6 +5794,7 @@ main.enquiry-form-page article section.enquiry-page-content section.enquiry-top.
   font-size: clamp(0.8125rem, 1.77vw, 1.625rem);
   font-weight: 200;
   color: #000;
+  font-family: "Josefin Sans", sans-serif;
   border: 1px solid #9b9b9b;
   background-color: #fff;
   width: 100%;
@@ -5827,6 +5840,7 @@ main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col
   padding-top: clamp(0.5rem, 1.15vw, 1.0625rem);
   font-family: "Josefin Sans", sans-serif;
   margin: 0 0 0.3rem;
+  text-transform: uppercase;
 }
 main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.three-col-card div.artbook-item a.artwork-main-link .art-main-link-text p {
   font-size: clamp(0.8rem, 1.02vw, 0.9375rem);
@@ -5938,6 +5952,9 @@ main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col
   font-size: 12px;
   color: #000;
   text-transform: uppercase;
+  font-family: "Josefin Sans", sans-serif;
+  display: inline-flex;
+  gap: 0.5rem;
 }
 main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.two-column-span .three-col-grid div.book-card-wrapper .but-book-add-to-cart {
   padding: 0 2vw 3rem;
@@ -5949,6 +5966,7 @@ main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col
   font-size: 12px;
   color: #000;
   text-transform: uppercase;
+  font-family: "Josefin Sans", sans-serif;
   transition: all 0.4s ease-in;
   display: inline-block;
 }
@@ -6073,6 +6091,10 @@ main.artworks-page section.page-content section.artworks-listing div.three-col-g
   font-style: italic;
   margin-bottom: 0.5rem;
 }
+main.artworks-page section.page-content section.artworks-listing div.three-col-grid div.art-card-wrapper a.artwork-card .card-text span.amount {
+  display: inline-flex;
+  gap: 0.5rem;
+}
 main.artworks-page section.page-content section.artworks-listing div.three-col-grid div.art-card-wrapper div.artwork-inquire {
   text-align: left;
 }
@@ -6083,6 +6105,7 @@ main.artworks-page section.page-content section.artworks-listing div.three-col-g
   padding: 9px 48px;
   font-size: 12px;
   color: #000;
+  font-family: "Josefin Sans", sans-serif;
   text-transform: uppercase;
   margin: 0 2vw;
   transition: all 0.4s ease-in;
@@ -6166,6 +6189,7 @@ main.books-page section.page-content section.books-listing div.three-col-grid di
   padding: 9px 48px;
   font-size: 12px;
   color: #000;
+  font-family: "Josefin Sans", sans-serif;
   text-transform: uppercase;
   margin: 0 2vw;
   transition: all 0.4s ease-in;
@@ -6203,6 +6227,9 @@ main.books-page section.page-content section.books-listing div.three-col-grid di
   main.books-page section.page-content section.books-listing div.three-col-grid div.book-card-wrapper {
     width: calc(100% - 2rem);
   }
+}
+main.contact-page {
+  height: 100vh;
 }
 @media screen and (max-width: 700px) {
   main::before {
@@ -6258,6 +6285,9 @@ body:has(.about-page) main section.about-page-content section.about-layout div.a
 }
 body:has(.about-page) main section.about-page-content section.about-layout div.about-content-column p:last-child {
   padding-bottom: 5rem;
+}
+body:has(.about-page) main section.about-page-content section.about-layout div.about-content-column p {
+  font-size: clamp(0.875rem, 1.4vw, 1.3125rem);
 }
 @media screen and (max-width: 560px) {
   body:has(.about-page) main section.about-page-content section.about-layout div.about-content-column {
