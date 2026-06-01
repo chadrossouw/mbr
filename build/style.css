@@ -5049,17 +5049,22 @@ main#primary.home-page header.page-header .hero-content .hero-stack {
   gap: 1vw;
 }
 main#primary.home-page header.page-header .hero-content .hero-stack.mobile-stack h1 {
-  font-size: 8vw;
+  font-size: 12vw;
 }
 main#primary.home-page header.page-header .hero-content .hero-stack.mobile-stack h2 {
-  font-size: 7vw;
+  font-size: 11vw;
 }
 main#primary.home-page header.page-header .hero-content .hero-stack.mobile-stack h3 {
-  font-size: 6vw;
+  font-size: 10vw;
 }
 @media screen and (max-width: 1400px) {
   main#primary.home-page header.page-header .hero-content .hero-stack {
     position: relative;
+  }
+}
+@media screen and (max-width: 700px) {
+  main#primary.home-page header.page-header .hero-content .hero-stack {
+    transform: translate(0px, 100%) !important;
   }
 }
 main#primary.home-page header.page-header .hero-content h1, main#primary.home-page header.page-header .hero-content h2, main#primary.home-page header.page-header .hero-content h3 {
@@ -5129,6 +5134,7 @@ main#primary.home-page header.page-header .hero-content h3 {
   }
   main#primary.home-page header.page-header.mobile_header {
     display: block;
+    aspect-ratio: 0.7;
   }
 }
 
