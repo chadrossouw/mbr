@@ -550,7 +550,7 @@ header#masthead {
 			left: 0;
 			right: 0;
 			height: 0px;
-			background: #d6d1d1;
+			background: #000;
 			transform: translateY(-50%);
 			pointer-events: none;
 			z-index: 0;
@@ -2384,4 +2384,9 @@ header#masthead.site-header.bg_light_gray.mobile_only {
 			}
 		}
 	}
+}
+
+header#masthead:has(~ main.home-page) #site-navigation::before,
+header#masthead:has(~ main.about-page) #site-navigation::before {
+    background-color: #d6d1d1;
 }

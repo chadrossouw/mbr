@@ -361,3 +361,43 @@ add_filter('wpcf7_form_tag', function ($tag) {
 add_filter( 'woocommerce_add_to_cart_redirect', function( $url ) {
     return wc_get_cart_url();
 });
+
+function mbr_enqueue_fonts() {
+
+    wp_enqueue_style(
+        'mbr-google-fonts',
+        'https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Tinos:ital,wght@0,400;0,700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap',
+        [],
+        null
+    );
+}
+add_action('wp_enqueue_scripts', 'mbr_enqueue_fonts');
+
+//Hero animation
+function mbr_enqueue_hero_animation() {
+
+    wp_enqueue_script(
+        'gsap',
+        'https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js',
+        [],
+        null,
+        true
+    );
+
+    wp_enqueue_script(
+        'gsap-scrolltrigger',
+        'https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js',
+        ['gsap'],
+        null,
+        true
+    );
+
+    wp_enqueue_script(
+        'mbr-hero',
+        get_template_directory_uri() . '/assets/js/hero.js',
+        ['gsap', 'gsap-scrolltrigger'],
+        null,
+        true
+    );
+}
+add_action('wp_enqueue_scripts', 'mbr_enqueue_hero_animation');

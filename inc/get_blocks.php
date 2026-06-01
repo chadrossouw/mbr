@@ -14,12 +14,16 @@ function get_home_hero()
 
     <header class="page-header home_page_header desktop_header" style="background-image: url('<?php echo esc_url($page_background); ?>');">
         <div class="hero-content">
-            <?php echo wp_kses_post($hero_content); ?>
+            <div class="hero-stack">
+                <?php echo wp_kses_post($hero_content); ?>
+            </div>
         </div>
     </header>
     <header class="page-header home_page_header mobile_header" style="background-image: url('<?php echo esc_url($mobile_bg); ?>');">
         <div class="hero-content mobile">
-            <?php echo wp_kses_post($hero_content); ?>
+            <div class="hero-stack mobile-stack">
+                <?php echo wp_kses_post($hero_content); ?>
+            </div>
         </div>
     </header>
 <?php }
