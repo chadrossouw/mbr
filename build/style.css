@@ -829,6 +829,10 @@ body {
 body {
   background-color: #fff;
 }
+body main#primary {
+  max-width: 1880px;
+  margin: 0 auto;
+}
 body::before {
   content: "";
   position: fixed;
