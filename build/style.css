@@ -6282,6 +6282,11 @@ main.contact-page {
   height: 100vh;
 }
 @media screen and (max-width: 700px) {
+  main.contact-page .page-content .three-col-grid .two-column-span {
+    width: calc(100% - 2rem);
+  }
+}
+@media screen and (max-width: 700px) {
   main::before {
     width: 0;
   }
