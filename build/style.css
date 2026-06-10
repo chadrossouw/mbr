@@ -842,7 +842,7 @@ body::before {
 }
 @media screen and (max-width: 700px) {
   body::before {
-    left: 50vw;
+    width: 0;
   }
 }
 @media screen and (max-width: 560px) {
@@ -2663,21 +2663,23 @@ section.three-col-with-form .three-col-grid a.three-col-card {
   display: inline-block;
   width: calc(33% - 4rem);
   margin: 0 2rem;
+  padding: 0 2rem 3rem;
   height: 100%;
   box-sizing: border-box;
   aspect-ratio: 0.75;
   vertical-align: top;
+  background-color: #faf9f9;
 }
 section.three-col-with-form .three-col-grid a.three-col-card .card-text {
   height: 28%;
-  padding: 0 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
 section.three-col-with-form .three-col-grid a.three-col-card .card-text h2 {
-  font-size: clamp(1rem, 3vw, 2.8125rem);
+  font-size: 2vw;
+  font-size: clamp(1rem, 2vw, 2.5rem);
   font-weight: 400;
   line-height: 100%;
   color: #212020;
@@ -2685,12 +2687,19 @@ section.three-col-with-form .three-col-grid a.three-col-card .card-text h2 {
   text-transform: uppercase;
   margin: 0 auto;
 }
+@media screen and (min-width: 1200px) {
+  section.three-col-with-form .three-col-grid a.three-col-card .card-text h2 {
+    font-size: 2.4vw;
+  }
+}
 section.three-col-with-form .three-col-grid a.three-col-card .card-image {
   height: 72%;
 }
 section.three-col-with-form .three-col-grid a.three-col-card .card-image img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 section.three-col-with-form .three-col-grid a.three-col-card:first-of-type .card-text h2 {
   width: 40%;
@@ -2772,6 +2781,7 @@ section.three-col-with-form .form-row .form-content .form-wrapper form .submit-f
   section.three-col-with-form .three-col-grid a.three-col-card {
     width: calc(32.9% - 2rem);
     margin: 0 1rem;
+    padding: 0 1rem 2rem;
   }
 }
 @media screen and (max-width: 700px) {
@@ -2779,12 +2789,22 @@ section.three-col-with-form .form-row .form-content .form-wrapper form .submit-f
     text-align: left;
   }
   section.three-col-with-form .three-col-grid a.three-col-card {
-    width: calc(49.6% - 2rem);
+    width: calc(100% - 2rem);
     margin: 0 1rem;
+    padding: 0 1rem 1.5rem;
     aspect-ratio: 0.65;
   }
+  section.three-col-with-form .three-col-grid a.three-col-card:not(:last-child) {
+    margin-bottom: 4rem;
+  }
+  section.three-col-with-form .three-col-grid a.three-col-card .card-text {
+    height: 20%;
+  }
+  section.three-col-with-form .three-col-grid a.three-col-card .card-text h2 {
+    font-size: clamp(2rem, 8vw, 2.6rem);
+  }
   section.three-col-with-form .form-row {
-    padding-left: 50vw;
+    padding-left: 0;
   }
   section.three-col-with-form .form-row .form-content .form-wrapper form .email-field {
     width: 100%;
@@ -2801,6 +2821,10 @@ section.three-col-with-form .form-row .form-content .form-wrapper form .submit-f
   section.three-col-with-form .three-col-grid a.three-col-card {
     width: calc(100% - 2rem);
     margin: 0 1rem;
+  }
+  section.three-col-with-form .three-col-grid a.three-col-card .card-text {
+    height: fit-content;
+    padding: 2rem 0;
   }
   section.three-col-with-form .three-col-grid a.three-col-card .card-text h2 {
     font-size: clamp(2rem, 8vw, 2.6rem);
@@ -3128,7 +3152,7 @@ header#masthead {
   width: 100%;
   max-width: 100vw;
   top: 0;
-  z-index: 9999;
+  z-index: 10000;
   background-color: transparent;
   transition: padding var(--transition) ease, margin var(--transition) ease;
   display: grid;
@@ -3157,11 +3181,6 @@ header#masthead:not(:has(~ .home-page)) #site-navigation.show {
 header#masthead:not(:has(~ .home-page)) #site-navigation .main-navigation-inner {
   background-color: transparent;
   padding: 0;
-}
-@media screen and (min-width: 1200px) {
-  header#masthead:not(:has(~ .home-page)) #site-navigation .main-navigation-inner {
-    padding: 3rem;
-  }
 }
 header#masthead:not(:has(~ .home-page)) #site-navigation .main-navigation-inner #primary-menu li a {
   color: #000 !important;
@@ -3195,6 +3214,7 @@ header#masthead #site-navigation a {
   font-weight: 600;
   font-size: 1rem;
   line-height: 1;
+  font-family: "Josefin Sans", sans-serif;
 }
 @media screen and (min-width: 1200px) {
   header#masthead #site-navigation a {
@@ -4864,7 +4884,7 @@ header#masthead.site-header.bg_light_gray.mobile_only .header.bg-white.padding-x
 
 header#masthead:has(~ main.home-page) #site-navigation::before,
 header#masthead:has(~ main.about-page) #site-navigation::before {
-  background-color: #d6d1d1;
+  background-color: #FFFCFC;
 }
 
 /* Posts and pages
@@ -5026,6 +5046,16 @@ main#primary.home-page header.page-header {
   aspect-ratio: 1.5;
   display: none;
   overflow: hidden;
+  position: relative;
+}
+main#primary.home-page header.page-header::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 main#primary.home-page header.page-header.desktop_header {
   display: block;
@@ -5039,13 +5069,14 @@ main#primary.home-page header.page-header .hero-content {
   display: block;
   overflow: hidden;
   position: relative;
+  z-index: 9999;
 }
 main#primary.home-page header.page-header .hero-content .hero-stack {
   display: flex;
   flex-direction: column;
   align-items: center;
   will-change: transform;
-  transform: translate(0px, 70%) !important;
+  transform: translate(0px, 15rem) !important;
   gap: 1vw;
 }
 main#primary.home-page header.page-header .hero-content .hero-stack.mobile-stack h1 {
@@ -5062,9 +5093,14 @@ main#primary.home-page header.page-header .hero-content .hero-stack.mobile-stack
     position: relative;
   }
 }
+@media screen and (max-width: 1200px) {
+  main#primary.home-page header.page-header .hero-content .hero-stack {
+    transform: translate(0px, 8rem) !important;
+  }
+}
 @media screen and (max-width: 700px) {
   main#primary.home-page header.page-header .hero-content .hero-stack {
-    transform: translate(0px, 100%) !important;
+    transform: translate(0px, 16rem) !important;
   }
 }
 main#primary.home-page header.page-header .hero-content h1, main#primary.home-page header.page-header .hero-content h2, main#primary.home-page header.page-header .hero-content h3 {
@@ -5097,13 +5133,13 @@ main#primary.home-page header.page-header .hero-content h3 {
     justify-content: center;
   }
   main#primary.home-page header.page-header .hero-content h1 {
-    font-size: 5.5vw;
+    font-size: 8vw;
   }
   main#primary.home-page header.page-header .hero-content h2 {
-    font-size: 4.5vw;
+    font-size: 7.5vw;
   }
   main#primary.home-page header.page-header .hero-content h3 {
-    font-size: 3.5vw;
+    font-size: 6.5vw;
   }
 }
 @media screen and (min-width: 1400px) {
