@@ -6208,6 +6208,8 @@ main.books-page section.page-content section.books-listing div.three-col-grid di
 }
 main.books-page section.page-content section.books-listing div.three-col-grid div.book-card-wrapper a.book-card .card-image img {
   aspect-ratio: 1.5;
+  object-fit: contain;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 main.books-page section.page-content section.books-listing div.three-col-grid div.book-card-wrapper a.book-card .card-text {
   padding: clamp(0.5rem, 1.15vw, 1.0625rem) 2vw 0.2rem;
@@ -6275,7 +6277,7 @@ main.books-page section.page-content section.books-listing div.three-col-grid di
 }
 @media screen and (max-width: 700px) {
   main.books-page section.page-content section.books-listing div.three-col-grid div.book-card-wrapper {
-    width: calc(49.6% - 2rem);
+    width: calc(100% - 2rem);
   }
 }
 @media screen and (max-width: 560px) {
@@ -6291,7 +6293,11 @@ main.contact-page {
     width: calc(100% - 2rem);
   }
 }
-main.contact-page input[type=submit] {
+main.contact-page form {
+  max-width: 680px;
+  margin: 0 auto;
+}
+main.contact-page form input[type=submit] {
   font-size: clamp(0.8125rem, 1.77vw, 1.625rem);
   font-weight: 200;
   color: #000;
@@ -6305,11 +6311,11 @@ main.contact-page input[type=submit] {
   text-transform: uppercase;
   transition: border 0.4s ease-in;
 }
-main.contact-page input[type=submit]:visited {
+main.contact-page form input[type=submit]:visited {
   background-color: #9b9b9b;
   color: #000;
 }
-main.contact-page input[type=submit]:hover {
+main.contact-page form input[type=submit]:hover {
   background-color: #000;
   color: #fff;
 }
@@ -6361,6 +6367,7 @@ body:has(.about-page) main section.about-page-content section.about-layout div.a
 }
 body:has(.about-page) main section.about-page-content section.about-layout div.about-content-column h1 {
   color: #FFCB71;
+  max-width: 720px;
 }
 body:has(.about-page) main section.about-page-content section.about-layout div.about-content-column h2, body:has(.about-page) main section.about-page-content section.about-layout div.about-content-column h3, body:has(.about-page) main section.about-page-content section.about-layout div.about-content-column p, body:has(.about-page) main section.about-page-content section.about-layout div.about-content-column a {
   color: #fffcfc;
@@ -6370,8 +6377,9 @@ body:has(.about-page) main section.about-page-content section.about-layout div.a
 }
 body:has(.about-page) main section.about-page-content section.about-layout div.about-content-column p {
   font-size: clamp(0.875rem, 1.4vw, 1.3125rem);
+  max-width: 720px;
 }
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 700px) {
   body:has(.about-page) main section.about-page-content section.about-layout div.about-content-column {
     padding-top: 3rem;
   }

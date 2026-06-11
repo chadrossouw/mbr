@@ -1138,6 +1138,8 @@ main {
 								aspect-ratio: 1.5;
 								img{
 									aspect-ratio: 1.5;
+									object-fit: contain;
+									box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);;
 								}
 							}
 
@@ -1196,7 +1198,7 @@ main {
 							width: calc(32.9% - 2rem);
 						}
 						@media screen and (max-width: 700px) {
-							width: calc(49.6% - 2rem);
+							width: calc(100% - 2rem);
 						}
 						@media screen and (max-width: 560px) {
 							width: calc(100% - 2rem);
@@ -1220,29 +1222,35 @@ main {
 			}
 		}
 
-		input[type=submit]{
-			font-size: clamp(0.8125rem, 1.77vw, 1.625rem);
-			font-weight: 200;
-			color: #000;
-			font-family: 'Josefin Sans', sans-serif;
-			border: 1px solid #9b9b9b;
-			background-color: #fff;
-			width: 100%;
-			display: inline-block;
-			padding: 1rem 0;
-			text-align: center;
-			text-transform: uppercase;
-			transition: border 0.4s ease-in;
+		form{
+			max-width: 680px;
+			margin: 0 auto;
 
-			&:visited{
-				background-color: #9b9b9b;
+			input[type=submit]{
+				font-size: clamp(0.8125rem, 1.77vw, 1.625rem);
+				font-weight: 200;
 				color: #000;
-			}
-			&:hover{
-				background-color: #000;
-				color: #fff;
+				font-family: 'Josefin Sans', sans-serif;
+				border: 1px solid #9b9b9b;
+				background-color: #fff;
+				width: 100%;
+				display: inline-block;
+				padding: 1rem 0;
+				text-align: center;
+				text-transform: uppercase;
+				transition: border 0.4s ease-in;
+
+				&:visited{
+					background-color: #9b9b9b;
+					color: #000;
+				}
+				&:hover{
+					background-color: #000;
+					color: #fff;
+				}
 			}
 		}
+
 	}
 
 	@media screen and (max-width: 700px) {
@@ -1333,6 +1341,7 @@ body{
 						
 						h1{
 							color: #FFCB71;
+							max-width: 720px;
 						}
 						h2,h3,p,a{
 							color: #fffcfc;
@@ -1344,10 +1353,11 @@ body{
 
 						p{
 							font-size: clamp(0.875rem, 1.4vw, 1.3125rem);
+							max-width: 720px;
 						}
 
-						@media screen and (max-width: 560px) {
-							padding-top: 3rem;
+						@media screen and (max-width: 700px) {
+							padding-top: 3rem; 
 						}
 					}
 				}
