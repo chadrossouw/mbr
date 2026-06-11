@@ -26,7 +26,7 @@ get_header();
 
 				<!-- LEFT: ARTWORKS -->
 				<div class="three-col-card">
-                    <h1>Art</h1>
+                    <h1><a href="/art-books/artworks/">Art</a></h1>
 
 					<?php if (!empty($selected_artworks)) : ?>
 
@@ -99,7 +99,7 @@ get_header();
 
 				<!-- RIGHT: BOOKS -->
                 <div class="two-column-span">
-                    <h1>Books</h1>
+                    <h1><a href="/art-books/books/">Books</a></h1>
 
                     <?php if (!empty($selected_books)) : ?>
 
