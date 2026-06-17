@@ -437,6 +437,9 @@ main {
 						@media screen and (max-width: 700px) {
 							display: flex;
 							flex-direction: column;
+							&.single-artwork-top {
+								flex-direction: column-reverse;
+							} 
 						}
 					}
 				}
@@ -493,7 +496,10 @@ main {
 					box-sizing: border-box;
 					
 					&.exhibition-meta{
-						padding: 6rem 2rem 1.2rem;
+						padding: 0 2rem 1.2rem; 
+						@media screen and (min-width: 1400px) {
+							padding: 6vw 2rem 1.2rem;
+						}
 
 						.card-text{
 							max-width: 100%;

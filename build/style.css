@@ -5595,6 +5595,9 @@ main:not(.home-page) .page-content .three-col-grid.single-exhibition-top::after 
     display: flex;
     flex-direction: column;
   }
+  main:not(.home-page) .page-content .three-col-grid.single-exhibition-top.with-1-col-2-col.single-artwork-top {
+    flex-direction: column-reverse;
+  }
 }
 main:not(.home-page) .page-content .three-col-grid.single-exhibition-description {
   margin-top: 4rem;
@@ -5646,7 +5649,12 @@ main:not(.home-page) .page-content .three-col-grid .three-col-card {
   box-sizing: border-box;
 }
 main:not(.home-page) .page-content .three-col-grid .three-col-card.exhibition-meta {
-  padding: 6rem 2rem 1.2rem;
+  padding: 0 2rem 1.2rem;
+}
+@media screen and (min-width: 1400px) {
+  main:not(.home-page) .page-content .three-col-grid .three-col-card.exhibition-meta {
+    padding: 6vw 2rem 1.2rem;
+  }
 }
 main:not(.home-page) .page-content .three-col-grid .three-col-card.exhibition-meta .card-text {
   max-width: 100%;
