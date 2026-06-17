@@ -830,7 +830,6 @@ body {
   background-color: #fff;
 }
 body main#primary {
-  max-width: 1880px;
   margin: 0 auto;
 }
 body::before {
@@ -5137,13 +5136,13 @@ main#primary.home-page header.page-header .hero-content h3 {
     justify-content: center;
   }
   main#primary.home-page header.page-header .hero-content h1 {
-    font-size: 8vw;
+    font-size: 6.5vw;
   }
   main#primary.home-page header.page-header .hero-content h2 {
-    font-size: 7.5vw;
+    font-size: 6vw;
   }
   main#primary.home-page header.page-header .hero-content h3 {
-    font-size: 6.5vw;
+    font-size: 5vw;
   }
 }
 @media screen and (min-width: 1400px) {
@@ -5151,13 +5150,13 @@ main#primary.home-page header.page-header .hero-content h3 {
     gap: 2rem;
   }
   main#primary.home-page header.page-header .hero-content h1 {
-    font-size: clamp(3.5rem, 8vw, 7.375rem);
+    font-size: clamp(3.5rem, 6.5vw, 5.5rem);
   }
   main#primary.home-page header.page-header .hero-content h2 {
-    font-size: clamp(3rem, 7.5vw, 6rem);
+    font-size: clamp(3rem, 6vw, 4.5rem);
   }
   main#primary.home-page header.page-header .hero-content h3 {
-    font-size: clamp(2.7rem, 6.5vw, 4.5rem);
+    font-size: clamp(2.7rem, 5vw, 3rem);
   }
 }
 @media screen and (max-width: 700px) {
@@ -5647,7 +5646,7 @@ main:not(.home-page) .page-content .three-col-grid .three-col-card {
   box-sizing: border-box;
 }
 main:not(.home-page) .page-content .three-col-grid .three-col-card.exhibition-meta {
-  padding: 0 2rem 1.2rem;
+  padding: 6rem 2rem 1.2rem;
 }
 main:not(.home-page) .page-content .three-col-grid .three-col-card.exhibition-meta .card-text {
   max-width: 100%;
@@ -5778,7 +5777,7 @@ main:not(.home-page) .page-content .three-col-grid .two-column-span {
   width: calc(66.5% - 4rem);
   height: 100%;
   box-sizing: border-box;
-  vertical-align: bottom;
+  vertical-align: top;
   aspect-ratio: 2.1;
 }
 main:not(.home-page) .page-content .three-col-grid .two-column-span.description-content {

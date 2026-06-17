@@ -493,7 +493,7 @@ main {
 					box-sizing: border-box;
 					
 					&.exhibition-meta{
-						padding: 0 2rem 1.2rem;
+						padding: 6rem 2rem 1.2rem;
 
 						.card-text{
 							max-width: 100%;
@@ -633,7 +633,7 @@ main {
 					width: calc(66.5% - 4rem);
 					height: 100%;
 					box-sizing: border-box;
-					vertical-align: bottom;
+					vertical-align: top;
 					aspect-ratio: 2.1; //1.48
 					&.description-content{
 						height: fit-content;

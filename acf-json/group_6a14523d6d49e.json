@@ -3,6 +3,31 @@
     "title": "Products",
     "fields": [
         {
+            "key": "field_6a32535536590",
+            "label": "Single Product Image",
+            "name": "single_product_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Please add in a full width image to be displayed for a single Artwork or Book",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
             "key": "field_6a14524035203",
             "label": "Artists",
             "name": "artists",
@@ -207,5 +232,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1779881953
+    "modified": 1781683133
 }

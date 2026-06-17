@@ -33,7 +33,8 @@ if ( post_password_required() ) {
 
 // Product data
 $product_id      = $product->get_id();
-$featured_image  = get_the_post_thumbnail_url( $product_id, 'large' );
+$product_full_image = get_field('single_product_image');
+$featured_image  = $product_full_image ?? get_the_post_thumbnail_url( $product_id, 'large' );
 
 // Artworks ACF Fields
 $artists     = get_field( 'artists', $product_id );

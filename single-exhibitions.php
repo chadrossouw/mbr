@@ -7,7 +7,8 @@ get_header();
 <?php while (have_posts()) : the_post(); ?>
 
     <?php
-    $featured_image = get_the_post_thumbnail_url(get_the_ID(), 'large');
+    $exhibition_full_image = get_field('single_exhibition_image');
+    $featured_image = $exhibition_full_image ?? get_the_post_thumbnail_url(get_the_ID(), 'large');
     $artists        = get_field('artists');
     $description    = get_field('exhibition_description');
     $long_description = get_field('exhibition_long_content');
