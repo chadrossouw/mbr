@@ -3,12 +3,12 @@
     "title": "Exhibitions",
     "fields": [
         {
-            "key": "field_6a3259835464e",
+            "key": "field_6a881fd0e574e",
             "label": "Single Exhibition Image",
             "name": "single_exhibition_image",
             "aria-label": "",
             "type": "image",
-            "instructions": "Add in a full width image for the exhibition",
+            "instructions": "Use this to add the image related to the exhibition. This will be the same image that appears on the All Exhibitions listings page, as well, the single exhibition page.\r\nNB!! - Use only this field when adding a new exhibition. AVOID using the featured image input on the right",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -146,5 +146,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1781684676
+    "modified": 1787306618
 }

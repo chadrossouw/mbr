@@ -514,6 +514,12 @@ h1,
 .h1 {
   font-size: clamp(2.09375rem, 4.75vw, 4.1875rem);
 }
+@media screen and (min-width: 700px) {
+  h1,
+  .h1 {
+    font-size: 4.1875vw;
+  }
+}
 h2,
 .h2 {
   font-size: 1.4rem;
@@ -5485,7 +5491,7 @@ main:not(.home-page) .page-content {
 }
 @media screen and (min-width: 1200px) {
   main:not(.home-page) .page-content {
-    padding: 5rem 0vw 4rem;
+    padding: 2rem 0vw 4rem;
   }
 }
 main:not(.home-page) .page-content form p span {
@@ -5498,8 +5504,9 @@ main:not(.home-page) .page-content form input[type=submit]:hover {
   border: 1px solid #000;
 }
 main:not(.home-page) .page-content h1 {
-  text-align: center;
+  text-align: left;
   text-transform: uppercase;
+  padding: 0 3vw 4.5vw;
 }
 main:not(.home-page) .page-content p a {
   text-decoration: underline !important;
@@ -5524,13 +5531,22 @@ main:not(.home-page) .page-content .three-col-no-form .three-col-grid a {
   box-sizing: border-box;
   vertical-align: top;
 }
+main:not(.home-page) .page-content .three-col-no-form .three-col-grid a .card-image {
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  background-color: #f1f0f0;
+  border: 2rem solid #f1f0f0;
+}
 main:not(.home-page) .page-content .three-col-no-form .three-col-grid a .card-image img {
   width: 100%;
+  object-position: 50% 50%;
+  object-fit: contain;
 }
 main:not(.home-page) .page-content .three-col-no-form .three-col-grid a .card-text {
   text-align: left;
   max-width: 90%;
-  padding: clamp(0.875rem, 1.9vw, 1.75rem) 0 clamp(2.625rem, 5.7vw, 5.25rem);
+  padding: clamp(0.875rem, 1.9vw, 1.75rem) 0 4vw;
 }
 main:not(.home-page) .page-content .three-col-no-form .three-col-grid a .card-text h2,
 main:not(.home-page) .page-content .three-col-no-form .three-col-grid a .card-text p {

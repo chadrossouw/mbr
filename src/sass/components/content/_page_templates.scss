@@ -325,7 +325,7 @@ main {
 			margin-left: auto;
 			margin-right: auto;
 			@include media1200{
-				padding: 5rem 0vw 4rem;
+				padding: 2rem 0vw 4rem;
 			}
 			form{
 				p span{
@@ -339,8 +339,9 @@ main {
 				}
 			}
 			h1{
-				text-align: center;
+				text-align: left;
 				text-transform: uppercase;
+				padding: 0 3vw 4.5vw;
 			}
 			p{
 				a{
@@ -370,14 +371,22 @@ main {
 						vertical-align: top;
 
 						.card-image{
+							aspect-ratio: 1;
+							display: flex;
+							//align-items: center;
+							justify-content: center;
+							background-color: #f1f0f0;
+							border: 2rem solid #f1f0f0;
 							img{
 								width: 100%;
+								object-position: 50% 50%;
+								object-fit: contain;
 							}
 						}
 						.card-text{
 							text-align: left;
 							max-width: 90%;
-							padding: clamp(0.875rem, 1.9vw, 1.75rem) 0 clamp(2.625rem, 5.7vw, 5.25rem);
+							padding: clamp(0.875rem, 1.9vw, 1.75rem) 0 4vw;
 							h2,
 							p{
 								font-size: clamp(0.875rem, 1.9vw, 1.75rem);

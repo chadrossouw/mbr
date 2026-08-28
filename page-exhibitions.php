@@ -1,6 +1,6 @@
 <?php
-/*
-Template Name: Exhibitions Page
+/* 
+Template Name: Exhibitions Page 
 */
 get_header();
 ?>
@@ -34,7 +34,9 @@ get_header();
 
                     <?php while ($exhibitions->have_posts()) : $exhibitions->the_post();
 
-                        $featured_image = get_the_post_thumbnail_url(get_the_ID(), 'large');
+                        // ACF image field returns the image URL.
+                        $featured_image = get_field('single_exhibition_image');
+
                         $artists        = get_field('artists');
                         $title          = get_the_title();
                         $link           = get_permalink();
@@ -69,7 +71,7 @@ get_header();
 
                             <?php if (!empty($featured_image)) : ?>
                                 <div class="card-image">
-                                    <img
+                                    <img 
                                         src="<?php echo esc_url($featured_image); ?>"
                                         alt="<?php echo esc_attr($title); ?>"
                                     >

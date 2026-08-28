@@ -113,5 +113,38 @@ function soul_init()
 
 	// register_post_type('artworks', $args_artworks);
 
+	// Essays
+	$labels_essays = array(
+		'name'               => __( 'Essays', 'soul' ),
+		'singular_name'      => __( 'Essay', 'soul' ),
+		'menu_name'          => __( 'Essays', 'soul' ),
+		'name_admin_bar'     => __( 'Essay', 'soul' ),
+		'add_new'            => __( 'Add New', 'soul' ),
+		'add_new_item'       => __( 'Add New Essay', 'soul' ),
+		'new_item'           => __( 'New Essay', 'soul' ),
+		'edit_item'          => __( 'Edit Essay', 'soul' ),
+		'view_item'          => __( 'View Essay', 'soul' ),
+		'all_items'          => __( 'All Essays', 'soul' ),
+		'search_items'       => __( 'Search Essays', 'soul' ),
+		'not_found'          => __( 'No Essays found.', 'soul' ),
+		'not_found_in_trash' => __( 'No Essays found in Trash.', 'soul' )
+	);
+
+	$args_essays = array(
+		'labels'        => $labels_essays,
+		'public'        => true,
+		'show_ui'       => true,
+		'show_in_rest'  => true,
+		'has_archive'   => false,
+		'rewrite'       => array(
+			'slug'       => 'essays',
+			'with_front' => false
+		),
+		'menu_icon'     => 'dashicons-edit-page',
+		'supports'      => array( 'title', 'thumbnail', 'editor' ),
+	);
+
+	register_post_type( 'essays', $args_essays );
+
 }
 add_action('init', 'soul_init');

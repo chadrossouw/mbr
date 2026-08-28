@@ -1,0 +1,381 @@
+{
+    "key": "group_6a88554f7a1a3",
+    "title": "Essay and Exhibitions Content Layout Blocks",
+    "fields": [
+        {
+            "key": "field_6a88555262723",
+            "label": "Essay Exhibitions Content Blocks",
+            "name": "essay_exhibitions_content_blocks",
+            "aria-label": "",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_6a8857755d3a1": {
+                    "key": "layout_6a8857755d3a1",
+                    "name": "parallax_effect_block",
+                    "label": "Parallax Effect Block",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6a88585062724",
+                            "label": "Artwork",
+                            "name": "artwork",
+                            "aria-label": "",
+                            "type": "relationship",
+                            "instructions": "Choose an artwork related to this Parallax block, when this block is for an Essay or Exhibition",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "product"
+                            ],
+                            "post_status": "",
+                            "taxonomy": [
+                                "product_cat:artworks"
+                            ],
+                            "filters": [
+                                "search",
+                                "post_type",
+                                "taxonomy"
+                            ],
+                            "return_format": "object",
+                            "min": 1,
+                            "max": 1,
+                            "elements": "",
+                            "bidirectional": 0,
+                            "bidirectional_target": []
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_6a885c5dc022f": {
+                    "key": "layout_6a885c5dc022f",
+                    "name": "scroll_over_block",
+                    "label": "Scroll Over Block",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6a885cabc0235",
+                            "label": "Artwork",
+                            "name": "artwork",
+                            "aria-label": "",
+                            "type": "relationship",
+                            "instructions": "Choose an artwork related to this Parallax block, when this block is for an Essay or Exhibition",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "product"
+                            ],
+                            "post_status": "",
+                            "taxonomy": [
+                                "product_cat:artworks"
+                            ],
+                            "filters": [
+                                "search",
+                                "post_type",
+                                "taxonomy"
+                            ],
+                            "return_format": "object",
+                            "min": 1,
+                            "max": 1,
+                            "elements": "",
+                            "bidirectional": 0,
+                            "bidirectional_target": []
+                        },
+                        {
+                            "key": "field_6a885d22c0236",
+                            "label": "Scroll Over Text",
+                            "name": "scroll_over_text",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 0,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_6a885d4ac0237": {
+                    "key": "layout_6a885d4ac0237",
+                    "name": "zoom_block",
+                    "label": "Zoom Block",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6a885d70c023d",
+                            "label": "Zoom Anchor Point",
+                            "name": "zoom_anchor_point",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "top-left": "Top Left",
+                                "top-right": "Top Right",
+                                "bottom-left": "Bottom Left",
+                                "bottom-right": "Bottom Right"
+                            },
+                            "default_value": false,
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_6a885db2c023e",
+                            "label": "Artwork",
+                            "name": "artwork",
+                            "aria-label": "",
+                            "type": "relationship",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "product"
+                            ],
+                            "post_status": "",
+                            "taxonomy": [
+                                "product_cat:artworks"
+                            ],
+                            "filters": [
+                                "search",
+                                "post_type",
+                                "taxonomy"
+                            ],
+                            "return_format": "object",
+                            "min": 1,
+                            "max": 1,
+                            "elements": "",
+                            "bidirectional": 0,
+                            "bidirectional_target": []
+                        },
+                        {
+                            "key": "field_6a885df1c023f",
+                            "label": "Non Zooming Text",
+                            "name": "non_zooming_text",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_6a885e05c0240",
+                            "label": "Zooming Text",
+                            "name": "zooming_text",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_6a885ea7c0241": {
+                    "key": "layout_6a885ea7c0241",
+                    "name": "small_text",
+                    "label": "Small Text",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6a885ec7c0247",
+                            "label": "Small Text",
+                            "name": "small_text",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 0,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_6a88601ac0248": {
+                    "key": "layout_6a88601ac0248",
+                    "name": "three_column_image_text",
+                    "label": "Three Column Image Text",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6a886089c024a",
+                            "label": "Artwork",
+                            "name": "artwork",
+                            "aria-label": "",
+                            "type": "relationship",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "product"
+                            ],
+                            "post_status": "",
+                            "taxonomy": [
+                                "product_cat:artworks"
+                            ],
+                            "filters": [
+                                "search",
+                                "post_type",
+                                "taxonomy"
+                            ],
+                            "return_format": "object",
+                            "min": 1,
+                            "max": 3,
+                            "elements": "",
+                            "bidirectional": 0,
+                            "bidirectional_target": []
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_6a8860efc024b": {
+                    "key": "layout_6a8860efc024b",
+                    "name": "single_full_image_text",
+                    "label": "Single Full Image Text",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6a8860f9c0251",
+                            "label": "Artwork",
+                            "name": "artwork",
+                            "aria-label": "",
+                            "type": "relationship",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": "",
+                            "post_status": "",
+                            "taxonomy": "",
+                            "filters": [
+                                "search",
+                                "post_type",
+                                "taxonomy"
+                            ],
+                            "return_format": "object",
+                            "min": 1,
+                            "max": 1,
+                            "elements": "",
+                            "bidirectional": 0,
+                            "bidirectional_target": []
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "min": "",
+            "max": "",
+            "button_label": "Add Row"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "exhibitions"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "essays"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1787322662
+}
