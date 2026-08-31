@@ -1,92 +1,129 @@
-<?php
+<?php if ( ! have_rows('column') ) { return; } ?>
 
-$artworks = get_sub_field('artwork');
-$images = get_sub_field('images');
-if (!$artworks) {
-    return;
-}
-$artworks = is_array($artworks) ? array_map(function($n){ 
-    $artwork_id = $n->ID;
+<div class="essay-layout three-column-layout">
 
-    $image = get_field('artwork_image', $artwork_id);
-    $title = get_field('artwork_caption', $artwork_id);
+<?php while ( have_rows('column') ) : the_row();
 
-    // Artist relationship
-    $artist = get_field('artist_name', $artwork_id);
+    $use_artworks = get_sub_field('use_artwork_product');
 
-    if (is_array($artist)) {
-        $artist = $artist[0];
+    $image = null;
+    $title = '';
+    $link = null;
+    $artist_output = '';
+
+    /*
+     * Artwork/product selected
+     */
+    if ($use_artworks) {
+
+        $artwork = get_sub_field('artwork');
+
+        if ( ! empty($artwork) ) {
+
+            // Relationship field returns an array (max 1)
+            $artwork_post = is_array($artwork) ? $artwork[0] : $artwork;
+
+            $product_id = is_object($artwork_post)
+                ? $artwork_post->ID
+                : $artwork_post;
+
+            $image = get_the_post_thumbnail_url(
+                $product_id,
+                'large'
+            );
+
+            $title = get_the_title($product_id);
+
+            $link = get_permalink($product_id);
+
+            /*
+             * Artist relationship
+             */
+            $artists = get_field('artists', $product_id);
+
+            $artist_names = [];
+
+            if ( ! empty($artists) ) {
+
+                foreach ( $artists as $artist ) {
+
+                    $artist_names[] = is_object($artist)
+                        ? get_the_title($artist->ID)
+                        : get_the_title($artist);
+                }
+            }
+
+            if ( count($artist_names) > 1 ) {
+
+                $last_artist = array_pop($artist_names);
+
+                $artist_output =
+                    implode(', ', $artist_names) .
+                    ' & ' .
+                    $last_artist;
+
+            } else {
+
+                $artist_output = $artist_names[0] ?? '';
+            }
+        }
+
+    /*
+     * Standalone image selected
+     */
+    } else {
+
+        $title = get_sub_field('caption');
+
+        $image = get_sub_field('image');
+
+        if ( $image ) {
+            $image = wp_get_attachment_image_url(
+                $image,
+                'full'
+            );
+        }
     }
 
-    $artist_name = $artist ? get_the_title($artist->ID) : null;
-    $artist_link = $artist ? get_permalink($artist->ID) : null;
-    return [
-        'image' => $image,
-        'title' => $title,
-        'artist_name' => $artist_name,
-        'artist_link' => $artist_link
-    ];
-}, $artworks) : [];
-
-$images = is_array($images) ? array_map(function($n){ 
-    $image = wp_get_attachment_image($n, 'full');
-    $title = wp_get_attachment_caption($n);
-    return [
-        'image' => $image,
-        'title' => $title,
-    ];
-}, $images) : [];
-
-$artworks = array_merge($artworks, $images);
 ?>
 
-<div class="essay-layout multiple-half-image-text padding grid--two-to-one gap_3">
-
-    <?php foreach ($artworks as $artwork) : 
-
-    ?>
-
+    <a class="three-col-card" href="<?php echo esc_url($link); ?>">
         <div class="essay-artwork card">
-
             <div class="essay-artwork-image">
 
-                <?php if ($artwork['image']) : ?>
+                <?php if ( $image ) : ?>
+
                     <img
-                        class=""
-                        src="<?php echo esc_url($artwork['image']); ?>"
-                        alt="<?php echo esc_attr($artwork['title']); ?>"
-                        oncontextmenu="return false;">
+                        src="<?php echo esc_url($image); ?>"
+                        alt="<?php echo esc_attr(wp_strip_all_tags($title)); ?>"
+                        oncontextmenu="return false;"
+                    >
+
                 <?php endif; ?>
 
             </div>
 
             <div class="essay-artwork-meta inside-grid white card-meta-padding">
 
-                <?php if (isset($artwork['title'])) : ?>
+                <?php if ( ! empty($artist_output) ) : ?>
 
-                    
-                        <div class="caption">
-                            <?php echo apply_filters('the_content', $artwork['title']); ?>
-                        </div>
-                    <?php endif; ?>
+                    <h2 class="artwork-artist card-artists">
+                        <?php echo esc_html($artist_output); ?>
+                    </h2>
 
-                
-
-                <?php if (isset($artwork['artist_name'])) : ?>
-                    <p class="artwork-artist">
-                        <?php if (isset($artwork['artist_link'])) : ?>
-                        <a class="artwork-title card_target" href="<?php echo esc_url($artwork['artist_link']); ?>">
-                            <?php echo esc_html($artwork['artist_name']); ?>
-                        </a>
-                        <?php else : ?>
-                            <?php echo esc_html($artwork['artist_name']); ?>
-                        <?php endif; ?>
-                    </p>
                 <?php endif; ?>
+
+                <?php if ( $title ) : ?>
+
+                    <div class="caption card-title">
+                        <?php echo apply_filters('the_content', $title); ?>
+                    </div>
+
+                <?php endif; ?>
+
+
             </div>
-
         </div>
+    </a>
 
-    <?php endforeach; ?>
-
-</div>
+<?php endwhile; ?>

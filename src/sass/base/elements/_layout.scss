@@ -521,3 +521,69 @@ section.three-col-with-form{
 		}
 	}
 }
+
+// THREE COLUMN IMAGE
+.three-column-layout{
+	// display: grid;
+	// grid-template-columns: 1fr 1fr 1fr;
+	// gap: 4rem;
+	display: block;
+	width: 100dvw;
+	padding: 6rem 0;
+	box-sizing: border-box;
+	
+	a.three-col-card{
+		width: 100%;
+		display: inline-block;
+		padding: 0 2rem;
+		vertical-align: top;
+		box-sizing: border-box;
+		.card{
+			// width: 33%;
+			// display: inline-block;
+			// padding: 0 4rem;
+
+			.essay-artwork-image{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				img{
+					display: block;
+					max-width: 100%;
+					height: auto;
+				}
+			}
+
+			.essay-artwork-meta{
+				background-color: transparent;
+				padding: 2rem 0;
+				text-transform: uppercase;
+				font-family: "Josefin Sans", sans-serif;
+
+				.card-artists{
+					font-weight: 400;
+					font-size: clamp(0.875rem, 1.1vw, 1.0625rem);
+					color: $color-white;
+					font-family: inherit;
+				}
+				.card-title p{
+					font-weight: 300;
+					font-style: italic;
+					font-size: clamp(0.875rem, 1.1vw, 1.0625rem);
+					font-family: "Josefin Sans", sans-serif;
+				}
+			}
+		}
+
+		@include media700{
+			width: 32.9%;
+			padding: 0 4rem;
+		}
+		
+		@include media1000{
+			width: 33%;
+			vertical-align: middle;
+		}
+	}
+}
