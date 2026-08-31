@@ -59,12 +59,9 @@ else{
     <div class="essay-artwork-meta white card-meta-padding">
 
         <?php if ($title) : ?>
-
                 <div class="caption">
                     <?php echo apply_filters('the_content', $title); ?>
-                </div>
-            
-
+                </div>   
         <?php endif; ?>
 
         <?php if (!empty($artist_output)) : ?>

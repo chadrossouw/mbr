@@ -13,6 +13,7 @@ get_header();
     $description    = get_field('exhibition_description');
     $long_description = get_field('exhibition_long_content');
     $related_artworks = get_field('artworks');
+    $essay_link = get_field('essay_link');
 
     // Build artist names
     $artist_names = [];
@@ -57,6 +58,20 @@ get_header();
                         </p>
                     </div>
 
+                    <div class="description-content two-column-span">
+                        <?php if (!empty($description)) : ?>
+                            <?php echo wp_kses_post($description); ?>
+                        <?php endif; ?>
+                    </div>
+
+                    <?php if (!empty($essay_link)) : ?>
+                        <div class="essay-link-wrapper">
+                            <a class="essay-link bg_white" href="<?php echo esc_url($essay_link['url']); ?>"<?php echo !empty($essay_link['target']) ? ' target="' . esc_attr($essay_link['target']) . '"' : ''; ?>>
+                                <?php echo esc_html($essay_link['title']); ?>
+                            </a>
+                        </div>
+                    <?php endif; ?>
+
                 </div>
 
                 <div class="exhibition-image two-column-span">
@@ -71,23 +86,6 @@ get_header();
                 </div>
 
             </section>
-
-
-            <!-- DESCRIPTION SECTION -->
-            <section class="single-exhibition-description three-col-grid">
-
-                <div class="empty-column three-col-card"></div>
-
-                <div class="description-content two-column-span">
-
-                    <?php if (!empty($description)) : ?>
-                        <?php echo wp_kses_post($description); ?>
-                    <?php endif; ?>
-
-                </div>
-
-            </section>
-
 
             <!-- RELATED ARTWORKS -->
             <?php if (!empty($related_artworks)) : ?>

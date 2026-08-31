@@ -33,6 +33,49 @@
             "name": "exhibition_description",
             "aria-label": "",
             "type": "wysiwyg",
+            "instructions": "Use this field to add the exhibition Essay snippet",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_6a956e8ea7572",
+            "label": "Essay Link",
+            "name": "essay_link",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "Use this field to add a link to the Exhibition Essay",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6a144be21fdb3",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_6a14508ba380e",
+            "label": "Exhibition Long Content",
+            "name": "exhibition_long_content",
+            "aria-label": "",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -106,26 +149,6 @@
             "elements": "",
             "bidirectional": 0,
             "bidirectional_target": []
-        },
-        {
-            "key": "field_6a14508ba380e",
-            "label": "Exhibition Long Content",
-            "name": "exhibition_long_content",
-            "aria-label": "",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 0
         }
     ],
     "location": [
@@ -148,5 +171,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1788160192
+    "modified": 1788178258
 }

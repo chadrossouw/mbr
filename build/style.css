@@ -5751,7 +5751,7 @@ main:not(.home-page) .page-content .three-col-grid .three-col-card.exhibition-me
 }
 @media screen and (min-width: 1400px) {
   main:not(.home-page) .page-content .three-col-grid .three-col-card.exhibition-meta {
-    padding: 6vw 2rem 1.2rem;
+    padding: 0vw 2rem 1.2rem;
   }
 }
 main:not(.home-page) .page-content .three-col-grid .three-col-card.exhibition-meta .card-text {
@@ -6432,6 +6432,23 @@ main.single-exhibition-page > * {
 }
 main.single-exhibition-page .page-content p, main.single-exhibition-page .page-content h1, main.single-exhibition-page .page-content h2, main.single-exhibition-page .page-content h3, main.single-exhibition-page .page-content h4, main.single-exhibition-page .page-content h5, main.single-exhibition-page .page-content h6 {
   color: #fff !important;
+}
+main.single-exhibition-page .page-content .single-exhibition-top .description-content {
+  width: 100%;
+  margin: 2rem 2rem 3rem 0;
+}
+main.single-exhibition-page .page-content .single-exhibition-top .essay-link-wrapper {
+  margin-bottom: 3rem;
+}
+main.single-exhibition-page .page-content .single-exhibition-top a.essay-link {
+  padding: 0.5rem 2rem;
+  border-radius: 5px;
+  border: 1px solid #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-style: italic;
+  display: flex;
+  width: fit-content;
 }
 main #masthead:has(+ .single-exhibition-page) .site-branding a svg path {
   fill: #fff !important;

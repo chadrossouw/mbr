@@ -507,7 +507,8 @@ main {
 					&.exhibition-meta{
 						padding: 0 2rem 1.2rem; 
 						@media screen and (min-width: 1400px) {
-							padding: 6vw 2rem 1.2rem;
+							//padding: 6vw 2rem 1.2rem;
+							padding: 0vw 2rem 1.2rem;
 						}
 
 						.card-text{
@@ -1277,6 +1278,28 @@ main {
 		.page-content{
 			p,h1,h2,h3,h4,h5,h6{
 				color: $color_white !important;
+			}
+
+			.single-exhibition-top{
+				.description-content {
+					width: 100%;
+					margin: 2rem 2rem 3rem 0;
+				}
+
+				.essay-link-wrapper{
+					margin-bottom: 3rem;
+				}
+
+				a.essay-link{
+					padding: 0.5rem 2rem;
+					border-radius: 5px;
+					border: 1px solid $color-black;
+					text-decoration: none;
+					text-transform: uppercase;
+					font-style: italic;
+					display: flex;
+					width: fit-content;
+				}
 			}
 		}
 	}
