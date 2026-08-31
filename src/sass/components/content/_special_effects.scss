@@ -119,6 +119,7 @@
 	overflow: hidden;
     clip-path: inset(0 0 0 0);
 	-webkit-clip-path: inset(0 0 0 0);
+	box-sizing: border-box;
 	.essay-artwork-image{
 		position:absolute;
 		top:0;
@@ -188,6 +189,7 @@
 		padding:2rem;
 		opacity:0;
 		transition: opacity 0.8s ease-in;
+		background-color: #121212;
 		&.text-left{
 			margin-left: var(--margin); 
 			margin-right: auto;

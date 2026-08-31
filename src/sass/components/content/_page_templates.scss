@@ -1268,6 +1268,27 @@ main {
 
 	}
 
+	&.single-exhibition-page{
+		background-color: #121212;
+
+		&>*{
+			color: $color_white;
+		}
+		.page-content{
+			p,h1,h2,h3,h4,h5,h6{
+				color: $color_white !important;
+			}
+		}
+	}
+
+	#masthead{
+		&:has(+.single-exhibition-page){
+			.site-branding a svg path {
+				fill: $color_white !important;
+			}
+		}
+	}
+
 	@media screen and (max-width: 700px) {
 		&::before{
 			width: 0;

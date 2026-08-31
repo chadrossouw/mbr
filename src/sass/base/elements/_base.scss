@@ -89,6 +89,16 @@ body {
 		// pointer-events: none;
 	}
 
+	&:has(> #page .single-exhibition-page){
+		&::before{
+			//background: #b6afaf;
+		}
+
+		header#masthead #site-navigation::before{
+			background-color: #d6d1d1;
+		}
+	}
+
 	@media screen and (max-width: 700px) {
 		&::before{
 			//left: 50vw;

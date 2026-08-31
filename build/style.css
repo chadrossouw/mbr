@@ -849,6 +849,9 @@ body::before {
   z-index: 9998;
   pointer-events: none;
 }
+body:has(> #page .single-exhibition-page) header#masthead #site-navigation::before {
+  background-color: #d6d1d1;
+}
 @media screen and (max-width: 700px) {
   body::before {
     width: 0;
@@ -3212,6 +3215,9 @@ header#masthead:not(:has(~ .home-page)) .header .hamburger_container button.hamb
 header#masthead:not(:has(~ .home-page)) .header .hamburger_container button.hamburger .hamburger-box .hamburger-inner::before, header#masthead:not(:has(~ .home-page)) .header .hamburger_container button.hamburger .hamburger-box .hamburger-inner::after {
   background-color: #000;
 }
+header#masthead:has(~ .single-exhibition-page) .site-branding svg path {
+  fill: #fff;
+}
 header#masthead:has(~ .about-page) .site-branding svg path {
   fill: #fff;
 }
@@ -3443,6 +3449,12 @@ header#masthead .open_times {
   }
   header#masthead:not(:has(~ .home-page)) .header #site-navigation .main-navigation-inner #primary_menu li a {
     color: #000;
+  }
+  header#masthead:has(~ .single-exhibition-page) .header #site-navigation .main-navigation-inner #primary_menu li {
+    border-color: #fff;
+  }
+  header#masthead:has(~ .single-exhibition-page) .header #site-navigation .main-navigation-inner #primary_menu li a {
+    color: #fff;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -6342,6 +6354,18 @@ main.contact-page form input[type=submit]:hover {
   background-color: #000;
   color: #fff;
 }
+main.single-exhibition-page {
+  background-color: #121212;
+}
+main.single-exhibition-page > * {
+  color: #fff;
+}
+main.single-exhibition-page .page-content p, main.single-exhibition-page .page-content h1, main.single-exhibition-page .page-content h2, main.single-exhibition-page .page-content h3, main.single-exhibition-page .page-content h4, main.single-exhibition-page .page-content h5, main.single-exhibition-page .page-content h6 {
+  color: #fff !important;
+}
+main #masthead:has(+ .single-exhibition-page) .site-branding a svg path {
+  fill: #fff !important;
+}
 @media screen and (max-width: 700px) {
   main::before {
     width: 0;
@@ -7114,6 +7138,7 @@ footer#footer .bg_yellow svg * {
   overflow: hidden;
   clip-path: inset(0 0 0 0);
   -webkit-clip-path: inset(0 0 0 0);
+  box-sizing: border-box;
 }
 .zoom-block .essay-artwork-image {
   position: absolute;
@@ -7183,6 +7208,7 @@ footer#footer .bg_yellow svg * {
   padding: 2rem;
   opacity: 0;
   transition: opacity 0.8s ease-in;
+  background-color: #121212;
 }
 .zoom-block .zoom-block__zooming-text.text-left {
   margin-left: var(--margin);

@@ -94,6 +94,16 @@ header#masthead {
 		}
 	}
 
+	&:has(~ .single-exhibition-page) {
+		.site-branding{
+			svg {
+				path {
+					fill: $color_white;
+				}
+			}
+		}
+	}
+
 	&:has(~ .about-page){
 		.site-branding{
 			svg {
@@ -422,6 +432,24 @@ header#masthead {
 				.site-branding {
 					// position: relative;
 					// top: 200px;
+				}
+			}
+		}
+
+		&:has(~ .single-exhibition-page){
+			.header {
+				#site-navigation {
+
+					.main-navigation-inner{
+						#primary_menu{
+							li{
+								border-color: $color-white;
+								a{
+									color: $color-white;
+								}
+							}
+						}
+					}
 				}
 			}
 		}
