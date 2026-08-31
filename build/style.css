@@ -566,7 +566,7 @@ p {
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: 400;
-  font-family: "Tinos", serif;
+  font-family: "Lora", sans-serif;
 }
 
 dfn,
@@ -5726,7 +5726,7 @@ main:not(.home-page) .page-content .three-col-grid.single-exhibition-description
 }
 main:not(.home-page) .page-content .three-col-grid.single-exhibition-description .description-content p {
   max-width: 720px;
-  font-family: "Tinos", serif;
+  font-family: "Lora", sans-serif;
 }
 @media screen and (max-width: 900px) {
   main:not(.home-page) .page-content .three-col-grid.single-exhibition-description {

@@ -485,7 +485,7 @@ main {
 					.description-content{
 						p{
 							max-width: 720px;
-							font-family: "Tinos", serif;
+							font-family: $font__body;
 						}
 					}
 					@media screen and (max-width: 900px) {
