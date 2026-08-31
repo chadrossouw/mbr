@@ -799,9 +799,13 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "post_type": "",
+                            "post_type": [
+                                "product"
+                            ],
                             "post_status": "",
-                            "taxonomy": "",
+                            "taxonomy": [
+                                "product_cat:artworks"
+                            ],
                             "filters": [
                                 "search",
                                 "post_type",
@@ -851,5 +855,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1788161374
+    "modified": 1788174862
 }

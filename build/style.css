@@ -2901,6 +2901,22 @@ section.three-col-with-form .form-row .form-content .form-wrapper form .submit-f
   }
 }
 
+.single-full-image-text {
+  position: relative;
+  z-index: 9999;
+}
+.single-full-image-text .essay-artwork-meta {
+  background-color: transparent;
+  padding: 2rem 0 !important;
+}
+.single-full-image-text .essay-artwork-meta .artwork-artist {
+  font-weight: 600;
+}
+.single-full-image-text .essay-artwork-meta .artwork-artist a,
+.single-full-image-text .essay-artwork-meta p {
+  color: #fff;
+}
+
 @media screen and (min-width: 1200px) {
   .column--one {
     grid-column: 1/2;
@@ -7078,6 +7094,7 @@ footer#footer .bg_yellow svg * {
   overflow: hidden;
   clip-path: inset(0 0 0 0);
   -webkit-clip-path: inset(0 0 0 0);
+  z-index: 9999;
 }
 .essay-layout.parallax-effect-block .essay-artwork-meta {
   position: absolute;
@@ -7123,6 +7140,7 @@ footer#footer .bg_yellow svg * {
   overflow: hidden;
   clip-path: inset(0 0 0 0);
   -webkit-clip-path: inset(0 0 0 0);
+  z-index: 9999;
 }
 .scroll-over-block .essay-artwork-image {
   position: absolute;
@@ -7193,6 +7211,7 @@ footer#footer .bg_yellow svg * {
   clip-path: inset(0 0 0 0);
   -webkit-clip-path: inset(0 0 0 0);
   box-sizing: border-box;
+  z-index: 9999;
 }
 .zoom-block .essay-artwork-image {
   position: absolute;

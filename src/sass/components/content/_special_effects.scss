@@ -4,6 +4,7 @@
     overflow: hidden;
     clip-path: inset(0 0 0 0);
 	-webkit-clip-path: inset(0 0 0 0);
+	z-index:9999;
 	.essay-artwork-meta{
 		position:absolute;
 		bottom:0;
@@ -48,6 +49,7 @@
     overflow: hidden;
     clip-path: inset(0 0 0 0);
 	-webkit-clip-path: inset(0 0 0 0);
+	z-index:9999;
 	.essay-artwork-image{
 		position:absolute;
 		top:0;
@@ -120,6 +122,7 @@
     clip-path: inset(0 0 0 0);
 	-webkit-clip-path: inset(0 0 0 0);
 	box-sizing: border-box;
+	z-index:9999;
 	.essay-artwork-image{
 		position:absolute;
 		top:0;

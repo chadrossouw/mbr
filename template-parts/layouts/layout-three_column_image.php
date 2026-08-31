@@ -127,3 +127,4 @@
     </a>
 
 <?php endwhile; ?>
+</div>

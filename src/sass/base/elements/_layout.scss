@@ -587,3 +587,22 @@ section.three-col-with-form{
 		}
 	}
 }
+
+//Single full image
+.single-full-image-text {
+	position: relative;
+	z-index: 9999;
+	.essay-artwork-meta{
+		background-color: transparent;
+		padding: 2rem 0 !important;
+
+		.artwork-artist{
+			font-weight: 600;
+		}
+
+		.artwork-artist a,
+		p{
+			color: $color_white;
+		}
+	}
+}

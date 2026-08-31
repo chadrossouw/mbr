@@ -92,12 +92,16 @@ if($zoom_anchor=='coordinates'){
                 </div>
         <?php  endif; ?>
 
-        <?php if ($artist_output) : ?>
-            <?php if ($link) : ?>
-                <p class="artwork-artist"><a class="card_target" href="<?php echo esc_url($link); ?>"><?php echo esc_html($artist_name); ?></a></p>
-            <?php else : ?>
-            <p class="artwork-artist"><?php echo esc_html($artist_output); ?></p>
-            <?php endif; ?>
+        <?php if (!empty($artist_output)) : ?>
+            <p class="artwork-artist">
+                <?php echo esc_html($artist_output); ?>
+            </p>
+        <?php endif; ?>
+
+       <?php if($link): ?>
+            <a class="artwork-link" href="<?php echo esc_url($link); ?>">
+                <?php echo esc_html__('View Artwork', 'mbr'); ?>
+            </a>
         <?php endif; ?>
 
     </div>
