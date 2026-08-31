@@ -7095,6 +7095,7 @@ footer#footer .bg_yellow svg * {
   position: relative;
   z-index: 99;
   padding: 2rem;
+  background: #121212;
 }
 .scroll-over-block .scroll-over-block__overlay-text.text-left {
   margin-left: var(--margin);
@@ -7202,6 +7203,14 @@ footer#footer .bg_yellow svg * {
 
 .essay-artwork-meta {
   background-color: rgba(0, 0, 0, 0.65);
+}
+
+a.artwork-link {
+  color: #fff;
+}
+
+.card-meta-padding.essay-artwork-meta {
+  padding: 2rem calc(var(--margin) / 2) 2rem;
 }
 
 /*--------------------------------------------------------------
