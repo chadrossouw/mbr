@@ -6994,6 +6994,216 @@ footer#footer .bg_yellow svg * {
   flex-grow: 5;
 }
 
+.essay-layout.parallax-effect-block {
+  position: relative;
+  height: 100dvh;
+  overflow: hidden;
+  clip-path: inset(0 0 0 0);
+  -webkit-clip-path: inset(0 0 0 0);
+}
+.essay-layout.parallax-effect-block .essay-artwork-meta {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+}
+
+.parallax .essay-artwork-image {
+  height: 100dvh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100dvw;
+  z-index: 0;
+}
+.parallax .essay-artwork-image.contain {
+  background-size: contain;
+  background-position: center !important;
+}
+.parallax .essay-artwork-image.top-left {
+  background-position: left top;
+}
+.parallax .essay-artwork-image.top-right {
+  background-position: right top;
+}
+.parallax .essay-artwork-image.center {
+  background-position: center center;
+}
+.parallax .essay-artwork-image.bottom-left {
+  background-position: left bottom;
+}
+.parallax .essay-artwork-image.bottom-right {
+  background-position: right bottom;
+}
+
+.scroll-over-block {
+  position: relative;
+  min-height: 100dvh;
+  padding: 1px 0;
+  overflow: hidden;
+  clip-path: inset(0 0 0 0);
+  -webkit-clip-path: inset(0 0 0 0);
+}
+.scroll-over-block .essay-artwork-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100dvw;
+  height: 100%;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: 100dvw auto;
+  transition: all 1.2s ease-in-out;
+  z-index: 0;
+}
+.scroll-over-block .essay-artwork-image.contain {
+  background-size: auto 100dvh;
+  background-position: center top !important;
+}
+.scroll-over-block .essay-artwork-image.top-left {
+  background-position: left top;
+}
+.scroll-over-block .essay-artwork-image.top-right {
+  background-position: right top;
+}
+.scroll-over-block .essay-artwork-image.center {
+  background-position: center center;
+}
+.scroll-over-block .essay-artwork-image.bottom-left {
+  background-position: left top;
+}
+.scroll-over-block .essay-artwork-image.bottom-right {
+  background-position: right top;
+}
+.scroll-over-block.active .essay-artwork-image {
+  background-size: 110dvw auto;
+  position: fixed;
+}
+.scroll-over-block.active .essay-artwork-image.contain {
+  background-size: auto 100dvh;
+  background-position: center top !important;
+}
+.scroll-over-block .scroll-over-block__overlay-text {
+  width: 600px;
+  max-width: 80vw;
+  margin-left: auto;
+  margin-right: var(--margin);
+  margin-top: 100dvh;
+  margin-bottom: 100dvh;
+  position: relative;
+  z-index: 99;
+  padding: 2rem;
+}
+.scroll-over-block .scroll-over-block__overlay-text.text-left {
+  margin-left: var(--margin);
+  margin-right: auto;
+}
+.scroll-over-block .scroll-over-block__meta {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+}
+
+.zoom-block {
+  position: relative;
+  min-height: 100dvh;
+  padding: 1px 0;
+  overflow: hidden;
+  clip-path: inset(0 0 0 0);
+  -webkit-clip-path: inset(0 0 0 0);
+}
+.zoom-block .essay-artwork-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100dvw;
+  height: 100%;
+  background-position: center 4rem;
+  background-repeat: no-repeat;
+  background-size: 90dvw auto;
+  transition: all 1.2s ease-in-out;
+  /* @include media1200{
+  	background-size:  40dvw auto;
+  } */
+}
+@media screen and (min-width: 700px) {
+  .zoom-block .essay-artwork-image {
+    background-size: calc(50dvw - var(--margin) - 4rem) auto;
+    background-position: var(--margin) 4rem;
+  }
+}
+.zoom-block.active .essay-artwork-image {
+  position: fixed;
+}
+.zoom-block.active.zoom .essay-artwork-image {
+  background-size: 200dvw auto;
+}
+.zoom-block.active.zoom .essay-artwork-image.top-left {
+  background-position: left top;
+}
+.zoom-block.active.zoom .essay-artwork-image.top-right {
+  background-position: right top;
+}
+.zoom-block.active.zoom .essay-artwork-image.bottom-left {
+  background-position: left bottom;
+}
+.zoom-block.active.zoom .essay-artwork-image.bottom-right {
+  background-position: right bottom;
+}
+.zoom-block.active.zoom .essay-artwork-image.coordinates {
+  background-position: var(--zoomleft) var(--zoomtop);
+}
+.zoom-block .zoom-block__overlay-text {
+  padding: 4rem var(--margin) 4rem var(--margin);
+  margin-top: 66dvh;
+  background-color: #1d1d1b;
+  position: relative;
+  z-index: 1;
+}
+@media screen and (min-width: 700px) {
+  .zoom-block .zoom-block__overlay-text {
+    padding: 8rem var(--margin) 2rem 50dvw;
+    width: 100dvw;
+    margin-top: 0;
+    background-color: transparent;
+  }
+}
+.zoom-block .zoom-block__zooming-text {
+  width: 600px;
+  max-width: 80vw;
+  margin-left: auto;
+  margin-right: var(--margin);
+  margin-top: 100dvh;
+  margin-bottom: 100dvh;
+  position: relative;
+  z-index: 99;
+  padding: 2rem;
+  opacity: 0;
+  transition: opacity 0.8s ease-in;
+}
+.zoom-block .zoom-block__zooming-text.text-left {
+  margin-left: var(--margin);
+  margin-right: auto;
+}
+.zoom-block.zoom .zoom-block__zooming-text {
+  opacity: 1;
+}
+.zoom-block.top-right .zoom-block__zooming-text, .zoom-block.bottom-right .zoom-block__zooming-text {
+  margin-left: var(--margin);
+  margin-right: auto;
+}
+.zoom-block .zoom-block__meta {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+}
+
+.essay-artwork-meta {
+  background-color: rgba(0, 0, 0, 0.65);
+}
+
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/

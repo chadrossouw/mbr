@@ -127,6 +127,16 @@
                 "param": "page_type",
                 "operator": "==",
                 "value": "top_level"
+            },
+            {
+                "param": "post_type",
+                "operator": "!=",
+                "value": "essays"
+            },
+            {
+                "param": "post_type",
+                "operator": "!=",
+                "value": "exhibitions"
             }
         ]
     ],
@@ -139,5 +149,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1779715019
+    "modified": 1788159168
 }

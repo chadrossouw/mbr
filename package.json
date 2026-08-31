@@ -24,6 +24,7 @@
 	"dependencies": {
 		"@vimeo/player": "^2.20.1",
 		"color-calendar": "^1.0.7",
+		"scrollama": "^3.2.0",
 		"swiper": "^11.0.5",
 		"vinyl-buffer": "^1.0.1"
 	}

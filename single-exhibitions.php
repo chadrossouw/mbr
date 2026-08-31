@@ -196,6 +196,10 @@ get_header();
 
             </section>
 
+            <section class="essay-content">
+                <?php get_essays_content_layouts(get_the_ID()); ?>
+            </section>
+
         </section>
 
     </article>

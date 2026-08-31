@@ -8,7 +8,7 @@ import {
 	hamburgerToggleMobile,
 	mobileNavToggle,
 } from "./js/navigation.js";
-
+import scroll from "./js/scroll.js";
 // import {
 // 	filters,
 // 	discoverFilter,
@@ -44,6 +44,7 @@ import {
 hamburgerToggle();
 hamburgerToggleMobile();
 mobileNavToggle();
+scroll();
 
 // os_showroom_map();
 // cardLinks();
