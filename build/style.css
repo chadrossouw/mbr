@@ -6500,7 +6500,7 @@ main.single-essay-page .single-essay-top .essay-meta .exhibition-link-wrapper .e
   display: flex;
   width: fit-content;
 }
-main.single-essay-page .single-essay-description {
+main.single-essay-page .single-essay-description, main.single-essay-page .three-col-grid.single-exhibition-description.single-exhibition-description {
   margin: 2rem 0 2rem 0rem;
   padding: 0 0rem 0 0;
 }
