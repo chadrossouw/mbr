@@ -596,9 +596,32 @@ section.three-col-with-form{
 	position: relative;
 	z-index: 9999;
 	background-color: #121212;
+
+	a.three-col-card{
+		display: grid;
+		grid-template-rows: 1fr auto;
+		height: calc(100dvh - 2rem);
+
+		div.essay-artwork-image{
+			height: 100%;
+			width: 100%;
+			position: relative;
+
+			img{
+				position: absolute; // absolute cause the image to adhere to the dimensions of its container other than its intrinsic dimensions
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: contain;
+			}
+		}
+	}
+
 	.essay-artwork-meta{
 		background-color: transparent;
 		padding: 2rem 0 !important;
+		text-align: center;
 
 		.artwork-artist{
 			font-weight: 600;
@@ -609,4 +632,9 @@ section.three-col-with-form{
 			color: $color_white;
 		}
 	}
+}
+
+//SCROLL OVER TEXT BLOCK
+.scroll-over-block{
+	background-color: #121212;
 }

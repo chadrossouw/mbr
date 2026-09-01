@@ -2912,9 +2912,28 @@ section.three-col-with-form .form-row .form-content .form-wrapper form .submit-f
   z-index: 9999;
   background-color: #121212;
 }
+.single-full-image-text a.three-col-card {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  height: calc(100dvh - 2rem);
+}
+.single-full-image-text a.three-col-card div.essay-artwork-image {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.single-full-image-text a.three-col-card div.essay-artwork-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 .single-full-image-text .essay-artwork-meta {
   background-color: transparent;
   padding: 2rem 0 !important;
+  text-align: center;
 }
 .single-full-image-text .essay-artwork-meta .artwork-artist {
   font-weight: 600;
@@ -2922,6 +2941,10 @@ section.three-col-with-form .form-row .form-content .form-wrapper form .submit-f
 .single-full-image-text .essay-artwork-meta .artwork-artist a,
 .single-full-image-text .essay-artwork-meta p {
   color: #fff;
+}
+
+.scroll-over-block {
+  background-color: #121212;
 }
 
 @media screen and (min-width: 1200px) {
@@ -3294,6 +3317,18 @@ header#masthead:not(:has(~ .home-page)) .header .hamburger_container button.hamb
 }
 header#masthead:has(~ .single-exhibition-page) .site-branding svg path {
   fill: #fff;
+}
+header#masthead:has(~ .single-exhibition-page) .header .hamburger_container {
+  color: #fff;
+}
+header#masthead:has(~ .single-exhibition-page) .header .hamburger_container button.hamburger {
+  color: #fff;
+}
+header#masthead:has(~ .single-exhibition-page) .header .hamburger_container button.hamburger .hamburger-box .hamburger-inner {
+  background-color: #fff;
+}
+header#masthead:has(~ .single-exhibition-page) .header .hamburger_container button.hamburger .hamburger-box .hamburger-inner::before, header#masthead:has(~ .single-exhibition-page) .header .hamburger_container button.hamburger .hamburger-box .hamburger-inner::after {
+  background-color: #fff;
 }
 header#masthead:has(~ .about-page) .site-branding svg path {
   fill: #fff;
@@ -5570,7 +5605,12 @@ main {
   display: block;
 }
 main:not(.home-page) {
-  padding-top: 15rem;
+  padding-top: 10rem;
+}
+@media screen and (min-width: 1200px) {
+  main:not(.home-page) {
+    padding-top: 13.5rem;
+  }
 }
 main:not(.home-page) .page-content {
   padding: 0;
@@ -6468,6 +6508,7 @@ main.single-exhibition-page .page-content .single-exhibition-top .exhibition-met
   font-weight: 400 !important;
   font-size: 2.7rem !important;
   margin-top: 3.5rem;
+  font-style: normal !important;
 }
 main.single-essay-page .single-essay-top {
   position: relative;
@@ -6494,6 +6535,7 @@ main.single-essay-page .single-essay-top .essay-meta .card-text {
 main.single-essay-page .single-essay-top .essay-meta .card-text .card-title.card-title.card-title.card-title.card-title {
   font-weight: 350;
   font-size: 2.4rem;
+  font-style: normal;
 }
 main.single-essay-page .single-essay-top .essay-meta .card-text .card-artists.card-artists.card-artists.card-artists.card-artists {
   font-weight: 300;
@@ -6523,7 +6565,7 @@ main.single-essay-page .single-essay-description, main.single-essay-page .three-
 }
 main.single-essay-page .essay-artwork.card .essay-artwork-meta .card-title p,
 main.single-essay-page .essay-artwork-meta .caption p {
-  font-weight: 600;
+  font-weight: 300;
   font-style: italic;
   font-family: "Lora", sans-serif;
   text-transform: capitalize;
@@ -6531,7 +6573,7 @@ main.single-essay-page .essay-artwork-meta .caption p {
 }
 main.single-essay-page .essay-artwork.card .essay-artwork-meta .card-artists,
 main.single-essay-page .essay-artwork-meta .artwork-artist {
-  font-weight: 600;
+  font-weight: 300;
   font-family: "Lora", sans-serif;
   text-transform: capitalize;
 }

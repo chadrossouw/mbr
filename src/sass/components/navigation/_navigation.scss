@@ -102,6 +102,28 @@ header#masthead {
 				}
 			}
 		}
+
+		.header {
+			.hamburger_container {
+				color: $color-white;
+				
+				button.hamburger{
+					color: $color-white;
+
+					.hamburger-box{
+						
+						.hamburger-inner{
+							background-color: $color-white;
+
+							&::before,
+							&::after{
+								background-color: $color-white;
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 
 	&:has(~ .about-page){
