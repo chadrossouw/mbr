@@ -48,6 +48,26 @@
             "delay": 0
         },
         {
+            "key": "field_6a96b4ca2ef37",
+            "label": "Essay Author",
+            "name": "essay_author",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_6a957c1273981",
             "label": "Exhibition Link",
             "name": "exhibition_link",
@@ -149,5 +169,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1788181858
+    "modified": 1788261621
 }

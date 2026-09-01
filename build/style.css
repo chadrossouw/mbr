@@ -5580,7 +5580,7 @@ main:not(.home-page) .page-content {
 }
 @media screen and (min-width: 1200px) {
   main:not(.home-page) .page-content {
-    padding: 2rem 0vw 4rem;
+    padding: 0rem 0vw 4rem;
   }
 }
 main:not(.home-page) .page-content form p span {
@@ -5595,7 +5595,7 @@ main:not(.home-page) .page-content form input[type=submit]:hover {
 main:not(.home-page) .page-content h1 {
   text-align: left;
   text-transform: uppercase;
-  padding: 0 3vw 4.5vw;
+  padding: 0 3vw 1.5vw;
 }
 main:not(.home-page) .page-content p a {
   text-decoration: underline !important;
@@ -6461,6 +6461,14 @@ main.single-exhibition-page .page-content .single-exhibition-top a.essay-link {
   display: flex;
   width: fit-content;
 }
+main.single-exhibition-page .page-content .single-exhibition-top .exhibition-meta .card-text h2 {
+  font-weight: 400 !important;
+}
+main.single-exhibition-page .page-content .single-exhibition-top .exhibition-meta .card-text p {
+  font-weight: 400 !important;
+  font-size: 2.7rem !important;
+  margin-top: 3.5rem;
+}
 main.single-essay-page .single-essay-top {
   position: relative;
 }
@@ -6483,6 +6491,15 @@ main.single-essay-page .single-essay-top .essay-meta .card-text {
   padding: 0 !important;
   margin: 0 2rem;
 }
+main.single-essay-page .single-essay-top .essay-meta .card-text .card-title.card-title.card-title.card-title.card-title {
+  font-weight: 350;
+  font-size: 2.4rem;
+}
+main.single-essay-page .single-essay-top .essay-meta .card-text .card-artists.card-artists.card-artists.card-artists.card-artists {
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-top: 1.5rem;
+}
 main.single-essay-page .single-essay-top .essay-meta .description-content {
   width: fit-content;
 }
@@ -6503,6 +6520,20 @@ main.single-essay-page .single-essay-top .essay-meta .exhibition-link-wrapper .e
 main.single-essay-page .single-essay-description {
   margin: 2rem 0 2rem 0rem;
   padding: 0 0rem 0 0;
+}
+main.single-essay-page .essay-artwork.card .essay-artwork-meta .card-title p,
+main.single-essay-page .essay-artwork-meta .caption p {
+  font-weight: 600;
+  font-style: italic;
+  font-family: "Lora", sans-serif;
+  text-transform: capitalize;
+  letter-spacing: 0.015rem;
+}
+main.single-essay-page .essay-artwork.card .essay-artwork-meta .card-artists,
+main.single-essay-page .essay-artwork-meta .artwork-artist {
+  font-weight: 600;
+  font-family: "Lora", sans-serif;
+  text-transform: capitalize;
 }
 @media screen and (max-width: 900px) {
   main.single-essay-page .single-essay-top .essay-meta h1 {

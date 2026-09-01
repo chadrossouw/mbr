@@ -40,13 +40,13 @@ if($use_artworks){
 else{
     $title = get_sub_field('caption');
     $image = get_sub_field('image');
-    $image = $image?wp_get_attachment_image_url($image, 'full'):null;
+    $image = $image?wp_get_attachment_image_url($image, 'large'):null;
 } ?>
 
 
 <div class="essay-layout card single-full-image-text padding">
 
-    <a class="three-col-card" href="<?php echo esc_url($link); ?>">
+    <?php if ($link) : ?> <a class="three-col-card" href="<?php echo esc_url($link); ?>"> <?php else : ?> <div class="three-col-card"> <?php endif; ?>
         <div class="essay-artwork-image">
 
             <?php if ($image) : ?>
@@ -75,6 +75,6 @@ else{
             <?php endif; ?>
 
         </div>
-    </a>
+    <?php if ($link) : ?> </a> <?php else : ?> </div> <?php endif; ?>
 
 </div>

@@ -11,6 +11,7 @@ get_header();
     $featured_image = $essay_image ? wp_get_attachment_image_url($essay_image, 'large') : null;
     $artists = get_field('artists');
     $description = get_field('essay_description');
+    $essay_author = get_field('essay_author');
     $long_description = get_field('essay_long_content');
     $exhibition_link = get_field('exhibition_link');
 
@@ -49,15 +50,11 @@ get_header();
 
                     <div class="card-text">
 
-                        <?php if (!empty($artist_output)) : ?>
-                            <h2 class="card-artists">
-                                <?php echo esc_html($artist_output); ?>
-                            </h2>
+                        <p class="card-title"><?php the_title(); ?></p>
+                        
+                        <?php if (!empty($essay_author)) : ?>
+                            <h2 class="card-artists"><?php echo esc_html($essay_author); ?></h2>
                         <?php endif; ?>
-
-                        <p class="card-title">
-                            <?php the_title(); ?>
-                        </p>
 
                     </div>
 

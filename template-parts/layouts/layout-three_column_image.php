@@ -105,22 +105,15 @@
 
             <div class="essay-artwork-meta inside-grid white card-meta-padding">
 
-                <?php if ( ! empty($artist_output) ) : ?>
-
-                    <h2 class="artwork-artist card-artists">
-                        <?php echo esc_html($artist_output); ?>
-                    </h2>
-
-                <?php endif; ?>
-
                 <?php if ( $title ) : ?>
-
                     <div class="caption card-title">
                         <?php echo apply_filters('the_content', $title); ?>
                     </div>
-
                 <?php endif; ?>
 
+                <?php if ( ! empty($artist_output) ) : ?>
+                    <h2 class="artwork-artist card-artists"><?php echo esc_html($artist_output); ?></h2>
+                <?php endif; ?>
 
             </div>
         </div>
