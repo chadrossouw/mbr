@@ -120,7 +120,7 @@ header#masthead {
 			position: relative;
 			text-decoration: none;
 			text-transform: uppercase;
-			font-weight: 600;
+			font-weight: 400;
 			font-size: 1rem;
 			line-height: 1;
 			font-family: "Josefin Sans", sans-serif;
@@ -1277,7 +1277,7 @@ body:has(.no-featured-image) header#masthead {
 header#masthead:not(:has(~ .home-page)) {
 	.site-branding {
 		a {
-			width: 10vw;
+			width: 8dvw; //10vw
 			@media screen and (max-width: 1200px) {
 				//transform: translate(-10px, -32px);
 			}
@@ -1285,11 +1285,11 @@ header#masthead:not(:has(~ .home-page)) {
 			&.logo{
 				color: #000;
 				height: auto;
-				min-width: 160px;
+				min-width: 120px; //160
 			}
 
 			svg {
-				min-width: 160px;
+				min-width: 120px;
 				height:auto;
 			}
 		}

@@ -529,8 +529,11 @@ section.three-col-with-form{
 	// gap: 4rem;
 	display: block;
 	width: 100dvw;
-	padding: 6rem 0;
+	padding: 3rem 0 0;
 	box-sizing: border-box;
+	background-color: #121212;
+	position: relative;
+	z-index: 9999;
 	
 	a.three-col-card{
 		width: 100%;
@@ -592,6 +595,7 @@ section.three-col-with-form{
 .single-full-image-text {
 	position: relative;
 	z-index: 9999;
+	background-color: #121212;
 	.essay-artwork-meta{
 		background-color: transparent;
 		padding: 2rem 0 !important;

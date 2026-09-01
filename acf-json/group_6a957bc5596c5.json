@@ -1,14 +1,14 @@
 {
-    "key": "group_6a144be0dd3c2",
-    "title": "Exhibitions",
+    "key": "group_6a957bc5596c5",
+    "title": "Essays",
     "fields": [
         {
-            "key": "field_6a881fd0e574e",
-            "label": "Single Exhibition Image",
-            "name": "single_exhibition_image",
+            "key": "field_6a957bc773980",
+            "label": "Single Essay Image",
+            "name": "single_essay_image",
             "aria-label": "",
             "type": "image",
-            "instructions": "Use this to add the image related to the exhibition. This will be the same image that appears on the All Exhibitions listings page, as well, the single exhibition page.\r\nNB!! - Use only this field when adding a new exhibition. AVOID using the featured image input on the right",
+            "instructions": "Use this to add the image related to the essay. This will be the same image that appears on the All Exhibitions listings page, as well, the single exhibition page.\r\nNB!! - Use only this field when adding a new exhibition. AVOID using the featured image input on the right",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -16,7 +16,7 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "url",
+            "return_format": "id",
             "library": "all",
             "min_width": "",
             "min_height": "",
@@ -28,12 +28,12 @@
             "preview_size": "medium"
         },
         {
-            "key": "field_6a144be21fdb3",
-            "label": "Exhibition Description",
-            "name": "exhibition_description",
+            "key": "field_6a957c5c73982",
+            "label": "Essay Description",
+            "name": "essay_description",
             "aria-label": "",
             "type": "wysiwyg",
-            "instructions": "Use this field to add the exhibition Essay snippet",
+            "instructions": "Use this field to add the Exhibition exhibition text snippet",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -48,17 +48,17 @@
             "delay": 0
         },
         {
-            "key": "field_6a956e8ea7572",
-            "label": "Essay Link",
-            "name": "essay_link",
+            "key": "field_6a957c1273981",
+            "label": "Exhibition Link",
+            "name": "exhibition_link",
             "aria-label": "",
             "type": "link",
-            "instructions": "Use this field to add a link to the Exhibition Essay",
+            "instructions": "Use this field to add a link to the Essay's Exhibition",
             "required": 0,
             "conditional_logic": [
                 [
                     {
-                        "field": "field_6a144be21fdb3",
+                        "field": "field_6a957c5c73982",
                         "operator": "!=empty"
                     }
                 ]
@@ -71,7 +71,7 @@
             "return_format": "array"
         },
         {
-            "key": "field_6a144f8660b4a",
+            "key": "field_6a957cf173983",
             "label": "Artists",
             "name": "artists",
             "aria-label": "",
@@ -100,7 +100,7 @@
             "bidirectional_target": []
         },
         {
-            "key": "field_6a144db61fdb4",
+            "key": "field_6a957d2c73984",
             "label": "Artworks",
             "name": "artworks",
             "aria-label": "",
@@ -136,7 +136,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "exhibitions"
+                "value": "essays"
             }
         ]
     ],
@@ -145,11 +145,9 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": [
-        "the_content"
-    ],
+    "hide_on_screen": "",
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1788181740
+    "modified": 1788181858
 }

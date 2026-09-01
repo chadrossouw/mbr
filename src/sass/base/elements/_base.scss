@@ -72,8 +72,8 @@ body {
 		top: 0;
 		bottom: 0;
 		left: 33.1vw; //33.333vw
-		width: 2px;
-		background: #d6d1d1;
+		width: 1px;
+		background: #a19f9f;
 		z-index: 9998;
 		pointer-events: none;
 	}
@@ -91,7 +91,7 @@ body {
 
 	&:has(> #page .single-exhibition-page){
 		&::before{
-			//background: #b6afaf;
+			background: #696464; 
 		}
 
 		header#masthead #site-navigation::before{

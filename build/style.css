@@ -844,10 +844,13 @@ body::before {
   top: 0;
   bottom: 0;
   left: 33.1vw;
-  width: 2px;
-  background: #d6d1d1;
+  width: 1px;
+  background: #a19f9f;
   z-index: 9998;
   pointer-events: none;
+}
+body:has(> #page .single-exhibition-page)::before {
+  background: #696464;
 }
 body:has(> #page .single-exhibition-page) header#masthead #site-navigation::before {
   background-color: #d6d1d1;
@@ -2850,8 +2853,11 @@ section.three-col-with-form .form-row .form-content .form-wrapper form .submit-f
 .three-column-layout {
   display: block;
   width: 100dvw;
-  padding: 6rem 0;
+  padding: 3rem 0 0;
   box-sizing: border-box;
+  background-color: #121212;
+  position: relative;
+  z-index: 9999;
 }
 .three-column-layout a.three-col-card {
   width: 100%;
@@ -2904,6 +2910,7 @@ section.three-col-with-form .form-row .form-content .form-wrapper form .submit-f
 .single-full-image-text {
   position: relative;
   z-index: 9999;
+  background-color: #121212;
 }
 .single-full-image-text .essay-artwork-meta {
   background-color: transparent;
@@ -3296,7 +3303,7 @@ header#masthead #site-navigation a {
   position: relative;
   text-decoration: none;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 1rem;
   line-height: 1;
   font-family: "Josefin Sans", sans-serif;
@@ -4109,15 +4116,15 @@ body:has(.no-featured-image) header#masthead .pre_header:after {
 }
 
 header#masthead:not(:has(~ .home-page)) .site-branding a {
-  width: 10vw;
+  width: 8dvw;
 }
 header#masthead:not(:has(~ .home-page)) .site-branding a.logo {
   color: #000;
   height: auto;
-  min-width: 160px;
+  min-width: 120px;
 }
 header#masthead:not(:has(~ .home-page)) .site-branding a svg {
-  min-width: 160px;
+  min-width: 120px;
   height: auto;
 }
 
@@ -5879,12 +5886,11 @@ main:not(.home-page) .page-content .three-col-grid .three-col-card .card-text .c
 }
 main:not(.home-page) .page-content .three-col-grid .two-column-span {
   display: inline-block;
-  margin: 0 2rem;
-  width: calc(66.5% - 4rem);
-  height: 100%;
+  margin: 0 4rem;
+  width: calc(66.4% - 8rem);
+  height: auto;
   box-sizing: border-box;
   vertical-align: top;
-  aspect-ratio: 2.1;
 }
 main:not(.home-page) .page-content .three-col-grid .two-column-span.description-content {
   height: fit-content;
@@ -5897,8 +5903,8 @@ main:not(.home-page) .page-content .three-col-grid .two-column-span img {
 }
 @media screen and (max-width: 900px) {
   main:not(.home-page) .page-content .three-col-grid .two-column-span {
-    margin: 0 1rem;
-    width: calc(66.4% - 2rem);
+    margin: 0 2rem;
+    width: calc(66.4% - 4rem);
   }
 }
 @media screen and (max-width: 700px) {
@@ -5923,7 +5929,12 @@ main:not(.home-page) .page-content .related-artworks {
   }
 }
 main:not(.home-page) .page-content:not(:has(.related-artworks)) .long {
-  margin-top: 4rem;
+  margin-top: 2rem;
+}
+@media screen and (min-width: 700px) {
+  main:not(.home-page) .page-content:not(:has(.related-artworks)) .long {
+    margin-top: 4rem;
+  }
 }
 @media screen and (max-width: 700px) {
   main:not(.home-page) .page-content {
@@ -6449,6 +6460,66 @@ main.single-exhibition-page .page-content .single-exhibition-top a.essay-link {
   font-style: italic;
   display: flex;
   width: fit-content;
+}
+main.single-essay-page .single-essay-top {
+  position: relative;
+}
+main.single-essay-page .single-essay-top::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2rem;
+  width: 100%;
+  height: 1px;
+  background-color: #d6d1d1;
+  z-index: 9998;
+  pointer-events: none;
+}
+main.single-essay-page .single-essay-top .essay-meta h1 {
+  padding: 0 2rem;
+}
+main.single-essay-page .single-essay-top .essay-meta .card-text {
+  padding: 0 !important;
+  margin: 0 2rem;
+}
+main.single-essay-page .single-essay-top .essay-meta .description-content {
+  width: fit-content;
+}
+main.single-essay-page .single-essay-top .essay-meta .exhibition-link-wrapper {
+  margin: 2rem 0 4rem 2rem;
+}
+main.single-essay-page .single-essay-top .essay-meta .exhibition-link-wrapper .exhibition-link {
+  padding: 0.5rem 2rem;
+  border-radius: 5px;
+  border: 1px solid #000;
+  color: #373737;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-style: italic;
+  display: flex;
+  width: fit-content;
+}
+main.single-essay-page .single-essay-description {
+  margin: 2rem 0 2rem 0rem;
+  padding: 0 0rem 0 0;
+}
+@media screen and (max-width: 900px) {
+  main.single-essay-page .single-essay-top .essay-meta h1 {
+    padding: 0 1rem;
+  }
+  main.single-essay-page .single-essay-top .essay-meta .card-text {
+    margin: 0 1rem;
+  }
+  main.single-essay-page .single-essay-top .essay-meta .exhibition-link-wrapper {
+    margin: 1rem 0 2rem 1rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  main.single-essay-page .single-essay-description {
+    margin-top: 2rem;
+    margin: 2rem 0 1rem;
+  }
 }
 main #masthead:has(+ .single-exhibition-page) .site-branding a svg path {
   fill: #fff !important;
