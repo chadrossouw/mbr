@@ -36,7 +36,8 @@ get_header();
 
 							$artwork_title = get_the_title($artwork_id);
 							$artwork_link  = get_permalink($artwork_id);
-							$artwork_image = get_the_post_thumbnail_url($artwork_id, 'large');
+							//$artwork_image = get_the_post_thumbnail_url($artwork_id, 'large');
+							$artwork_image = get_field('single_product_image', $artwork_id);
 
 							$artists = get_field('artists', $artwork_id);
 
