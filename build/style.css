@@ -2912,17 +2912,20 @@ section.three-col-with-form .form-row .form-content .form-wrapper form .submit-f
   z-index: 9999;
   background-color: #121212;
 }
-.single-full-image-text a.three-col-card {
+.single-full-image-text a.three-col-card,
+.single-full-image-text div.three-col-card {
   display: grid;
   grid-template-rows: 1fr auto;
   height: calc(100dvh - 2rem);
 }
-.single-full-image-text a.three-col-card div.essay-artwork-image {
+.single-full-image-text a.three-col-card div.essay-artwork-image,
+.single-full-image-text div.three-col-card div.essay-artwork-image {
   height: 100%;
   width: 100%;
   position: relative;
 }
-.single-full-image-text a.three-col-card div.essay-artwork-image img {
+.single-full-image-text a.three-col-card div.essay-artwork-image img,
+.single-full-image-text div.three-col-card div.essay-artwork-image img {
   position: absolute;
   top: 0;
   left: 0;
@@ -2936,7 +2939,7 @@ section.three-col-with-form .form-row .form-content .form-wrapper form .submit-f
   text-align: center;
 }
 .single-full-image-text .essay-artwork-meta .artwork-artist {
-  font-weight: 600;
+  font-weight: 400;
 }
 .single-full-image-text .essay-artwork-meta .artwork-artist a,
 .single-full-image-text .essay-artwork-meta p {

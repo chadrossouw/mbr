@@ -597,7 +597,8 @@ section.three-col-with-form{
 	z-index: 9999;
 	background-color: #121212;
 
-	a.three-col-card{
+	a.three-col-card,
+	div.three-col-card{
 		display: grid;
 		grid-template-rows: 1fr auto;
 		height: calc(100dvh - 2rem);
@@ -624,7 +625,7 @@ section.three-col-with-form{
 		text-align: center;
 
 		.artwork-artist{
-			font-weight: 600;
+			font-weight: 400;
 		}
 
 		.artwork-artist a,
