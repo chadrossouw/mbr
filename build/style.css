@@ -5982,17 +5982,22 @@ main:not(.home-page) .page-content .single-artwork-top.single-artwork-top.single
   font-size: clamp(0.9375rem, 2.04vw, 1.65rem);
 }
 main:not(.home-page) .page-content .single-artwork-top.single-artwork-top.single-artwork-top.single-artwork-top .artwork-meta.artwork-meta.artwork-meta.artwork-meta .card-text .card-title {
-  font-weight: 200;
+  font-weight: 300;
   font-style: normal;
 }
 main:not(.home-page) .page-content .single-artwork-top.single-artwork-top.single-artwork-top.single-artwork-top .artwork-meta.artwork-meta.artwork-meta.artwork-meta .card-text .artwork_notes_wrapper {
-  padding: 2rem 0 2rem;
+  padding: 1rem 0 2rem;
+}
+@media screen and (min-width: 700px) {
+  main:not(.home-page) .page-content .single-artwork-top.single-artwork-top.single-artwork-top.single-artwork-top .artwork-meta.artwork-meta.artwork-meta.artwork-meta .card-text .artwork_notes_wrapper {
+    padding: 2rem 0 2rem;
+  }
 }
 main:not(.home-page) .page-content .single-artwork-top.single-artwork-top.single-artwork-top.single-artwork-top .artwork-meta.artwork-meta.artwork-meta.artwork-meta .card-text .artwork_notes_wrapper p {
   margin: 0 !important;
   color: #878181;
   font-family: "Josefin Sans", sans-serif;
-  font-weight: 100;
+  font-weight: 300;
 }
 @media screen and (max-width: 700px) {
   main:not(.home-page) .page-content {
