@@ -43,7 +43,7 @@ get_header();
 							$artwork_title = get_the_title($artwork_id);
 							$artwork_link  = get_permalink($artwork_id);
 							//$artwork_image = get_the_post_thumbnail_url($artwork_id, 'large');
-							$artwork_image = get_field('single_product_image', $artwork_id);
+							$artwork_image = get_field('single_product_image', $artwork_id) ?: get_the_post_thumbnail_url( $artwork_id, 'large' ) ;
 
 							$artists = get_field('artists', $artwork_id);
 
@@ -118,7 +118,7 @@ get_header();
 								$product = wc_get_product($book_id);
                                 $book_title = get_the_title($book_id);
                                 $book_link  = get_permalink($book_id);
-                                $book_image = get_the_post_thumbnail_url($book_id, 'large');
+                                $book_image = get_field('single_product_image', $book_id) ?: get_the_post_thumbnail_url($book_id, 'large');
                                 $book_author = get_field('book_author_name', $book_id);
                                 $book_price = '';
 

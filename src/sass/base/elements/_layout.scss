@@ -597,6 +597,10 @@ section.three-col-with-form{
 	z-index: 9999;
 	background-color: #121212;
 
+	@media screen  and (max-width: 1200px) {
+		padding: 0 var(--margin);
+	}
+
 	a.three-col-card,
 	div.three-col-card{
 		display: grid;
@@ -622,7 +626,11 @@ section.three-col-with-form{
 	.essay-artwork-meta{
 		background-color: transparent;
 		padding: 2rem 0 !important;
-		text-align: center;
+		text-align: left;
+
+		@include media700{
+			padding: 2rem 20vw !important;
+		}
 
 		.artwork-artist{
 			font-weight: 400;
@@ -631,6 +639,25 @@ section.three-col-with-form{
 		.artwork-artist a,
 		p{
 			color: $color_white;
+		}
+	}
+
+	@media screen and (max-width: 1200px) {
+		a.three-col-card,
+		div.three-col-card{
+			height: auto;
+        	grid-template-rows: auto auto;
+
+			div.essay-artwork-image{
+				height: auto;
+
+				img{
+					position: relative;
+					width: 100%;
+					height: auto;
+					display: block;
+				}
+			}
 		}
 	}
 }

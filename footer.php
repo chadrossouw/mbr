@@ -5,8 +5,8 @@
         <div class="mbr-footer__details">
             <div>
                 <span>Email</span>
-                <a href="mailto:matth@mbrprojects.co.za">matth@mbrprojects.co.za</a>
-                <a href="mailto:siya@mbrprojects.co.za">siya@mbrprojects.co.za</a>
+                <a href="mailto:matth@mbrprojects.co.za">matthew@mbrprojects.co.za</a>
+                <a href="mailto:siya@mbrprojects.co.za">siwa@mbrprojects.co.za</a>
             </div>
 
             <div>

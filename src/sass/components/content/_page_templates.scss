@@ -715,10 +715,10 @@ main {
 							font-style: normal;
 						}
 						.artwork_notes_wrapper{
-							padding: 1rem 0 2rem;
+							padding: 1rem 0 1.2rem;
 
 							@include media700{
-								padding: 2rem 0 2rem;
+								padding: 1.2rem 0 1.2rem;
 							}
 
 							p{
@@ -1709,6 +1709,9 @@ body{
 								max-width: 100%;
 
 								p{
+									&.card-title{
+										font-weight: 300;
+									}
 									&.but-book-price{
 										font-size: clamp(0.9375rem, 2.04vw, 1.65rem);
 										margin-top: 1rem;
@@ -1729,7 +1732,7 @@ body{
 								}
 
 								.product-details-wrapper{
-									padding: 1rem 0 2rem;
+									padding: 0.3rem 0 1rem;
 
 									h2{
 										margin-bottom: 1rem;
@@ -1742,6 +1745,7 @@ body{
 										font-style: normal;
 										text-transform: none;
 										font-weight: 300;
+										color: #878181;
 									}
 								}
 

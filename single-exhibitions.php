@@ -180,6 +180,7 @@ get_header();
             <?php endif; ?>
 
             <!-- LONG DESCRIPTION SECTION -->
+             <?php if (!empty($long_description)) : ?>
             <section class="single-exhibition-description long three-col-grid">
 
                 <div class="empty-column three-col-card"></div>
@@ -193,6 +194,7 @@ get_header();
                 </div>
 
             </section>
+            <?php endif; ?>
 
             <section class="essay-content">
                 <?php get_essays_content_layouts(get_the_ID()); ?>
