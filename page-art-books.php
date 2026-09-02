@@ -16,6 +16,12 @@ get_header();
 
 	$selected_artworks = get_field('selected_artworks');
 	$selected_books    = get_field('selected_books'); // future use
+	$selected_artworks = array_filter($selected_artworks,function($n){
+		return get_post_status($n);
+	});
+	$selected_books = array_filter($selected_books,function($n){
+		return get_post_status($n);
+	});
 	?>
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

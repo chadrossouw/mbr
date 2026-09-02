@@ -16,8 +16,7 @@
         </div>
 
         <p class="mbr-footer__notice">
-            We regret that we are unable to accept unsolicited artists'<br>
-            submissions.
+            We regret that we are unable to accept unsolicited artists' submissions.
         </p>
     </div>
 </footer>

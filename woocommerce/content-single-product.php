@@ -34,7 +34,8 @@ if ( post_password_required() ) {
 // Product data
 $product_id      = $product->get_id();
 $product_full_image = get_field('single_product_image');
-$featured_image  = $product_full_image ?? get_the_post_thumbnail_url( $product_id, 'large' );
+//$featured_image  = $product_full_image ?? get_the_post_thumbnail_url( $product_id, 'large' );
+$featured_image  = $product_full_image ?: get_the_post_thumbnail_url( $product_id, 'large' );
 
 // Artworks ACF Fields
 $artists     = get_field( 'artists', $product_id );
@@ -90,15 +91,6 @@ $enquiry_url = add_query_arg(
 	],
 	get_permalink(get_page_by_path('enquire-product'))
 );
-
-//DEBUG
-	// echo '<pre style="background:#000;color:#0f0;padding:10px;">';
-	// var_dump($enquiry_url);
-	// echo '</pre>';
-	// echo '<pre style="background:#fff;color:#000;padding:10px;">';
-	// var_dump($artist_names);
-	// var_dump($artwork_title);
-	// echo '</pre>';
 ?>
 
 <!-- Return a single artwork -->
@@ -127,21 +119,20 @@ $enquiry_url = add_query_arg(
 							<?php the_title(); ?>
 						</p>
 
-						<?php if ( ! empty( $year ) ) : ?>
+						<div class="artwork_notes_wrapper">
 
-							<p class="artwork-year artwork-meta-item">
-								<?php echo esc_html( $year ); ?>
-						</p>
+							<?php if ( ! empty( $dimensions ) ) : ?>
+								<p class="artwork-dimensions artwork-meta-item"><?php echo nl2br( esc_html( $dimensions ) ); ?></p>
+							<?php endif; ?>
 
-						<?php endif; ?>
+							<?php if ( ! empty( $work_note ) ) : ?>
+								<p class="artwork-note artwork-meta-item"><?php echo esc_html( $work_note ); ?></p>
+							<?php endif; ?>
 
-						<?php if ( ! empty( $dimensions ) ) : ?>
-							<p class="artwork-dimensions artwork-meta-item"><?php echo nl2br( esc_html( $dimensions ) ); ?></p>
-						<?php endif; ?>
-
-						<?php if ( ! empty( $work_note ) ) : ?>
-							<p class="artwork-note artwork-meta-item"><?php echo esc_html( $work_note ); ?></p>
-						<?php endif; ?>
+							<?php if ( ! empty( $year ) ) : ?>
+								<p class="artwork-year artwork-meta-item"><?php echo esc_html( $year ); ?></p>
+							<?php endif; ?>
+						</div>
 
 						<div class="artwork-inquire">
 							<a href="<?php echo esc_url( $enquiry_url ); ?>" class="inquire-button">
@@ -172,7 +163,7 @@ $enquiry_url = add_query_arg(
 
 
 			<!-- FORM / DESCRIPTION SECTION -->
-			<section class="single-artwork-description single-exhibition-description three-col-grid">
+			<!-- <section class="single-artwork-description single-exhibition-description three-col-grid">
 
 				<div class="empty-column three-col-card"></div>
 
@@ -183,7 +174,7 @@ $enquiry_url = add_query_arg(
 
 				</div>
 
-			</section>
+			</section> -->
 
 		</section>
 
@@ -261,6 +252,12 @@ $enquiry_url = add_query_arg(
 							<?php echo $product->get_price_html(); ?>
 						</p>
 
+						<?php if ( ! empty( $product_details ) ) : ?> 
+							<div class="product-details-wrapper">
+								<?php echo wp_kses_post( $product_details ); ?> 
+							</div>
+						<?php endif; ?> 
+
 						<div class="artwork-add-to-cart but-book-add-to-cart">
 
 							<?php if ( $product->is_in_stock() ) : ?>
@@ -304,17 +301,7 @@ $enquiry_url = add_query_arg(
 
 				<!-- LEFT COLUMN -->
 				<div class="three-col-card">
-
-					<div class="card-text">
-
-						<?php if ( ! empty( $product_details ) ) : ?>
-
-							<?php echo wp_kses_post( $product_details ); ?>
-
-						<?php endif; ?>
-
-					</div>
-
+					<div class="card-text"></div>
 				</div>
 
 				<!-- RIGHT 2 COLUMNS -->

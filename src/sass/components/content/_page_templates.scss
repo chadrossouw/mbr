@@ -329,8 +329,10 @@ main {
 			box-sizing: content-box;
 			margin-left: auto;
 			margin-right: auto;
+			//margin-bottom: 4rem;
 			@include media1200{
-				padding: 0rem 0vw 4rem;
+				padding: 0rem 0vw 0rem;
+				//margin-bottom: 4rem;
 			}
 			form{
 				p span{
@@ -430,6 +432,7 @@ main {
 				text-align: center;
 				box-sizing: border-box;
 				text-align: left;
+				margin-bottom: 4rem;
 				&.single-exhibition-top{
 					position: relative;
 					&::after{
@@ -564,14 +567,14 @@ main {
 								}
 								.artwork-inquire{
 									a{
-										font-size: clamp(0.8125rem, 1.77vw, 1.625rem);
+										font-size: clamp(0.8125rem, 1.77vw, 1.2rem);
 										font-weight: 200;
 										color: #000;
 										border: 1px solid #9b9b9b;
-										width: 100%;
+										width: fit-content;
 										max-width: 320px;
 										display: inline-block;
-										padding: 1rem 0;
+										padding: 1rem 3rem 0.6rem;
 										text-align: center;
 										text-transform: uppercase;
 										transition: all 0.4s ease-in;
@@ -699,6 +702,32 @@ main {
 				}
 			}
 
+			.single-artwork-top.single-artwork-top.single-artwork-top.single-artwork-top{
+				.artwork-meta.artwork-meta.artwork-meta.artwork-meta{
+					.card-text{
+
+						h2,
+						.card-title{
+							font-size: clamp(0.9375rem, 2.04vw, 1.65rem);
+						}
+						.card-title{
+							font-weight: 200;
+							font-style: normal;
+						}
+						.artwork_notes_wrapper{
+							padding: 2rem 0 2rem;
+
+							p{
+								margin: 0 !important;
+								color: #878181;
+								font-family: "Josefin Sans", sans-serif;
+								font-weight: 100;
+							}
+						}
+					}
+				}
+			}
+
 
 			@media screen and (max-width: 1200px) {
 				// padding-left: 15rem;
@@ -795,7 +824,7 @@ main {
 
 								img{
 									width: 100%;
-									aspect-ratio: 1;
+									//aspect-ratio: 1;
 								}
 								.art-main-link-text{
 									padding: 0 2vw;
@@ -1164,7 +1193,7 @@ main {
 								img{
 									aspect-ratio: 1.5;
 									object-fit: contain;
-									box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);;
+									//box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);;
 								}
 							}
 
@@ -1316,9 +1345,9 @@ main {
 							font-weight: 400 !important;
 						}
 						p{
-							font-weight: 400 !important;
+							font-weight: 300 !important;
 							font-size: 2.7rem !important;
-							margin-top: 3.5rem;
+							margin-top: 1.5rem;
 							font-style: normal !important;
 						}
 					}
@@ -1677,7 +1706,7 @@ body{
 
 								p{
 									&.but-book-price{
-										font-size: clamp(0.9375rem, 2.04vw, 1.875rem);
+										font-size: clamp(0.9375rem, 2.04vw, 1.65rem);
 										margin-top: 1rem;
 
 										span{
@@ -1695,19 +1724,36 @@ body{
 									margin-bottom: 1.2rem;
 								}
 
+								.product-details-wrapper{
+									padding: 1rem 0 2rem;
+
+									h2{
+										margin-bottom: 1rem;
+									}
+
+									p{
+										font-family: "Josefin Sans", sans-serif;
+										font-size: 1rem;
+										line-height: 1.2;
+										font-style: normal;
+										text-transform: none;
+										font-weight: 300;
+									}
+								}
+
 								.but-book-add-to-cart{
 									form{
 										margin-bottom: 1.5rem;
 										max-width: 320px;
 
 										button{
-											font-size: clamp(0.8125rem, 1.77vw, 1.625rem);
+											font-size: clamp(0.8125rem, 1.77vw, 1.2rem);
 											font-weight: 200;
 											color: #000;
 											border: 1px solid #9b9b9b;
-											width: 100%;
+											width: fit-content;
 											display: inline-block;
-											padding: 1rem 0;
+											padding: 1rem 3rem 0.6rem;
 											text-align: center;
 											text-transform: uppercase;
 											transition: all 0.4s ease-in;
@@ -1775,9 +1821,10 @@ body{
 								font-weight: 400;
 								//margin-bottom: 2rem;
 								margin-bottom: clamp(1rem, 2.17vw, 2rem);
+								font-family: "Lora", sans-serif;
 							}
 							p{
-								font-size: clamp(0.9rem, 1.63vw, 1.5rem);
+								font-size: clamp(0.9rem, 1.63vw, 1.2rem);
 								line-height: 130%;
 								//margin-bottom: 2rem;
 								margin-bottom: clamp(1rem, 2.17vw, 2rem);

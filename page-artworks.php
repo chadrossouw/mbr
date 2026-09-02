@@ -33,7 +33,7 @@ get_header();
 						<?php foreach ( $selected_artworks as $artwork ) :
 
 							$product_id = is_object( $artwork ) ? $artwork->ID : $artwork;
-							$featured_image  = get_the_post_thumbnail_url( $product_id, 'large' );
+							$featured_image  = get_field( 'single_product_image', $product_id ) ?: get_the_post_thumbnail_url( $product_id, 'large' );
 							$title           = get_the_title( $product_id );
 							$link            = get_permalink($product_id);
 

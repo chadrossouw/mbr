@@ -566,7 +566,7 @@ p {
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: 400;
-  font-family: "Lora", sans-serif;
+  font-family: "Lora", serif;
 }
 
 dfn,
@@ -5620,7 +5620,7 @@ main:not(.home-page) .page-content {
 }
 @media screen and (min-width: 1200px) {
   main:not(.home-page) .page-content {
-    padding: 0rem 0vw 4rem;
+    padding: 0rem 0vw 0rem;
   }
 }
 main:not(.home-page) .page-content form p span {
@@ -5714,6 +5714,7 @@ main:not(.home-page) .page-content .three-col-grid {
   text-align: center;
   box-sizing: border-box;
   text-align: left;
+  margin-bottom: 4rem;
 }
 main:not(.home-page) .page-content .three-col-grid.single-exhibition-top {
   position: relative;
@@ -5773,7 +5774,7 @@ main:not(.home-page) .page-content .three-col-grid.single-exhibition-description
 }
 main:not(.home-page) .page-content .three-col-grid.single-exhibition-description .description-content p {
   max-width: 720px;
-  font-family: "Lora", sans-serif;
+  font-family: "Lora", serif;
 }
 @media screen and (max-width: 900px) {
   main:not(.home-page) .page-content .three-col-grid.single-exhibition-description {
@@ -5844,14 +5845,14 @@ main:not(.home-page) .page-content .three-col-grid .three-col-card.exhibition-me
   margin-bottom: 0;
 }
 main:not(.home-page) .page-content .three-col-grid .three-col-card.exhibition-meta.artwork-meta .card-text .artwork-inquire a {
-  font-size: clamp(0.8125rem, 1.77vw, 1.625rem);
+  font-size: clamp(0.8125rem, 1.77vw, 1.2rem);
   font-weight: 200;
   color: #000;
   border: 1px solid #9b9b9b;
-  width: 100%;
+  width: fit-content;
   max-width: 320px;
   display: inline-block;
-  padding: 1rem 0;
+  padding: 1rem 3rem 0.6rem;
   text-align: center;
   text-transform: uppercase;
   transition: all 0.4s ease-in;
@@ -5976,6 +5977,23 @@ main:not(.home-page) .page-content:not(:has(.related-artworks)) .long {
     margin-top: 4rem;
   }
 }
+main:not(.home-page) .page-content .single-artwork-top.single-artwork-top.single-artwork-top.single-artwork-top .artwork-meta.artwork-meta.artwork-meta.artwork-meta .card-text h2,
+main:not(.home-page) .page-content .single-artwork-top.single-artwork-top.single-artwork-top.single-artwork-top .artwork-meta.artwork-meta.artwork-meta.artwork-meta .card-text .card-title {
+  font-size: clamp(0.9375rem, 2.04vw, 1.65rem);
+}
+main:not(.home-page) .page-content .single-artwork-top.single-artwork-top.single-artwork-top.single-artwork-top .artwork-meta.artwork-meta.artwork-meta.artwork-meta .card-text .card-title {
+  font-weight: 200;
+  font-style: normal;
+}
+main:not(.home-page) .page-content .single-artwork-top.single-artwork-top.single-artwork-top.single-artwork-top .artwork-meta.artwork-meta.artwork-meta.artwork-meta .card-text .artwork_notes_wrapper {
+  padding: 2rem 0 2rem;
+}
+main:not(.home-page) .page-content .single-artwork-top.single-artwork-top.single-artwork-top.single-artwork-top .artwork-meta.artwork-meta.artwork-meta.artwork-meta .card-text .artwork_notes_wrapper p {
+  margin: 0 !important;
+  color: #878181;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 100;
+}
 @media screen and (max-width: 700px) {
   main:not(.home-page) .page-content {
     box-sizing: border-box;
@@ -6038,7 +6056,6 @@ main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col
 }
 main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.three-col-card div.artbook-item a.artwork-main-link img {
   width: 100%;
-  aspect-ratio: 1;
 }
 main.art-books-page section.page-content section.three-col-grid.with-1-col-2-col div.three-col-card div.artbook-item a.artwork-main-link .art-main-link-text {
   padding: 0 2vw;
@@ -6365,7 +6382,6 @@ main.books-page section.page-content section.books-listing div.three-col-grid di
 main.books-page section.page-content section.books-listing div.three-col-grid div.book-card-wrapper a.book-card .card-image img {
   aspect-ratio: 1.5;
   object-fit: contain;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 main.books-page section.page-content section.books-listing div.three-col-grid div.book-card-wrapper a.book-card .card-text {
   padding: clamp(0.5rem, 1.15vw, 1.0625rem) 2vw 0.2rem;
@@ -6505,9 +6521,9 @@ main.single-exhibition-page .page-content .single-exhibition-top .exhibition-met
   font-weight: 400 !important;
 }
 main.single-exhibition-page .page-content .single-exhibition-top .exhibition-meta .card-text p {
-  font-weight: 400 !important;
+  font-weight: 300 !important;
   font-size: 2.7rem !important;
-  margin-top: 3.5rem;
+  margin-top: 1.5rem;
   font-style: normal !important;
 }
 main.single-essay-page .single-essay-top {
@@ -6567,14 +6583,14 @@ main.single-essay-page .essay-artwork.card .essay-artwork-meta .card-title p,
 main.single-essay-page .essay-artwork-meta .caption p {
   font-weight: 300;
   font-style: italic;
-  font-family: "Lora", sans-serif;
+  font-family: "Lora", serif;
   text-transform: capitalize;
   letter-spacing: 0.015rem;
 }
 main.single-essay-page .essay-artwork.card .essay-artwork-meta .card-artists,
 main.single-essay-page .essay-artwork-meta .artwork-artist {
   font-weight: 300;
-  font-family: "Lora", sans-serif;
+  font-family: "Lora", serif;
   text-transform: capitalize;
 }
 @media screen and (max-width: 900px) {
@@ -6728,7 +6744,7 @@ body div#page:has(header#masthead) {
   max-width: 100%;
 }
 .single-product .product.instock section.page-content.but-book-product-content section.but-single-book-top .three-col-card .card-text p.but-book-price, .single-product .product.outofstock section.page-content.but-book-product-content section.but-single-book-top .three-col-card .card-text p.but-book-price {
-  font-size: clamp(0.9375rem, 2.04vw, 1.875rem);
+  font-size: clamp(0.9375rem, 2.04vw, 1.65rem);
   margin-top: 1rem;
 }
 .single-product .product.instock section.page-content.but-book-product-content section.but-single-book-top .three-col-card .card-text p.but-book-price span bdi span.woocommerce-Price-currencySymbol, .single-product .product.outofstock section.page-content.but-book-product-content section.but-single-book-top .three-col-card .card-text p.but-book-price span bdi span.woocommerce-Price-currencySymbol {
@@ -6739,18 +6755,32 @@ body div#page:has(header#masthead) {
 .single-product .product.outofstock section.page-content.but-book-product-content section.but-single-book-top .three-col-card .card-text p {
   margin-bottom: 1.2rem;
 }
+.single-product .product.instock section.page-content.but-book-product-content section.but-single-book-top .three-col-card .card-text .product-details-wrapper, .single-product .product.outofstock section.page-content.but-book-product-content section.but-single-book-top .three-col-card .card-text .product-details-wrapper {
+  padding: 1rem 0 2rem;
+}
+.single-product .product.instock section.page-content.but-book-product-content section.but-single-book-top .three-col-card .card-text .product-details-wrapper h2, .single-product .product.outofstock section.page-content.but-book-product-content section.but-single-book-top .three-col-card .card-text .product-details-wrapper h2 {
+  margin-bottom: 1rem;
+}
+.single-product .product.instock section.page-content.but-book-product-content section.but-single-book-top .three-col-card .card-text .product-details-wrapper p, .single-product .product.outofstock section.page-content.but-book-product-content section.but-single-book-top .three-col-card .card-text .product-details-wrapper p {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.2;
+  font-style: normal;
+  text-transform: none;
+  font-weight: 300;
+}
 .single-product .product.instock section.page-content.but-book-product-content section.but-single-book-top .three-col-card .card-text .but-book-add-to-cart form, .single-product .product.outofstock section.page-content.but-book-product-content section.but-single-book-top .three-col-card .card-text .but-book-add-to-cart form {
   margin-bottom: 1.5rem;
   max-width: 320px;
 }
 .single-product .product.instock section.page-content.but-book-product-content section.but-single-book-top .three-col-card .card-text .but-book-add-to-cart form button, .single-product .product.outofstock section.page-content.but-book-product-content section.but-single-book-top .three-col-card .card-text .but-book-add-to-cart form button {
-  font-size: clamp(0.8125rem, 1.77vw, 1.625rem);
+  font-size: clamp(0.8125rem, 1.77vw, 1.2rem);
   font-weight: 200;
   color: #000;
   border: 1px solid #9b9b9b;
-  width: 100%;
+  width: fit-content;
   display: inline-block;
-  padding: 1rem 0;
+  padding: 1rem 3rem 0.6rem;
   text-align: center;
   text-transform: uppercase;
   transition: all 0.4s ease-in;
@@ -6807,9 +6837,10 @@ body div#page:has(header#masthead) {
   text-transform: uppercase;
   font-weight: 400;
   margin-bottom: clamp(1rem, 2.17vw, 2rem);
+  font-family: "Lora", sans-serif;
 }
 .single-product .product.instock section.page-content.but-book-product-content section.but-single-book-description .author-book-description p, .single-product .product.outofstock section.page-content.but-book-product-content section.but-single-book-description .author-book-description p {
-  font-size: clamp(0.9rem, 1.63vw, 1.5rem);
+  font-size: clamp(0.9rem, 1.63vw, 1.2rem);
   line-height: 130%;
   margin-bottom: clamp(1rem, 2.17vw, 2rem);
 }
@@ -6860,7 +6891,8 @@ body div#page:has(header#masthead) {
   width: 100%;
   background-color: #000;
   color: #fff;
-  padding: 4rem 4rem;
+  padding: 5.5rem 4rem 4rem;
+  border-top: 1px solid #696464;
 }
 .mbr-footer .mbr-footer__content {
   width: 100%;
@@ -6868,8 +6900,8 @@ body div#page:has(header#masthead) {
 }
 .mbr-footer .mbr-footer__content h3 {
   color: #fff;
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 30px;
+  font-weight: 300;
 }
 @media screen and (min-width: 700px) {
   .mbr-footer .mbr-footer__content {
@@ -6879,7 +6911,7 @@ body div#page:has(header#masthead) {
 .mbr-footer .mbr-footer__details {
   margin-bottom: 1rem;
   font-size: 0.75rem;
-  font-family: "Josephin Sans", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
 }
 .mbr-footer .mbr-footer__details > div {
   display: flex;
@@ -6892,10 +6924,11 @@ body div#page:has(header#masthead) {
   color: #fff;
 }
 .mbr-footer .mbr-footer__details > div span {
-  font-weight: 400;
+  font-weight: 200;
 }
 .mbr-footer .mbr-footer__notice {
   font-size: 0.75rem;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .essay-layout.parallax-effect-block {

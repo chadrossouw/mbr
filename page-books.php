@@ -30,7 +30,7 @@ get_header();
 						<?php foreach ( $selected_books as $book ) :
 
 							$product_id      = is_object( $book ) ? $book->ID : $book;
-							$featured_image  = get_the_post_thumbnail_url( $product_id, 'large' );
+							$featured_image  = get_field( 'single_product_image', $product_id ) ?: get_the_post_thumbnail_url( $product_id, 'large' );
 							$title           = get_the_title($product_id);
 							$link            = get_permalink($product_id);
 

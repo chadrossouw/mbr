@@ -2,7 +2,8 @@
 	width: 100%;
 	background-color: $color-black;
 	color: $color-white;
-	padding: 4rem 4rem;
+	padding: 5.5rem 4rem 4rem;
+	border-top: 1px solid #696464;
 
 	.mbr-footer__content{
 		width: 100%;
@@ -10,8 +11,8 @@
 
 		h3{
 			color: $color_white;
-			font-size: $font_18px;
-			font-weight: 500;
+			font-size: 30px;
+			font-weight: 300;
 		}
 
 		@include media700{
@@ -22,7 +23,7 @@
 	.mbr-footer__details{
 		margin-bottom: 1rem;
 		font-size: 0.75rem;
-		font-family: "Josephin Sans", sans-serif;
+		font-family: "Josefin Sans", sans-serif;
 
 		&>div{
 			display: flex;
@@ -35,11 +36,12 @@
 				color: $color-white;
 			}
 			span{
-				font-weight: 400;
+				font-weight: 200;
 			}
 		}
 	}
 	.mbr-footer__notice{
 		font-size: 0.75rem;
+		font-family: "Josefin Sans", sans-serif;
 	}
 }
