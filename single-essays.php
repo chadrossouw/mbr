@@ -111,20 +111,21 @@ get_header();
             </section> -->
 
             <!-- DESCRIPTION SECTION -->
-            <section class="single-essay-description long three-col-grid">
+            <?php if (!empty($description)) : ?>
+                <section class="single-essay-description long three-col-grid">
 
-                <div class="empty-column three-col-card"></div>
+                    <div class="empty-column three-col-card"></div>
 
-                <div class="description-content two-column-span">
+                    <div class="description-content two-column-span">
 
-                    <?php if (!empty($description)) : ?>
-                        <?php echo wp_kses_post($description); ?>
-                    <?php endif; ?>
+                        
+                            <?php echo wp_kses_post($description); ?>
+                        
 
-                </div>
+                    </div>
 
-            </section>
-
+                </section>
+            <?php endif; ?>
             <!-- ESSAY CONTENT -->
             <section class="essay-content">
                 <?php get_essays_content_layouts(get_the_ID()); ?>
