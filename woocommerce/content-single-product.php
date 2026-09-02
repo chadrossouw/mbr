@@ -146,7 +146,7 @@ $enquiry_url = add_query_arg(
 
 
 				<!-- RIGHT 2 COLUMNS -->
-				<div class="artwork-image exhibition-image two-column-span">
+				<div class="artwork-image exhibition-image two-column-span container container--threetwo">
 
 					<?php if ( ! empty( $featured_image ) ) : ?>
 
@@ -281,7 +281,7 @@ $enquiry_url = add_query_arg(
 				</div>
 
 				<!-- RIGHT 2 COLUMNS -->
-				<div class="artwork-image exhibition-image two-column-span">
+				<div class="artwork-image exhibition-image two-column-span container container--threetwo">
 
 					<?php if ( ! empty( $featured_image ) ) : ?>
 

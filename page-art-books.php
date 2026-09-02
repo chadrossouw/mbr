@@ -68,7 +68,7 @@ get_header();
 								<a class="artwork-main-link" href="<?php echo esc_url($artwork_link); ?>">
 
 									<?php if (!empty($artwork_image)) : ?>
-										<img src="<?php echo esc_url($artwork_image); ?>" alt="<?php echo esc_attr($artwork_title); ?>">
+										<div class="card-image container container--threetwo"><img src="<?php echo esc_url($artwork_image); ?>" alt="<?php echo esc_attr($artwork_title); ?>"></div>
 									<?php endif; ?>
 
 									<div class="art-main-link-text">
@@ -142,7 +142,7 @@ get_header();
 									<a class="three-col-card book-card book-main-link" href="<?php echo esc_url($book_link); ?>">
 
                                     <?php if (!empty($book_image)) : ?>
-                                        <div class="card-image">
+                                        <div class="card-image container container--threetwo">
                                             <img
                                                 src="<?php echo esc_url($book_image); ?>"
                                                 alt="<?php echo esc_attr($book_title); ?>"
