@@ -140,7 +140,7 @@
         },
         {
             "key": "field_6a16d4c135c5e",
-            "label": "About Book And Author",
+            "label": "About Book And Author OR artwork And Artist",
             "name": "about_book_and_author",
             "aria-label": "",
             "type": "group",
@@ -232,5 +232,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1781683133
+    "modified": 1788426273
 }

@@ -6026,9 +6026,13 @@ main:not(.home-page) .page-content .single-artwork-top.single-artwork-top.single
 }
 main:not(.home-page) .page-content .single-artwork-top.single-artwork-top.single-artwork-top.single-artwork-top .artwork-meta.artwork-meta.artwork-meta.artwork-meta .card-text .artwork_notes_wrapper p {
   margin: 0 !important;
-  color: #878181;
   font-family: "Josefin Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.2;
+  font-style: normal;
+  text-transform: none;
   font-weight: 300;
+  color: #878181;
 }
 main:not(.home-page) .page-content .single-artwork-top.single-artwork-top.single-artwork-top.single-artwork-top .artwork-image.artwork-image.artwork-image.artwork-image {
   background-color: #f1f0f0;
@@ -6554,7 +6558,7 @@ main.single-exhibition-page .page-content p, main.single-exhibition-page .page-c
 }
 main.single-exhibition-page .page-content .single-exhibition-top .description-content {
   width: 100%;
-  margin: 2rem 2rem 3rem 0;
+  margin: 0.5rem 2rem 1.2rem 0;
 }
 main.single-exhibition-page .page-content .single-exhibition-top .essay-link-wrapper {
   margin-bottom: 3rem;
@@ -6582,6 +6586,7 @@ main.single-exhibition-page .page-content .single-exhibition-top div.exhibition-
   text-align: right;
   padding-top: 1rem;
   font-family: "Lora", serif;
+  font-style: italic;
 }
 main.single-essay-page .single-essay-top {
   position: relative;
@@ -6636,6 +6641,7 @@ main.single-essay-page .single-essay-top div.essay-image .top-caption {
   text-align: right;
   padding-top: 1rem;
   font-family: "Lora", serif;
+  font-style: italic;
 }
 main.single-essay-page .single-essay-description, main.single-essay-page .three-col-grid.single-exhibition-description.single-exhibition-description {
   margin: 2rem 0 2rem 0rem;
@@ -6906,7 +6912,7 @@ body div#page:has(header#masthead) {
   font-family: "Lora", sans-serif;
 }
 .single-product .product.instock section.page-content.but-book-product-content section.but-single-book-description .author-book-description p, .single-product .product.outofstock section.page-content.but-book-product-content section.but-single-book-description .author-book-description p {
-  font-size: clamp(0.9rem, 1.63vw, 1.2rem);
+  font-size: clamp(0.9rem, 1.63vw, 1rem);
   line-height: 130%;
   margin-bottom: clamp(1rem, 2.17vw, 2rem);
 }
