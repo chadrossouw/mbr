@@ -565,16 +565,20 @@ section.three-col-with-form{
 				font-family: "Josefin Sans", sans-serif;
 
 				.card-artists{
-					font-weight: 400;
 					font-size: clamp(0.875rem, 1.1vw, 1.0625rem);
 					color: $color-white;
 					font-family: inherit;
+					font-weight: 300;
+					font-family: $font__body;
+					text-transform: capitalize;
 				}
 				.card-title p{
 					font-weight: 300;
 					font-style: italic;
 					font-size: clamp(0.875rem, 1.1vw, 1.0625rem);
-					font-family: "Josefin Sans", sans-serif;
+					font-family: $font__body;
+					text-transform: capitalize;
+					letter-spacing: 0.015rem;
 				}
 			}
 		}

@@ -286,9 +286,14 @@ $enquiry_url = add_query_arg(
 
 							<?php if ( $product->is_in_stock() ) : ?>
 
-								<form class="cart" method="post" enctype="multipart/form-data">
+								<!-- <form class="cart" method="post" enctype="multipart/form-data">
 									<button type="submit" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" class="single_add_to_cart_button">Add to cart</button>
-								</form>
+								</form> -->
+
+								<!-- FOR LATER   =>  REMOVE THIS FIRST ENQUIRE BUTTON AND UNCOMMENT THE ADD TO CART ONE ABOVE ONCE CHECK OUT IS SET -->
+								<div class="artwork-inquire but-book-enquire">
+									<a href="<?php echo esc_url( $enquiry_url ); ?>" class="inquire-button">Enquire</a>
+								</div>
 
 							<?php else : ?>
 
