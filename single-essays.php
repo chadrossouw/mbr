@@ -9,6 +9,7 @@ get_header();
     <?php
     $essay_image = get_field('single_essay_image');
     $featured_image = $essay_image ? wp_get_attachment_image_url($essay_image, 'large') : null;
+    $top_caption = get_field('essay_caption');
     $artists = get_field('artists');
     $description = get_field('essay_description');
     $essay_author = get_field('essay_author');
@@ -82,6 +83,12 @@ get_header();
                             src="<?php echo esc_url($featured_image); ?>"
                             alt="<?php echo esc_attr(get_the_title()); ?>"
                         >
+                    <?php endif; ?>
+
+                    <?php if(!empty($top_caption)) : ?>
+                        <div class="top-caption">
+                            <?php echo esc_html($top_caption) ;?>
+                        </div>
                     <?php endif; ?>
                 </div>
 

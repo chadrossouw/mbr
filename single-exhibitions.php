@@ -9,6 +9,7 @@ get_header();
     <?php
     $exhibition_full_image = get_field('single_exhibition_image');
     $featured_image = $exhibition_full_image ?? get_the_post_thumbnail_url(get_the_ID(), 'large');
+    $top_caption = get_field('exhibition_caption');
     $artists        = get_field('artists');
     $description    = get_field('exhibition_description');
     $long_description = get_field('exhibition_long_content');
@@ -75,7 +76,6 @@ get_header();
                 </div>
 
                 <div class="exhibition-image two-column-span">
-
                     <?php if (!empty($featured_image)) : ?>
                         <img
                             src="<?php echo esc_url($featured_image); ?>"
@@ -83,6 +83,11 @@ get_header();
                         >
                     <?php endif; ?>
 
+                    <?php if(!empty($top_caption)) : ?>
+                        <div class="top-caption white">
+                            <?php echo esc_html($top_caption) ;?>
+                        </div>
+                    <?php endif; ?>
                 </div>
 
             </section>

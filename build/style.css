@@ -6578,6 +6578,11 @@ main.single-exhibition-page .page-content .single-exhibition-top .exhibition-met
   margin-top: 1.5rem;
   font-style: normal !important;
 }
+main.single-exhibition-page .page-content .single-exhibition-top div.exhibition-image .top-caption {
+  text-align: right;
+  padding-top: 1rem;
+  font-family: "Lora", serif;
+}
 main.single-essay-page .single-essay-top {
   position: relative;
 }
@@ -6626,6 +6631,11 @@ main.single-essay-page .single-essay-top .essay-meta .exhibition-link-wrapper .e
   font-style: italic;
   display: flex;
   width: fit-content;
+}
+main.single-essay-page .single-essay-top div.essay-image .top-caption {
+  text-align: right;
+  padding-top: 1rem;
+  font-family: "Lora", serif;
 }
 main.single-essay-page .single-essay-description, main.single-essay-page .three-col-grid.single-exhibition-description.single-exhibition-description {
   margin: 2rem 0 2rem 0rem;

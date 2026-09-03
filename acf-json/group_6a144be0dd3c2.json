@@ -28,6 +28,26 @@
             "preview_size": "medium"
         },
         {
+            "key": "field_6a992fedbdcd9",
+            "label": "Exhibition Caption",
+            "name": "exhibition_caption",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_6a144be21fdb3",
             "label": "Exhibition Description",
             "name": "exhibition_description",
@@ -151,5 +171,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1788181740
+    "modified": 1788424216
 }

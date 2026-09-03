@@ -28,6 +28,26 @@
             "preview_size": "medium"
         },
         {
+            "key": "field_6a9933d7eb8e2",
+            "label": "Essay Caption",
+            "name": "essay_caption",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_6a957c5c73982",
             "label": "Essay Description",
             "name": "essay_description",
@@ -169,5 +189,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1788261621
+    "modified": 1788425192
 }

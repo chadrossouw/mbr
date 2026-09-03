@@ -1375,6 +1375,14 @@ main {
 						}
 					}
 				}
+
+				div.exhibition-image {
+					.top-caption {
+						text-align: right;
+						padding-top: 1rem;
+						font-family: $font__body;
+					}
+				}
 			}
 		}
 	}
@@ -1395,6 +1403,7 @@ main {
 				z-index: 9998;
 				pointer-events: none;
 			}
+
 			.essay-meta {
 				h1{
 					padding: 0 2rem;
@@ -1431,6 +1440,14 @@ main {
 						display: flex;
 						width: fit-content;
 					}
+				}
+			}
+
+			div.essay-image {
+				.top-caption {
+					text-align: right;
+					padding-top: 1rem;
+					font-family: $font__body;
 				}
 			}
 		}
