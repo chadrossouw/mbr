@@ -172,12 +172,12 @@ get_header();
 
 									<?php if ($product && $product->is_in_stock() ) : ?>
 
-										<a
-											href="<?php echo esc_url( wc_get_cart_url() . '?add-to-cart=' . $product->get_id() ); ?>"
-											class="single_add_to_cart_button"
-										>
-											Add to cart
-										</a>
+										<!-- <a href="<?php echo esc_url( wc_get_cart_url() . '?add-to-cart=' . $product->get_id() ); ?>" class="single_add_to_cart_button">Add to cart</a> -->
+
+										<!-- FOR LATER   =>  REMOVE THIS FIRST ENQUIRE BUTTON AND UNCOMMENT THE ADD TO CART ONE ABOVE ONCE CHECK OUT IS SET -->
+										<div class="artwork-inquire but-book-enquire">
+											<a href="<?php echo esc_url( $enquiry_url ); ?>" class="inquire-button">Enquire</a>
+										</div>
 
 									<?php else : ?>
 
