@@ -6517,9 +6517,6 @@ main.books-page section.page-content section.books-listing div.three-col-grid di
     width: calc(100% - 2rem);
   }
 }
-main.contact-page {
-  height: 100vh;
-}
 @media screen and (max-width: 700px) {
   main.contact-page .page-content .three-col-grid .two-column-span {
     width: calc(100% - 2rem);
@@ -6527,7 +6524,7 @@ main.contact-page {
 }
 main.contact-page form {
   max-width: 680px;
-  margin: 0 auto;
+  margin: 0 3vw;
 }
 main.contact-page form input[type=submit] {
   font-size: clamp(0.8125rem, 1.77vw, 1.625rem);
@@ -6742,7 +6739,7 @@ body:has(.about-page) main section.about-page-content section.about-layout div.a
   padding-bottom: 5rem;
 }
 body:has(.about-page) main section.about-page-content section.about-layout div.about-content-column p {
-  font-size: clamp(0.875rem, 1.4vw, 1.3125rem);
+  font-size: clamp(0.875rem, 1.4vw, 1rem);
   max-width: 720px;
 }
 @media screen and (max-width: 700px) {
@@ -7101,7 +7098,7 @@ body div#page:has(header#masthead) {
   background-position: center top !important;
 }
 .scroll-over-block .scroll-over-block__overlay-text {
-  width: 600px;
+  width: 400px;
   max-width: 80vw;
   margin-left: auto;
   margin-right: var(--margin);
