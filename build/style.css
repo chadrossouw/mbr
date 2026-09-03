@@ -2883,16 +2883,20 @@ section.three-col-with-form .form-row .form-content .form-wrapper form .submit-f
   font-family: "Josefin Sans", sans-serif;
 }
 .three-column-layout a.three-col-card .card .essay-artwork-meta .card-artists {
-  font-weight: 400;
   font-size: clamp(0.875rem, 1.1vw, 1.0625rem);
   color: #fff;
   font-family: inherit;
+  font-weight: 300;
+  font-family: "Lora", serif;
+  text-transform: capitalize;
 }
 .three-column-layout a.three-col-card .card .essay-artwork-meta .card-title p {
   font-weight: 300;
   font-style: italic;
   font-size: clamp(0.875rem, 1.1vw, 1.0625rem);
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Lora", serif;
+  text-transform: capitalize;
+  letter-spacing: 0.015rem;
 }
 @media screen and (min-width: 700px) {
   .three-column-layout a.three-col-card {
