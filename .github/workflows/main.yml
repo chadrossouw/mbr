@@ -2,7 +2,7 @@ name: Deploy Private GitHub repository to cPanel
 on:
   push:
     branches:
-      - staging
+      - main
 jobs:
   FTP-Deploy-Action:
     name: FTP-Deploy-Action
@@ -12,8 +12,8 @@ jobs:
     - name: FTP-Deploy-Action
       uses: SamKirkland/FTP-Deploy-Action@v4.4.0
       with:
-        server: ${{ secrets.STAGING_FTP_SERVER }}
-        username: ${{ secrets.STAGING_FTP_USERNAME }}
-        password: ${{ secrets.STAGING_FTP_PASSWORD }}
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.SFTP_PASSWORD }}
         protocol: ftps
         timeout: 120000
