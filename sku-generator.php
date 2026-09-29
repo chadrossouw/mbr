@@ -13,13 +13,13 @@ get_header();
 
         <section class="page-content">
             <h1><?php the_title(); ?></h1>
-
-            <?php
-                //Generate a six digit SKU
-                $sku = strtoupper(substr(md5(uniqid(rand(), true)), 0, 6));
-                echo '<p>Generated SKU: ' . esc_html($sku) . '</p>';
-            ?>
-        
+            <section class="contact-top three-col-grid with-1-col-2-col">
+                <?php
+                    //Generate a six digit SKU
+                    $sku = strtoupper(substr(md5(uniqid(rand(), true)), 0, 6));
+                    echo '<p>Generated Code: ' . esc_html($sku) . '</p>';
+                ?>
+            </section>
 
         </section>
 
