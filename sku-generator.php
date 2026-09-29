@@ -17,7 +17,13 @@ get_header();
                 <div class="three-col-card">
                 <?php
                     //Generate a six digit SKU
+                    $all_skus = get_option('all_skus', array());
                     $sku = strtoupper(substr(md5(uniqid(rand(), true)), 0, 6));
+                    while(in_array($sku, $all_skus)) {
+                        $sku = strtoupper(substr(md5(uniqid(rand(), true)), 0, 6));
+                    }
+                    $all_skus[] = $sku;
+                    update_option('all_skus', $all_skus);
                     echo '<p>Generated Code: ' . esc_html($sku) . '</p>';
                 ?>
                 </div>
