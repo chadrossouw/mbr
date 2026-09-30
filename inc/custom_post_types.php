@@ -146,5 +146,38 @@ function soul_init()
 
 	register_post_type( 'essays', $args_essays );
 
+	// News
+	$labels_news = array(
+		'name'               => __( 'News', 'soul' ),
+		'singular_name'      => __( 'News', 'soul' ),
+		'menu_name'          => __( 'News', 'soul' ),
+		'name_admin_bar'     => __( 'News', 'soul' ),
+		'add_new'            => __( 'Add New', 'soul' ),
+		'add_new_item'       => __( 'Add New News', 'soul' ),
+		'new_item'           => __( 'New News', 'soul' ),
+		'edit_item'          => __( 'Edit News', 'soul' ),
+		'view_item'          => __( 'View News', 'soul' ),
+		'all_items'          => __( 'All News', 'soul' ),
+		'search_items'       => __( 'Search News', 'soul' ),
+		'not_found'          => __( 'No News found.', 'soul' ),
+		'not_found_in_trash' => __( 'No News found in Trash.', 'soul' )
+	);
+
+	$args_news = array(
+		'labels'        => $labels_news,
+		'public'        => true,
+		'show_ui'       => true,
+		'show_in_rest'  => true,
+		'has_archive'   => false,
+		'rewrite'       => array(
+			'slug'       => 'news-listings',
+			'with_front' => false
+		),
+		'menu_icon'     => 'dashicons-megaphone',
+		'supports'      => array( 'title', 'thumbnail', 'editor' ),
+	);
+
+	register_post_type( 'news', $args_news );
+
 }
 add_action('init', 'soul_init');
