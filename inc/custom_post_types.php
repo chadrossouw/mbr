@@ -88,7 +88,7 @@ function soul_init()
 		'has_archive'   => false,
 		'rewrite'       => array('slug' => 'artists'),
 		'menu_icon'    => 'dashicons-admin-users',
-		'supports'      => array('title', 'thumbnail', 'editor'),
+		'supports'      => array('title', 'thumbnail'),
 	);
 
 	register_post_type('artists', $args_artists);
@@ -141,7 +141,7 @@ function soul_init()
 			'with_front' => false
 		),
 		'menu_icon'     => 'dashicons-edit-page',
-		'supports'      => array( 'title', 'thumbnail', 'editor' ),
+		'supports'      => array( 'title', 'thumbnail' ),
 	);
 
 	register_post_type( 'essays', $args_essays );
@@ -174,7 +174,7 @@ function soul_init()
 			'with_front' => false
 		),
 		'menu_icon'     => 'dashicons-megaphone',
-		'supports'      => array( 'title', 'thumbnail', 'editor' ),
+		'supports'      => array( 'title', 'thumbnail' ),
 	);
 
 	register_post_type( 'news', $args_news );
@@ -207,7 +207,7 @@ function soul_init()
 			'with_front' => false
 		),
 		'menu_icon'     => 'dashicons-id',
-		'supports'      => array( 'title', 'thumbnail', 'editor' ),
+		'supports'      => array( 'title', 'thumbnail' ),
 	);
 
 	register_post_type( 'profile', $args_profile );

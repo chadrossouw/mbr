@@ -413,3 +413,8 @@ add_action('admin_enqueue_scripts', function () {
     );
 
 });
+
+// remove the default WP content editor
+add_action('init', function () {
+    remove_post_type_support('page', 'editor');
+});
