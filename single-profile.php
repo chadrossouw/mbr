@@ -417,6 +417,11 @@ get_header();
 
             <?php endif; ?>
 
+            <!-- PROFILE LAYOUT CONTENT -->
+            <section class="essay-content">
+                <?php get_essays_content_layouts(get_the_ID()); ?>
+            </section>
+
 
         </section>
 

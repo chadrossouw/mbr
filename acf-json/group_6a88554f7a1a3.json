@@ -918,6 +918,13 @@
                 "operator": "==",
                 "value": "essays"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "profile"
+            }
         ]
     ],
     "menu_order": 10,
@@ -931,5 +938,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1788264901
+    "modified": 1790855574
 }
