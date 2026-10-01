@@ -88,7 +88,7 @@ function soul_init()
 		'has_archive'   => false,
 		'rewrite'       => array('slug' => 'artists'),
 		'menu_icon'    => 'dashicons-admin-users',
-		'supports'      => array('title', 'thumbnail', 'editor'),
+		'supports'      => array('title', 'thumbnail'),
 	);
 
 	register_post_type('artists', $args_artists);
@@ -141,10 +141,76 @@ function soul_init()
 			'with_front' => false
 		),
 		'menu_icon'     => 'dashicons-edit-page',
-		'supports'      => array( 'title', 'thumbnail', 'editor' ),
+		'supports'      => array( 'title', 'thumbnail' ),
 	);
 
 	register_post_type( 'essays', $args_essays );
+
+	// News
+	$labels_news = array(
+		'name'               => __( 'News', 'soul' ),
+		'singular_name'      => __( 'News', 'soul' ),
+		'menu_name'          => __( 'News', 'soul' ),
+		'name_admin_bar'     => __( 'News', 'soul' ),
+		'add_new'            => __( 'Add New', 'soul' ),
+		'add_new_item'       => __( 'Add New News', 'soul' ),
+		'new_item'           => __( 'New News', 'soul' ),
+		'edit_item'          => __( 'Edit News', 'soul' ),
+		'view_item'          => __( 'View News', 'soul' ),
+		'all_items'          => __( 'All News', 'soul' ),
+		'search_items'       => __( 'Search News', 'soul' ),
+		'not_found'          => __( 'No News found.', 'soul' ),
+		'not_found_in_trash' => __( 'No News found in Trash.', 'soul' )
+	);
+
+	$args_news = array(
+		'labels'        => $labels_news,
+		'public'        => true,
+		'show_ui'       => true,
+		'show_in_rest'  => true,
+		'has_archive'   => false,
+		'rewrite'       => array(
+			'slug'       => 'news-listings',
+			'with_front' => false
+		),
+		'menu_icon'     => 'dashicons-megaphone',
+		'supports'      => array( 'title', 'thumbnail' ),
+	);
+
+	register_post_type( 'news', $args_news );
+
+	// Profile
+	$labels_profile = array(
+		'name'               => __( 'Profiles', 'soul' ),
+		'singular_name'      => __( 'Profile', 'soul' ),
+		'menu_name'          => __( 'Profiles', 'soul' ),
+		'name_admin_bar'     => __( 'Profile', 'soul' ),
+		'add_new'            => __( 'Add New', 'soul' ),
+		'add_new_item'       => __( 'Add New Profile', 'soul' ),
+		'new_item'           => __( 'New Profile', 'soul' ),
+		'edit_item'          => __( 'Edit Profile', 'soul' ),
+		'view_item'          => __( 'View Profile', 'soul' ),
+		'all_items'          => __( 'All Profiles', 'soul' ),
+		'search_items'       => __( 'Search Profiles', 'soul' ),
+		'not_found'          => __( 'No Profiles found.', 'soul' ),
+		'not_found_in_trash' => __( 'No Profiles found in Trash.', 'soul' )
+	);
+
+	$args_profile = array(
+		'labels'        => $labels_profile,
+		'public'        => true,
+		'show_ui'       => true,
+		'show_in_rest'  => true,
+		'has_archive'   => false,
+		'rewrite'       => array(
+			'slug'       => 'profiles',
+			'with_front' => false
+		),
+		'menu_icon'     => 'dashicons-id',
+		'supports'      => array( 'title', 'thumbnail' ),
+	);
+
+	register_post_type( 'profile', $args_profile );
 
 }
 add_action('init', 'soul_init');

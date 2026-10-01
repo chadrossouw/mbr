@@ -73,7 +73,20 @@ $id = get_the_ID();
 			</div>-->
 			<div class="header flex space-between padding-x bg_white black">
 				<div class="site-branding">
-					<a href="<?php echo get_home_url(); ?>" class="logo"><span class="screen-reader-text"><?php echo __('Home', 'soul'); ?></span><?php echo file_get_contents(get_template_directory() . '/assets/logo.svg'); ?></a>
+					<a href="<?php echo get_home_url(); ?>" class="logo">
+						<span class="screen-reader-text"><?php echo __('Home', 'soul'); ?></span>
+
+						<?php
+						if (is_page_template('page-profiles.php') || is_singular('profile')) {
+							?>
+							<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/logo-2.jpg'); ?>" alt="Logo">
+							<?php
+						} else {
+							echo file_get_contents(get_template_directory() . '/assets/logo.svg');
+						}
+						?>
+
+					</a>
 				</div><!-- .site-branding -->
 				<nav id="site-navigation" class="main-navigation" aria-label="<?php echo esc_attr__('Main navigation', 'soul'); ?>">
 					<div class="main-navigation-inner">
@@ -134,7 +147,20 @@ $id = get_the_ID();
 			</div>
 			<div class="header bg-white padding-x black">
 				<div class="site-branding">
-					<a href="<?php echo get_home_url(); ?>" class="logo"><span class="screen-reader-text"><?php echo __('Home', 'soul'); ?></span><?php echo file_get_contents(get_template_directory() . '/assets/logo.svg'); ?></a>
+					<a href="<?php echo get_home_url(); ?>" class="logo">
+						<span class="screen-reader-text"><?php echo __('Home', 'soul'); ?></span>
+
+						<?php
+						if (is_page_template('page-profiles.php') || is_singular('profile')) {
+							?>
+							<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/logo-2.jpg'); ?>" alt="Logo">
+							<?php
+						} else {
+							echo file_get_contents(get_template_directory() . '/assets/logo.svg');
+						}
+						?>
+
+					</a>
 				</div><!-- .site-branding -->
 				<div class="hamburger_container">
 					<button class="hamburger hamburger--collapse" type="button" id="hamburger_mobile" aria-controls="main-navigation" aria-expanded="false">

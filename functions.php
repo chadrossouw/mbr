@@ -401,3 +401,20 @@ function mbr_enqueue_hero_animation() {
     );
 }
 add_action('wp_enqueue_scripts', 'mbr_enqueue_hero_animation');
+
+add_action('admin_enqueue_scripts', function () {
+
+    wp_enqueue_script(
+        'custom-date-picker',
+        get_template_directory_uri() . '/assets/js/custom-date-picker.js',
+        array('acf-input'),
+        SOUL_VERSION,
+        true
+    );
+
+});
+
+// remove the default WP content editor
+add_action('init', function () {
+    remove_post_type_support('page', 'editor');
+});

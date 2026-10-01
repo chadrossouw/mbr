@@ -94,7 +94,8 @@ header#masthead {
 		}
 	}
 
-	&:has(~ .single-exhibition-page) {
+	&:has(~ .single-exhibition-page),
+	&:has(~ .profiles-page) {
 		.site-branding{
 			svg {
 				path {
@@ -458,7 +459,9 @@ header#masthead {
 			}
 		}
 
-		&:has(~ .single-exhibition-page){
+		&:has(~ .single-exhibition-page),
+		&:has(~ .profiles-page),
+		&:has(~ .single-profile-page){
 			.header {
 				#site-navigation {
 

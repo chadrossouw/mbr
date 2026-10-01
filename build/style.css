@@ -849,10 +849,10 @@ body::before {
   z-index: 9998;
   pointer-events: none;
 }
-body:has(> #page .single-exhibition-page)::before {
+body:has(> #page .single-exhibition-page)::before, body:has(> #page .profiles-page)::before, body:has(> #page .single-profile-page)::before {
   background: #696464;
 }
-body:has(> #page .single-exhibition-page) header#masthead #site-navigation::before {
+body:has(> #page .single-exhibition-page) header#masthead #site-navigation::before, body:has(> #page .profiles-page) header#masthead #site-navigation::before, body:has(> #page .single-profile-page) header#masthead #site-navigation::before {
   background-color: #d6d1d1;
 }
 @media screen and (max-width: 700px) {
@@ -3350,19 +3350,19 @@ header#masthead:not(:has(~ .home-page)) .header .hamburger_container button.hamb
 header#masthead:not(:has(~ .home-page)) .header .hamburger_container button.hamburger .hamburger-box .hamburger-inner::before, header#masthead:not(:has(~ .home-page)) .header .hamburger_container button.hamburger .hamburger-box .hamburger-inner::after {
   background-color: #000;
 }
-header#masthead:has(~ .single-exhibition-page) .site-branding svg path {
+header#masthead:has(~ .single-exhibition-page) .site-branding svg path, header#masthead:has(~ .profiles-page) .site-branding svg path {
   fill: #fff;
 }
-header#masthead:has(~ .single-exhibition-page) .header .hamburger_container {
+header#masthead:has(~ .single-exhibition-page) .header .hamburger_container, header#masthead:has(~ .profiles-page) .header .hamburger_container {
   color: #fff;
 }
-header#masthead:has(~ .single-exhibition-page) .header .hamburger_container button.hamburger {
+header#masthead:has(~ .single-exhibition-page) .header .hamburger_container button.hamburger, header#masthead:has(~ .profiles-page) .header .hamburger_container button.hamburger {
   color: #fff;
 }
-header#masthead:has(~ .single-exhibition-page) .header .hamburger_container button.hamburger .hamburger-box .hamburger-inner {
+header#masthead:has(~ .single-exhibition-page) .header .hamburger_container button.hamburger .hamburger-box .hamburger-inner, header#masthead:has(~ .profiles-page) .header .hamburger_container button.hamburger .hamburger-box .hamburger-inner {
   background-color: #fff;
 }
-header#masthead:has(~ .single-exhibition-page) .header .hamburger_container button.hamburger .hamburger-box .hamburger-inner::before, header#masthead:has(~ .single-exhibition-page) .header .hamburger_container button.hamburger .hamburger-box .hamburger-inner::after {
+header#masthead:has(~ .single-exhibition-page) .header .hamburger_container button.hamburger .hamburger-box .hamburger-inner::before, header#masthead:has(~ .single-exhibition-page) .header .hamburger_container button.hamburger .hamburger-box .hamburger-inner::after, header#masthead:has(~ .profiles-page) .header .hamburger_container button.hamburger .hamburger-box .hamburger-inner::before, header#masthead:has(~ .profiles-page) .header .hamburger_container button.hamburger .hamburger-box .hamburger-inner::after {
   background-color: #fff;
 }
 header#masthead:has(~ .about-page) .site-branding svg path {
@@ -3597,10 +3597,10 @@ header#masthead .open_times {
   header#masthead:not(:has(~ .home-page)) .header #site-navigation .main-navigation-inner #primary_menu li a {
     color: #000;
   }
-  header#masthead:has(~ .single-exhibition-page) .header #site-navigation .main-navigation-inner #primary_menu li {
+  header#masthead:has(~ .single-exhibition-page) .header #site-navigation .main-navigation-inner #primary_menu li, header#masthead:has(~ .profiles-page) .header #site-navigation .main-navigation-inner #primary_menu li, header#masthead:has(~ .single-profile-page) .header #site-navigation .main-navigation-inner #primary_menu li {
     border-color: #fff;
   }
-  header#masthead:has(~ .single-exhibition-page) .header #site-navigation .main-navigation-inner #primary_menu li a {
+  header#masthead:has(~ .single-exhibition-page) .header #site-navigation .main-navigation-inner #primary_menu li a, header#masthead:has(~ .profiles-page) .header #site-navigation .main-navigation-inner #primary_menu li a, header#masthead:has(~ .single-profile-page) .header #site-navigation .main-navigation-inner #primary_menu li a {
     color: #fff;
   }
 }
@@ -5063,8 +5063,36 @@ header .fb-share-button.fb_iframe_widget {
   width: fit-content;
 }
 
-.news h1 {
-  font-size: 2rem;
+main.single-news-page .page-content.page-content.page-content .news-meta h1 {
+  font-size: clamp(2.5rem, 4.1875vw, 4.1875rem);
+  padding: 0;
+}
+main.single-news-page .page-content.page-content.page-content .news-meta .card-text {
+  padding: 0 0 1rem;
+  max-width: none;
+}
+main.single-news-page .page-content.page-content.page-content .news-meta .card-text .card-title {
+  font-weight: 350;
+  font-size: clamp(1.8rem, 2.4vw, 2.4rem);
+  font-style: normal;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+main.single-news-page .page-content.page-content.page-content .news-meta .card-text .news-short-text p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  font-family: "Lora", serif;
+}
+@media screen and (min-width: 700px) {
+  main.single-news-page .page-content.page-content.page-content .news-meta h1 {
+    padding: 0 2rem;
+  }
+  main.single-news-page .page-content.page-content.page-content .news-meta .card-text {
+    padding: 0 2rem;
+  }
 }
 
 .page-header {
@@ -6677,6 +6705,177 @@ main.single-essay-page .essay-artwork-meta .artwork-artist {
   main.single-essay-page .single-essay-description {
     margin-top: 2rem;
     margin: 2rem 0 1rem;
+  }
+}
+main#primary.news-page section.page-content section.three-col-no-form div.three-col-grid a.three-col-card div.card-text p.card-title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(0.875rem, 1.3vw, 1.5rem);
+}
+main#primary.profiles-page {
+  background-color: #000000;
+  padding-top: 13rem;
+}
+main#primary.profiles-page > * {
+  color: #fff;
+}
+main#primary.profiles-page .page-content .three-col-no-form .three-col-grid a h2 {
+  text-transform: uppercase;
+  font-size: clamp(1rem, 2.7vw, 2.7rem);
+}
+main#primary.profiles-page .page-content .three-col-no-form .three-col-grid a .card-text p.card-title {
+  font-style: normal;
+  text-transform: none;
+  font-size: clamp(0.85rem, 1.8vw, 1rem);
+  color: #fffafa;
+  text-align: center;
+  font-weight: 100;
+}
+main#primary.profiles-page .page-content .three-col-no-form .three-col-grid a .card-text .profile-summary * {
+  color: #fff5f5;
+  font-size: clamp(0.87rem, 1.9vw, 1.125rem);
+}
+@media screen and (min-width: 1200px) {
+  main#primary.profiles-page {
+    padding-top: 16rem;
+  }
+}
+main#primary.single-profile-page {
+  background-color: #121212;
+  padding-top: 13rem;
+}
+main#primary.single-profile-page > * {
+  color: #fff;
+}
+main#primary.single-profile-page p, main#primary.single-profile-page h1, main#primary.single-profile-page h2, main#primary.single-profile-page h3, main#primary.single-profile-page h4, main#primary.single-profile-page h5, main#primary.single-profile-page h6 {
+  color: #fff;
+}
+main#primary.single-profile-page section.single-profile-top > * {
+  font-family: "Josefin Sans", sans-serif;
+}
+main#primary.single-profile-page section.single-profile-top p {
+  font-family: "Josefin Sans", sans-serif;
+}
+main#primary.single-profile-page section.single-profile-top div.profile-image img {
+  min-width: 100%;
+}
+main#primary.single-profile-page section.single-profile-top div.profile-information {
+  padding: 1rem 0 0;
+  aspect-ratio: auto;
+}
+main#primary.single-profile-page section.single-profile-top div.profile-information h1 {
+  padding: 0 0 1vw;
+}
+main#primary.single-profile-page section.single-profile-top div.profile-information p.profile-accolades {
+  font-size: clamp(1.2rem, 2.5vw, 2rem);
+  line-height: 1;
+  font-weight: 300;
+  font-family: inherit;
+}
+main#primary.single-profile-page section.single-profile-top div.profile-information p.profile-accolades span.accolade-separator {
+  height: 2px;
+  width: 2px;
+  outline: 1px solid #fff;
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  top: clamp(-6px, -0.8vw, -10px);
+}
+main#primary.single-profile-page section.single-profile-top div.profile-information div.profile-dates-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: fit-content;
+  column-gap: clamp(2rem, 6vw, 6rem);
+}
+main#primary.single-profile-page section.single-profile-top div.profile-information div.profile-dates-grid div.profile-date-column {
+  width: fit-content;
+}
+main#primary.single-profile-page section.single-profile-top div.profile-information div.profile-dates-grid div.profile-date-column h2 {
+  font-size: clamp(1.1rem, 2.5vw, 20px);
+  margin-bottom: 0;
+  font-weight: 400;
+}
+main#primary.single-profile-page section.single-profile-top div.profile-information div.profile-dates-grid div.profile-date-column p {
+  font-size: clamp(12px, 1.5vw, 16px);
+  margin-bottom: 0;
+  font-weight: 300;
+}
+main#primary.single-profile-page section.single-profile-top div.profile-information .profile-biography-summary p {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-style: italic;
+  max-width: 100%;
+  padding-top: clamp(1.2rem, 3.6vw, 3rem);
+}
+@media screen and (min-width: 700px) {
+  main#primary.single-profile-page section.single-profile-top div.profile-information .profile-biography-summary p {
+    max-width: 90%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  main#primary.single-profile-page section.single-profile-top div.profile-information .profile-biography-summary p {
+    max-width: 75%;
+  }
+}
+@media screen and (min-width: 1600px) {
+  main#primary.single-profile-page section.single-profile-top div.profile-information .profile-biography-summary p {
+    max-width: 50%;
+  }
+}
+@media screen and (min-width: 700px) {
+  main#primary.single-profile-page section.single-profile-top div.profile-information {
+    padding: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  main#primary.single-profile-page section.single-profile-top div.profile-information {
+    padding: 5rem 0;
+  }
+}
+main#primary.single-profile-page section.bg-white {
+  margin-bottom: 0;
+  padding: 2rem 1rem;
+}
+@media screen and (min-width: 700px) {
+  main#primary.single-profile-page section.bg-white {
+    padding: 2rem 0;
+  }
+}
+main#primary.single-profile-page section.bg-white > * {
+  color: #000;
+}
+main#primary.single-profile-page section.bg-white p, main#primary.single-profile-page section.bg-white h1, main#primary.single-profile-page section.bg-white h2, main#primary.single-profile-page section.bg-white h3, main#primary.single-profile-page section.bg-white h4, main#primary.single-profile-page section.bg-white h5, main#primary.single-profile-page section.bg-white h6 {
+  color: #000;
+}
+main#primary.single-profile-page section.bg-white .profile-biography-meta {
+  margin-bottom: 1rem;
+}
+main#primary.single-profile-page section.bg-white .profile-biography-meta > div {
+  max-width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+@media screen and (min-width: 1600px) {
+  main#primary.single-profile-page section.bg-white .profile-biography-meta > div {
+    max-width: 75%;
+  }
+}
+main#primary.single-profile-page section.bg-white .profile-biography-meta > div p {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1;
+  color: #212020;
+  font-size: clamp(1.2rem, 2.5vw, 1.75rem);
+}
+main#primary.single-profile-page section.bg-white .profile-full-biography h3 {
+  font-family: "Josefin sans", sans-serif;
+  font-weight: 600;
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+}
+@media screen and (min-width: 1200px) {
+  main#primary.single-profile-page {
+    padding-top: 16rem;
   }
 }
 main #masthead:has(+ .single-exhibition-page) .site-branding a svg path {
