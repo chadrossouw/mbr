@@ -1538,6 +1538,232 @@ main {
 		}
 	}
 
+	&#primary {
+
+		&.news-page{
+			section.page-content{
+				section.three-col-no-form{
+					div.three-col-grid{
+						a.three-col-card{
+							div.card-text{
+								p.card-title{
+									font-style: normal;
+									font-weight: 400;
+									font-size: clamp(0.875rem, 1.3vw, 1.5rem);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		&.profiles-page{
+			background-color: #000000;
+			padding-top: 13rem;
+
+			&>*{
+				color: $color_white;
+			}
+
+			.page-content{
+				.three-col-no-form{
+					.three-col-grid{
+						a{
+							h2{
+								text-transform: uppercase;
+								font-size: clamp(1rem, 2.7vw, 2.7rem);
+							}
+							.card-text{
+								p.card-title{
+									font-style: normal;
+									text-transform: none;
+									font-size: clamp(0.85rem, 1.8vw, 1rem);
+									color: #fffafa;
+									text-align: center;
+									font-weight: 100;
+								}
+								.profile-summary{
+									*{
+										color: #fff5f5;
+										font-size: clamp(0.87rem, 1.9vw, 1.125rem);
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			
+			@include media1200{
+				padding-top: 16rem;
+			}
+		}
+
+		&.single-profile-page {
+			background-color: #121212;
+			padding-top: 13rem;
+
+			&>*{
+				color: $color_white;
+			}
+
+			p,h1,h2,h3,h4,h5,h6{
+				color: $color_white;
+			}
+
+			section.single-profile-top{
+
+				&>*{
+					font-family: "Josefin Sans", sans-serif;
+				}
+				p{
+					font-family: "Josefin Sans", sans-serif;
+				}
+
+				div.profile-image{
+					img{
+						min-width: 100%;
+					}
+				}
+
+				div.profile-information{
+					padding: 1rem 0 0;
+					aspect-ratio: auto;
+
+					h1{
+						padding: 0 0 1vw;
+					}
+
+					p.profile-accolades{
+						font-size: clamp(1.2rem, 2.5vw, 2rem);
+						line-height: 1;
+						font-weight: 300;
+						font-family: inherit;
+
+						span.accolade-separator{
+							height: 2px;
+							width: 2px;
+							outline: 1px solid $color-white;
+							background-color: $color-white;
+							border-radius: 50%;
+							display: inline-block;
+							position: relative;
+							top: clamp(-6px, -0.8vw, -10px);
+						}
+					}
+
+					div.profile-dates-grid{
+						display: grid;
+						grid-template-columns: 1fr 1fr 1fr;
+						width: fit-content;
+						column-gap: clamp(2rem, 6vw, 6rem);
+
+						div.profile-date-column{
+							width: fit-content;
+
+							h2{
+								font-size: clamp(1.1rem, 2.5vw, 20px);
+								margin-bottom: 0;
+								font-weight: 400;
+							}
+
+							p{
+								font-size: clamp(12px, 1.5vw, 16px);
+								margin-bottom: 0;
+								font-weight: 300;
+							}
+						}
+					}
+
+					.profile-biography-summary{
+						p{
+							font-size: clamp(1rem, 2vw, 1.5rem);
+							font-style: italic;
+							max-width: 100%;
+							padding-top: clamp(1.2rem, 3.6vw, 3rem);
+
+							@include media700{
+								max-width: 90%;
+							}
+
+							@include media1200{
+								max-width: 75%;
+							}
+
+							@include media1600{
+								max-width: 50%;
+							}
+						}
+					}
+
+					@include media700 {
+						padding: 0;
+					}
+
+					@include media1200{
+						padding: 5rem 0;
+					}
+				}
+			}
+
+			section.bg-white{
+				margin-bottom: 0;
+				padding: 2rem 1rem;
+
+				@include media700 {
+					padding: 2rem 0;
+				}
+				&>*{
+					color: $color_black;
+				}
+
+				p,h1,h2,h3,h4,h5,h6{
+					color: $color_black;
+				}
+
+				.profile-biography-meta{
+					margin-bottom: 1rem;
+					
+					& > div{
+						max-width: 100%;
+						margin: 0 auto;
+						box-sizing: border-box;
+
+						@include media700{
+							//margin: 0 2rem;
+						}
+
+						@include media1600{
+							max-width: 75%;  
+						}
+
+						p{
+							font-family: "Josefin Sans", sans-serif;
+							font-weight: 400;
+							font-style: italic;
+							line-height: 1;
+							color: #212020;
+							font-size: clamp(1.2rem, 2.5vw, 1.75rem);
+						}
+					}
+				}
+
+				.profile-full-biography{
+					h3{
+						font-family: "Josefin sans",sans-serif;
+						font-weight: 600;
+						font-size: clamp(1.1rem, 2vw, 1.5rem);
+					}
+				}
+			}
+
+			@include media1200{
+				padding-top: 16rem;
+			}
+		}
+	}
+
 	#masthead{
 		&:has(+.single-exhibition-page){
 			.site-branding a svg path {

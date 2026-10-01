@@ -1,0 +1,374 @@
+{
+    "key": "group_6abcf65710fb8",
+    "title": "Profiles",
+    "fields": [
+        {
+            "key": "field_6abcf65a772f9",
+            "label": "Profile Image",
+            "name": "profile_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Use this to add the image related to the profile. This will be the same image that appears on the All Profiles listings page, as well, the single Profile page. NB!! - Use only this field when adding a new Profile. AVOID using the featured image input on the right",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_6abcf680772fa",
+            "label": "Profile Accolades",
+            "name": "profile_accolades",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Use this to add the personal accolades list attached to the profile E.G (Reverend . South African . Missionary). Make sure to add each single item such as Reverend separately and do not add the separating dots.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "field_6abcf72b772fb",
+            "button_label": "Add Row",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_6abcf72b772fb",
+                    "label": "Accolade label",
+                    "name": "accolade_label",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_6abcf680772fa"
+                }
+            ]
+        },
+        {
+            "key": "field_6abcf8a6772fc",
+            "label": "Born_Died_Active_Columns",
+            "name": "born_died_active_columns",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Row",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_6abcf8d3772fd",
+                    "label": "Label",
+                    "name": "label",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "Use this to add the column label E.G Born",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Born": "Born",
+                        "Died": "Died",
+                        "Active": "Active"
+                    },
+                    "default_value": false,
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "parent_repeater": "field_6abcf8a6772fc"
+                },
+                {
+                    "key": "field_6abd09eb5a76f",
+                    "label": "Date",
+                    "name": "date",
+                    "aria-label": "",
+                    "type": "date_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6abcf8d3772fd",
+                                "operator": "==",
+                                "value": "Born"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_6abcf8d3772fd",
+                                "operator": "==",
+                                "value": "Died"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "display_format": "j M Y",
+                    "return_format": "j M Y",
+                    "first_day": 0,
+                    "parent_repeater": "field_6abcf8a6772fc"
+                },
+                {
+                    "key": "field_6abd0aba5a771",
+                    "label": "Start Date",
+                    "name": "start_date",
+                    "aria-label": "",
+                    "type": "date_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6abcf8d3772fd",
+                                "operator": "==",
+                                "value": "Active"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "display_format": "j M Y",
+                    "return_format": "j M Y",
+                    "first_day": 0,
+                    "parent_repeater": "field_6abcf8a6772fc"
+                },
+                {
+                    "key": "field_6abd0b1d5a772",
+                    "label": "End Date",
+                    "name": "end_date",
+                    "aria-label": "",
+                    "type": "date_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6abcf8d3772fd",
+                                "operator": "==",
+                                "value": "Active"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "display_format": "j M Y",
+                    "return_format": "j M Y",
+                    "first_day": 0,
+                    "parent_repeater": "field_6abcf8a6772fc"
+                },
+                {
+                    "key": "field_6abcf92a772ff",
+                    "label": "Do You Want To Add City?",
+                    "name": "do_you_want_to_add_city",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "Click Yes if you would like to add a City for this column",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": "",
+                    "ui": 1,
+                    "parent_repeater": "field_6abcf8a6772fc"
+                },
+                {
+                    "key": "field_6abcf99877300",
+                    "label": "City Label",
+                    "name": "city_label",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "This is the label of the City with a default value of City",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6abcf92a772ff",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "City",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_6abcf8a6772fc"
+                },
+                {
+                    "key": "field_6abcf9d777301",
+                    "label": "City Description",
+                    "name": "city_description",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "This is for the actual City name e.g Cape Colony",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6abcf92a772ff",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_6abcf8a6772fc"
+                }
+            ]
+        },
+        {
+            "key": "field_6abcfa2b77302",
+            "label": "Biography Summary",
+            "name": "biography_summary",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "This is for the summary paragraph for the Profile Biography E.G (Xhosa journalist,  minister, translator, missionary evangelist, and composer of hymns.)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_6abcfab877303",
+            "label": "Biography Source",
+            "name": "biography_source",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "This is where you add the full biography Source Text E.G (— Source or speaker, year)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_6abcfb2d77304",
+            "label": "Full Biography",
+            "name": "full_biography",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "This is where you add the full biography. Please add the bold headings in this section as H3.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "profile"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1790774131
+}

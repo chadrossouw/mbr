@@ -179,5 +179,38 @@ function soul_init()
 
 	register_post_type( 'news', $args_news );
 
+	// Profile
+	$labels_profile = array(
+		'name'               => __( 'Profiles', 'soul' ),
+		'singular_name'      => __( 'Profile', 'soul' ),
+		'menu_name'          => __( 'Profiles', 'soul' ),
+		'name_admin_bar'     => __( 'Profile', 'soul' ),
+		'add_new'            => __( 'Add New', 'soul' ),
+		'add_new_item'       => __( 'Add New Profile', 'soul' ),
+		'new_item'           => __( 'New Profile', 'soul' ),
+		'edit_item'          => __( 'Edit Profile', 'soul' ),
+		'view_item'          => __( 'View Profile', 'soul' ),
+		'all_items'          => __( 'All Profiles', 'soul' ),
+		'search_items'       => __( 'Search Profiles', 'soul' ),
+		'not_found'          => __( 'No Profiles found.', 'soul' ),
+		'not_found_in_trash' => __( 'No Profiles found in Trash.', 'soul' )
+	);
+
+	$args_profile = array(
+		'labels'        => $labels_profile,
+		'public'        => true,
+		'show_ui'       => true,
+		'show_in_rest'  => true,
+		'has_archive'   => false,
+		'rewrite'       => array(
+			'slug'       => 'profiles',
+			'with_front' => false
+		),
+		'menu_icon'     => 'dashicons-id',
+		'supports'      => array( 'title', 'thumbnail', 'editor' ),
+	);
+
+	register_post_type( 'profile', $args_profile );
+
 }
 add_action('init', 'soul_init');

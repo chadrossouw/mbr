@@ -89,7 +89,9 @@ body {
 		// pointer-events: none;
 	}
 
-	&:has(> #page .single-exhibition-page){
+	&:has(> #page .single-exhibition-page),
+	&:has(> #page .profiles-page),
+	&:has(> #page .single-profile-page){
 		&::before{
 			background: #696464; 
 		}
