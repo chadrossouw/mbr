@@ -6681,14 +6681,12 @@ main.single-essay-page .essay-artwork-meta .caption p {
   font-weight: 300;
   font-style: italic;
   font-family: "Lora", serif;
-  text-transform: capitalize;
   letter-spacing: 0.015rem;
 }
 main.single-essay-page .essay-artwork.card .essay-artwork-meta .card-artists,
 main.single-essay-page .essay-artwork-meta .artwork-artist {
   font-weight: 300;
   font-family: "Lora", serif;
-  text-transform: capitalize;
 }
 @media screen and (max-width: 900px) {
   main.single-essay-page .single-essay-top .essay-meta h1 {

@@ -22,7 +22,7 @@ $id = get_the_ID();
 	<link rel="icon" type="image/svg+xml" href="<?php echo get_template_directory_uri(); ?>/assets/favicons/favicon.svg" />
 	<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/assets/favicons/favicon.ico" />
 	<link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri(); ?>/assets/favicons/apple-touch-icon.png" />
-	<meta name="apple-mobile-web-app-title" content="Shoemakers" />
+	<meta name="apple-mobile-web-app-title" content="MBR Projects" />
 	<link rel="manifest" href="<?php echo get_template_directory_uri(); ?>/assets/favicons/site.webmanifest" />
 	<meta property="og:title" content="<?php echo get_the_title(); ?>" />
 	<meta property="og:image" content="<?php echo get_template_directory_uri() . '/assets/OG-image.jpg'; ?>" />

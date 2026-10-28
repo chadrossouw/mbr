@@ -1491,7 +1491,6 @@ main {
 			font-weight: 300;
 			font-style: italic;
 			font-family: $font__body;
-			text-transform: capitalize;
 			letter-spacing: 0.015rem;
 		}
 
@@ -1499,7 +1498,6 @@ main {
 		.essay-artwork-meta .artwork-artist{
 			font-weight: 300;
 			font-family: $font__body;
-			text-transform: capitalize;
 		}
 
 		@media screen and (max-width: 900px) {
